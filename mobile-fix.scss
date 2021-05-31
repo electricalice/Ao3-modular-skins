@@ -1,0 +1,115 @@
+h4 {
+  font-size: 1.2em;
+}
+
+#footer .module {
+  max-width: 40%;
+  margin: auto;
+}
+
+.userstuff, #header {
+  font-size: 110% !important;
+}
+
+#footer .heading,
+.comment h4.byline {
+  overflow-wrap: break-word;
+}
+
+#header .heading,
+#login,
+#greeting,
+#header .primary {
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+#header .user {
+  float: none;
+  text-align: center;
+}
+
+.home .header .userstuff,
+.home .header dl.stats,
+.home .header .type {
+  margin-left: auto;
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu {
+  width: auto;
+}
+
+div.preface {
+  margin: 1.5em;
+}
+
+#dashboard,
+#dashboard.own {
+  border-bottom: 0px;
+  border-top: 0px;
+  border: 0px;
+}
+
+.blurb .header .heading {
+  margin: .375em .375em 0 65px;
+  overflow-wrap: break-word;
+}
+
+.blurb .datetime {
+  position: initial;
+}
+
+.filters dt {
+  background-color: transparent;
+}
+
+#ui-datepicker-div {
+  top: 522px !important;
+}
+
+.javascript {
+  background-color: transparent;
+}
+
+.assigned.module th[scope="col"],
+thead th[scope="col"] {
+  max-width: 18px;
+  overflow: hidden;
+}
+
+.primary li:nth-of-type(4) .menu {
+  margin-left: -70px;
+}
+
+p.kudos {
+    background: url(/images/imageset.png) no-repeat -110px -580px;
+    padding: 4em 0 0 0;
+    min-height: 50px;
+    word-break: break-word;
+}
+
+.faq .userstuff .notice, .faq .userstuff .caution, .faq .example, .guideline .userstuff .notice, .guideline .userstuff .caution, .guideline .example {
+  /* mostly for stuff in the guidelines 
+  lowers the indent*/
+  margin: 0;
+}
+
+.userstuff dd {
+    /*less indent*/
+    margin-inline-start: 1em;
+}
+
+li.showme a.actions {
+
+    white-space: normal;
+    height: initial;
+
+}

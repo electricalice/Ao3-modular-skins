@@ -1,0 +1,294 @@
+@charset "iso-8859-1";
+
+
+$fontheading: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+$fontbody: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+$fontweightheading: normal;
+$lineheight: 1.125;
+
+$letterspacing: .02em;
+$wordspacing: .21em;
+$fontbasesize: 1.1em;
+$ratio: 1.333;
+$ratioheader: $ratio;
+$paragraphheight: 2em;
+
+$bordershape: 10px;
+$borderwidth: 3px solid;
+$borderbutton: 2px solid;
+
+$checkboxsize: .8em;
+
+$colbackground: #232946;
+$coltext: #b8c1ec;
+$coltextalt: #fffffe;
+$colaccent: #eebbc3;
+$colbackgroundalt: #283054;
+$colbackgroundalt2: #2d3973;
+$colborder: #121629;
+$colnotice: #b8c1ec;
+$colalert: #b51665;
+$colbackgroundfilters: #2d3973;
+$colbackgroundinput: #3d4f7d;
+
+//the following are relative to exchanges
+$colrequested: red;
+$colrequestedoffered: yellow;
+$coloffered: green;
+
+@import 'font';
+@import 'header';
+@import 'bottoni';
+@import 'filters';
+@import 'boxes';
+
+//@import 'bottoni-login-neri';
+@import 'bottoni-login-bianchi';
+
+
+%line-height {
+  /*
+  This is the line height of the text.
+  */
+    line-height: $lineheight;
+}
+
+
+body,
+#header,
+#outer.wrapper,
+#inner.wrapper,
+.secondary,
+#modal,
+.filters .expander, .autocomplete div.dropdown ul {
+  color: $coltext;
+  background-color: $colbackground;
+}
+::-moz-selection, ::selection, ::-webkit-selection {  background-color: $colaccent; 
+color: $colbackground;
+}
+.listbox>.heading, .listbox .heading a:visited, form dd.required, #header .primary .menu a, #header .primary .menu .current {
+    color: $coltext;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  color: $coltextalt;
+}
+
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+.dropdown,
+.splash .favorite li:nth-of-type(odd) a,
+input#site_search:focus,
+#header #search input:focus, .autocomplete div.dropdown ul {
+  color: $coltext;
+  background-color: $colbackgroundalt;
+}
+
+a,
+a:link,
+a:visited,
+a.tag,
+a.tag:visited,
+a.tag:link,
+.listbox .index a:link,
+.listbox .index a:visited,
+.listbox .index a,
+#header a,
+#header a:link,
+#header a:visited,
+#header .heading a,
+.splash .module h3,
+.blurb h4 a:link,
+.blurb h4 a,
+.blurb h4 a:visited,
+#header a,
+#header a:visited,
+#header .current,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus,
+#dashboard a,
+#dashboard span, li::marker, .draggable, .droppable {
+  color: $colaccent;
+}
+
+.blurb h4 a:visited {
+  color: $colaccent !important;
+}
+
+#footer,
+a:hover,
+a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+#dashboard a:hover,
+.actions a:hover,
+.actions input:hover,
+.actions a:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus,
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:focus,
+.blurb h4 a:hover,
+a:visited:hover,
+input[type="submit"]:hover,
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+a[href*="/users/logout"],
+a.tag:hover,  .event .userstuff, .event .userstuff a,  .event .userstuff a:link,  .event .userstuff a:visited,
+.listbox .index a:hover, .autocomplete .dropdown ul li:hover, li.selected {
+  background-color: $colaccent;
+  color: $colbackground;
+  border-color: $colaccent;
+}
+
+#dashboard .current,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header #search input:focus,
+#header #search input,
+tr:hover,
+#outer .current,
+li.relationships a,
+.thread .even, .autocomplete .dropdown ul li:hover, li.selected, .toggled form, .dynamic form, .secondary, .dropdown {
+  background-color: $colbackgroundalt;
+    /* needs this too to override some instances */
+  background: $colbackgroundalt;
+}
+
+a.modal.help:hover {
+  background-color: transparent;
+}
+
+.notice,
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash, .required .autocomplete, .autocomplete .notice, #header h2.collections, #header h2 {
+  background-color: $colnotice;
+  color: $colbackground;
+}
+
+
+
+.required,
+.error,
+.alert.flash, .nominations .rejected {
+  color: $colalert;
+}
+
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+.secondary,
+th,
+thead,
+tbody tr,
+.filters fieldset, .wrapper, li.blurb, form dl, dl.meta, .faq .example, .guideline .example, li.post.group, li.comment, .splash .news li:last-of-type {
+  border-color: $colborder;
+}
+
+
+
+
+
+.required, .error, .alert.flash {
+color: $colalert !important;
+
+
+}
+
+form.search input[type="text"], dd.autocomplete li.input, input[type="radio"], select, input[type="checkbox"], input[type="file"], input.number, p input, p select, .heading select, li select, input:focus, select:focus, textarea:focus, input, textarea {
+  border-top-color: $colbackgroundinput;
+  border-color: $colbackgroundinput;
+  background-color: $colbackgroundinput;
+}
+.filters [type="radio"]+.indicator:before, .filters [type="checkbox"]+.indicator:before, .filters .exclude [type="checkbox"]+.indicator:before {
+
+    background-color: $colbackgroundinput;
+
+}
+.filters [type="radio"]:checked+.indicator:before, .filters [type="checkbox"]:checked+.indicator:before, .filters .exclude [type="checkbox"]:checked+.indicator:before {
+
+    background-color: $colaccent;
+
+}
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+      background-color: $colalert;
+}
+
+.blurb ul li, .blurb dd ul li, .meta dd ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+//border with a different color
+
+#header {
+  background-color: $colbackgroundalt2;
+  border-color: $colborder;
+}
+#footer {
+  border-color: $colborder;
+}
+.javascript {
+  background-color: $colbackgroundfilters !important;
+}
+.announcement input[type="submit"], .announcement .action {
+    background: $colbackground;
+    border: 1px solid $colborder;
+    color: $coltext;
+
+    }
+    .blurb .header img {
+background-color: $coltext;
+}
+.userstuff blockquote {
+  border-inline-start: 2px solid $colaccent;
+}
+
+.chapter .preface {
+    border-color: $colborder;
+}
+span.offered.requested { color: $colrequestedoffered; }
+span.offered, .replied, .nominations .approved { color: $coloffered; }
+span.requested, .nominations .rejected { color: $colrequested; }

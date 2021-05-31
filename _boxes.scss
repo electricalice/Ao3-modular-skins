@@ -1,0 +1,231 @@
+/*
+===============================
+Borders and boxes in the layout
+===============================
+*/
+
+
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+.listbox .index,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+li.blurb,
+li.comment,
+.comment h4.byline,
+dl.index dd,
+form blockquote.userstuff,
+table,
+tr,
+th,
+td,
+thead,
+tfoot,
+.reading h4.viewed, li.relationships a {
+    /* 
+    it removes the color background 
+    where it's set in Ao3's default skin
+    */
+    background: transparent;
+}
+
+.secondary,
+dl.meta,
+li.post.group,
+.faq .example,
+.guideline .example,
+tr:hover,
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+li.blurb,
+li.comment {
+    /* 
+    sets the border shapes 
+    */
+    border: $borderwidth;
+    border-radius: $bordershape;
+}
+
+th,
+thead,
+tbody tr {
+     /* 
+    sets the border shapes 
+    */ 
+    border: $borderwidth;
+}
+
+li.post.group {
+  /* 
+  posts social distancing 
+  */
+    padding: 10px;
+}
+
+.splash .news li:last-of-type {
+  /* 
+  last news post in the home page has inexplicabbly a border-bottom
+  this removes it
+  */
+    border-bottom: $borderwidth;
+    border-radius: $bordershape;
+}
+
+tr,
+th,
+td,
+thead,
+tfoot {
+  /* 
+  this is for tables
+  */
+    vertical-align: middle;
+}
+
+.bookmark .user,
+.filters dl,
+.filters dt,
+dl.index dd,
+div.comment,
+#modal,
+#dashboard.own,
+#dashboard ul,
+.autocomplete div.dropdown ul,
+.event .userstuff,
+#dashboard.own,
+#dashboard ul,
+.splash .module h3,
+.comment div.icon,
+a,
+a:link,
+a:visited:hover {
+    /* remove borders */
+    border: none;
+}
+
+#dashboard.own,
+#dashboard ul,
+.splash .module h3,
+.comment div.icon,
+a,
+a:link,
+a:visited:hover {
+    /* 
+  further removes borders to those classes where there's a top and bottom border 
+  set in ao3's default skin
+  */
+    border-top: none;
+    border-bottom: none;
+}
+
+span.symbol {
+  /* 
+  what the hell does this change I can't remember
+  */
+    color: initial;
+    border: 1px solid;
+    vertical-align: middle;
+}
+
+.blurb .header img {
+  /* 
+  Aligns vertically the little lock next to the title in the blurb
+  it also gives a bit of a space enough to have a background if needed in dark mode, later
+  */
+    vertical-align: baseline;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/* 
+I make the icons smaller, 
+and as such a few things need to be 
+properly positioned
+*/
+.icon {
+    height: 80px;
+    width: 80px;
+}
+
+
+.tag .primary .icon,
+.tagset .primary .icon {
+    background: url(/images/imageset.png) -10px -285px;
+}
+
+.skins .primary .icon {
+    background: url(/images/imageset.png) -10px -185px;
+}
+.comment h4.byline {
+    padding: .25em;
+}
+.abbreviated h4.byline {
+    padding-left: .25em;
+}
+.comment div.icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+.comment .icon .visitor {
+    background: url(/images/imageset.png) no-repeat -10px -85px;
+    display: block;
+}
+
+/*end of stuff regarding the icon resizing*/
+
+
+.comment .posted {
+  /* 
+  positions the date of a comment 
+  */
+  display: block;
+  float: none;
+}
+
+@if $borderwidth == none {
+  .group.listbox {
+  border: 1px solid transparent; }
+}
+
+
+.fandom .group.listbox {
+    width: 100%;
+}
+
+form.inbox {
+//why is this a thing that needs to be addressed ao3 why??
+  overflow-x: initial;
+}

@@ -1,0 +1,11 @@
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: fixed;
+}

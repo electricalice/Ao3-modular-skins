@@ -1,0 +1,107 @@
+#header {
+  margin: 0px;
+  padding: .8em;
+  border-bottom: $borderwidth;
+  border-color: $colborder;
+}
+
+
+#header .search {
+  float: none;
+}
+
+input#site_search {
+  width: 60px;
+}
+
+input#site_search:focus {
+  width: auto;
+}
+
+#header .heading {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0;
+  margin-left: .5em;
+}
+
+#login,
+#greeting {
+  float: right;
+  position: relative;
+  display: inline-block;
+  padding: .5em;
+  margin-right: .5em;
+}
+
+#header .primary {
+  position: relative;
+  display: block;
+  float: none;
+  background: none;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  box-shadow: none;
+}
+
+#header .primary a {
+  color: currentColor;
+}
+
+#header .logo,
+#header .heading sup,
+#greeting p.icon {
+  display: none;
+}
+
+#header li {
+  display: inline-block;
+  float: none;
+  position: relative;
+}
+
+#header input,
+#header #search>*,
+#header #search .submit {
+  display: inline;
+  float: none;
+  vertical-align: middle;
+}
+
+#header .user {
+  padding: 0px;
+}
+
+#header h1 {
+  vertical-align: sub;
+}
+
+#header .user a:hover,
+#header .user a:focus,
+#header .user .current {
+  color: currentColor;
+  border-radius: 0px;
+}
+
+#footer {
+  background-image: none;
+  border-top: $borderwidth;
+}
+
+#inner.wrapper {
+  min-height: 80vh;
+}
+
+#main {
+  padding-top: 2em;
+}
+
+#main.dashboard {
+  margin-top: 0px;
+}
+
+#header .menu li {
+  border-bottom: none;
+  margin: 0;
+}

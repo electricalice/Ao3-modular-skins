@@ -1,0 +1,1027 @@
+//Import common stuff
+
+
+
+
+@import 'font';
+
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander {
+    /* 
+    for some weird reason this is needed 
+    or fonts just won't behave
+    */
+    font-size: 100%;
+}
+
+
+
+h1,
+h2 {
+    /*
+  thicc titley titles
+  */
+    font-size: $fontbasesize*$ratio*$ratio*$ratio;
+    font-weight: 600;
+}
+
+
+h3 {
+    /*
+  other titley titles, not as thicc
+  */
+    font-size: $fontbasesize*$ratio*$ratio;
+    @extend %line-height;
+}
+
+
+h5,
+h6,
+h4.viewed {
+    @extend %text-size; //già commentato
+}
+
+
+
+%word-spacing {
+    /*
+  -----------------WORD SPACING-----------------
+  This sets the spacing between words
+
+  if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 0.22em, 0.25em, 0.3em before going a number up (or down)
+  */
+    word-spacing: $wordspacing;
+}
+
+%letter-spacing {
+    /*
+  -----------------LETTER SPACING-----------------
+  This sets the spacing between letters
+
+  if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 0.025em, 0.03em, 0.035em before going a number up (or down)
+  */
+    letter-spacing: $letterspacing;
+}
+
+
+%align-left {
+    /*
+  -----------------TEXT ALIGNS TO LEFT-----------------
+  This sets the text alignment.
+
+  you can change it to justify, right or center.
+  */
+    text-align: left;
+}
+
+#workskin {
+    /*
+    Trying to override potential workskins so that the text is never justified
+    */
+    text-align: left !important;
+
+}
+
+%paragraph-width {
+    /*
+  -----------------PARAGRAPH WIDTH-----------------
+  This sets the width of the reading paragraphs.
+  It sets a percentage according to the width of the screen 
+  (reduce or increase the percentage of width: 70%; to change this. remember the semicolon.)
+  but it doesn't allow it to go over a certain amount of width, so that even HUGE screens
+  will have a maximum width for the text.
+  (reduce or increase this by changing the number on the max-width: 45em; remember the semicolon.)
+
+
+  It is reset on the mobile skin to 100%
+  */
+    width: $paragraphwidth;
+    max-width: $paragraphmaxwidth;
+}
+
+
+.comment .userstuff {
+    /* 
+  resets the width of the paragraph comments after being reduced as a part of .userstuff
+  */
+    width: 95%;
+}
+
+.blurb .userstuff {
+    /*
+  It gives a bit of space on top and at the bottom of the summary in the blurb
+  */
+    padding: 20px 0;
+}
+
+.userstuff p {
+    /*
+  Sets how far paragraphs should be from each other in text
+  
+  if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 2.5em, 2.3em, 2.8em before going a number up (or down)
+
+  remember to leave " auto;" or wonky stuff will happen to the width of your paragraphs
+  */
+    margin: $paragraphheight auto;
+}
+
+
+
+/* 
+Basic fic formatting 
+      (bold, 
+    italics 
+  and underline) 
+*/
+u,
+acronym[title], abbr[title] {
+
+    /* 
+    --------UNDERLINE---------
+    To remove the colored underline from the skin just remove 
+    the following 2 lines (border-bottom etc etc and padding-bottom etc etc)
+    This will leave a nice, readable bold text 
+    */
+
+    /* start deleting here -> */
+    border-bottom: 2px solid $colaccent;
+    padding-bottom: 4px;
+    /* <- stop deleting here for the underline thingy! Leave the rest*/
+
+    text-decoration: none;
+    font-weight: 700;
+
+    //opzione evidenziatore
+    //background-color: #c5d9fb;
+    //padding: 4px;   
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+/*
+--------ITALICS---------
+The following code remove all the italics and changes 
+them into bold instead for easier dyslexia reading. 
+This will override what the fic author's decided to use.
+If you prefer you can delete it and all will return to normal 
+*/
+
+/* start deleting here -> */
+i,
+em,
+cite {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* <- Stop deleting here for the italics thingy*/
+
+.userstuff blockquote {
+    /*
+  blockquotes in fics/newsposts/FAQs have a colored border on the left
+  */
+    border-inline-start: 2px solid $colaccent;
+}
+
+
+@import 'bottoni';
+@import 'boxes';
+
+
+
+
+/*
+======================
+  General settings
+======================
+*/
+
+%centers {
+    /*
+  This centers elements that need to be centered
+  */
+    margin: auto;
+}
+
+body,
+#header,
+#outer.wrapper,
+#inner.wrapper,
+.secondary,
+#modal,
+.filters .expander {
+    @extend %text-color; //già commentato
+    @extend %background-color;
+    @extend %text-size;
+    @extend %letter-spacing;
+    @extend %word-spacing;
+}
+
+body,
+#inner.wrapper,
+.secondary,
+#modal,
+.filters .expander {
+    @extend %line-height; //già commentato
+}
+
+
+
+/*
+==========
+  Header
+==========
+*/
+#outer.wrapper,
+#header {
+    /*
+  Resets line height for the header
+  so it all aligns properly
+  */
+    line-height: normal;
+}
+
+#header .logo,
+#header .heading sup,
+#greeting p.icon {
+    /*
+  hides Ao3 Logo in the header,
+  the user's avatar in the header
+  and the 'beta' bit too.
+  so that everything is a little more clear.
+  */
+    display: none;
+}
+
+#header .heading {
+    /* 
+  gives a decent space on the left to Ao3's logo in the header
+  */
+    margin-left: 2em;
+}
+
+#header h1 {
+    /* 
+  Ao3 Logo is boldy 
+  */
+    @extend %text-size;
+    font-weight: 700;
+}
+
+#login,
+#greeting {
+    /* 
+  gives a decent space on top to the user's menu in the header
+  */
+    margin-top: 10px;
+}
+
+
+#workskin,
+.blurb .userstuff,
+.news .userstuff,
+.system .userstuff,
+.collection blockquote.userstuff {
+    @extend %text-size; //già commentato
+    @extend %paragraph-width;
+    @extend %centers;
+    @extend %align-left;
+    @extend %word-spacing;
+    @extend %line-height;
+
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu {
+    /*
+  Makes the dropdown menu bigger, 
+  since the font used in this theme is huge
+  */
+    width: 25em;
+}
+
+/*
+=============
+ News Posts
+ Collections
+ FAQs
+=============
+*/
+
+
+.news .wrapper,
+#main.system h2.heading,
+#main.system h3.heading,
+#header h2.collections,
+#header h2 {
+    /* 
+  centers a few kind of titles (collections, news posts, FAQs...)
+  */
+    text-align: center;
+}
+
+.userstuff img {
+    /*
+  Regarding icons in news posts
+  */
+    max-width: 90%;
+}
+
+
+#main.system h2.heading,
+#main.system h3.heading,
+.userstuff img {
+    @extend %centers;
+    /*
+  needs this as blocks or will never center
+  */
+    display: block;
+}
+
+#header h2.collections,
+#header h2 {
+    /* 
+  resetting ao3 default skin's border on top of collection's header
+  */
+    border-top: none;
+}
+
+
+.home .header .userstuff,
+.home .header dl.stats,
+.home .header .type {
+    /*
+  Collection pages have a weird margin left??? why??
+  */
+    margin-left: initial;
+}
+
+/*
+========
+ Blurb
+========
+*/
+
+/*
+-----------------TAGS-----------------
+This is what makes the tag having a border!
+If you want to remove the border please delete all these lines 
+*/
+
+/* start deleting here -> */
+a.tag,
+a.tag:visited,
+a.tag:link {
+
+    @extend %text-color;
+    padding: 4px 7px;
+    line-height: 2.3em;
+    border: $bordertagwidth $colaccent;
+    border-radius: $bordershape;
+
+}
+
+.commas li:after {
+    content: "";
+}
+
+.favorite a.tag {
+    border: none;
+}
+
+/* <- stop deleting here for the tag thingy */
+
+.blurb dl.stats {
+    /*
+  puts stats on the left of the blurb
+  */
+    float: initial;
+    @extend %align-left;
+}
+
+.meta ul li {
+  padding-left: 0;
+}
+
+div#comments_placeholder {
+    @extend %paragraph-width; //già commentato
+    @extend %centers;
+    @extend %align-left;
+}
+
+
+
+#chapters,
+#chapters p,
+textarea,
+#footer li,
+.preface.group blockquote.userstuff,
+.preface.group blockquote.userstuff p,
+.userstuff p,
+#footer li,
+.comment .userstuff {
+    @extend %align-left; //already commented
+    @extend %word-spacing;
+    @extend %line-height;
+}
+
+.blurb dl.stats,
+.actions li a,
+.actions li input,
+.actions li input[type="submit"],
+input[type="submit"],
+.actions li .current,
+.actions li label,
+#header .primary .menu a,
+#header .primary .menu .current,
+form.search input[type="text"],
+dd.autocomplete li.input,
+input[type="radio"],
+select,
+input[type="checkbox"],
+input[type="file"],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea,
+p.type,
+.meta dd {
+    @extend %word-spacing; //già commentato
+    @extend %letter-spacing;
+    @extend %text-size;
+}
+
+
+
+textarea,
+#footer li,
+.comment .userstuff,
+form.search input[type="text"],
+dd.autocomplete li.input,
+input[type="radio"],
+select,
+input[type="checkbox"],
+input[type="file"],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input {
+    @extend %text-size; //già commentato
+}
+
+
+
+
+
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+.listbox>.heading,
+.listbox .heading a:visited,
+form dd.required,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander,
+#header .primary .menu a,
+#header .primary .menu .current, #outer .current, .userstuff h2, label, .autocomplete li.added, .post .meta dd ul li.added {
+    @extend %text-color; //already commented
+}
+
+a,
+a:link,
+a:visited,
+a.tag,
+a.tag:visited,
+a.tag:link,
+.listbox .index a:link,
+.listbox .index a:visited,
+.listbox .index a,
+#header .heading a,
+.splash .module h3,
+.blurb h4 a:link,
+.blurb h4 a,
+.blurb h4 a:visited,
+#dashboard a,
+#dashboard span,
+#header .user a:hover,
+#header .user a:focus,
+#header .user .current,
+li::marker,
+.draggable,
+.droppable {
+    @extend %accent-color; //already commented
+}
+
+.blurb ul li,
+.blurb dd ul li,
+.meta dd ul li {
+    /* 
+  paginates better the tags, so that they tend to not break lines mid-tag.
+  it's a readibility thing related to the border for the tags
+  */
+    display: inline-block;
+    margin: 0;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+.dropdown,
+.splash .favorite li:nth-of-type(odd) a, .statistics .index li:nth-of-type(even),
+input#site_search:focus,
+#header #search input:focus,
+.autocomplete div.dropdown ul,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown {
+    @extend %text-color; //already commented
+    @extend %background-color-alt;
+}
+
+#footer,
+a:hover,
+a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+#dashboard a:hover,
+.actions a:hover,
+.actions input:hover,
+.actions a:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus,
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:focus,
+.blurb h4 a:hover,
+a:visited:hover,
+input[type="submit"]:hover,
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+.event .userstuff,
+.event .userstuff a,
+.event .userstuff a:link,
+.event .userstuff a:visited,
+.listbox .index a:hover,
+.autocomplete .dropdown ul li:hover,
+li.selected {
+    @extend %accent-background; //already commented
+    @extend %color-text-bg;
+}
+
+li.dropdown {
+     @extend %color-text-bg; 
+}
+
+#dashboard .current,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header #search input:focus,
+#header #search input,
+tr:hover,
+#outer .current {
+    @extend %background-color-alt; //already commented
+}
+
+
+
+
+
+
+
+.notice a,
+.notice a:link,
+.notice a:visited {
+    @extend %color-text-bg; //already commented
+}
+
+
+
+
+
+
+.secondary {
+
+    @extend %background-color; //già commentato
+}
+
+
+@import 'filters';
+
+
+
+form.search input[type="text"],
+dd.autocomplete li.input,
+input[type="radio"],
+select,
+input[type="file"],
+input.number,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+    /* 
+  sets the color of most forms
+  */
+    border-top-color: $colbackgroundinput;
+    border-color: $colbackgroundinput;
+    background-color: $colbackgroundinput;
+    @extend %text-color;
+    border-radius: $bordershape;
+}
+
+
+p input, input[type="checkbox"] {
+    border-top-color: $colbackgroundinput;
+    border-color: $colbackgroundinput;
+    background-color: $colbackgroundinput;
+    @extend %text-color;
+}
+
+.filters [type="radio"]+.indicator:before,
+.filters [type="checkbox"]+.indicator:before,
+.filters .exclude [type="checkbox"]+.indicator:before {
+    /* 
+  filter related checkboxes and radio
+  */
+    background-color: $colbackgroundinput;
+}
+
+.filters [type="radio"]:checked+.indicator:before,
+.filters [type="checkbox"]:checked+.indicator:before,
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+    @extend %accent-background;
+}
+
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+    /*
+  Exclude filters when checked have the same color of alerts
+  */
+
+    background-color: $colalert;
+}
+
+.javascript {
+    /*
+  Sets the background color in the filters on mobile
+  */
+    background-color: $colbackgroundfilters !important;
+
+}
+
+.announcement input[type="submit"],
+.announcement .action {
+    @extend %background-color;
+    /* 
+  no idea what this is but it does something I guess 
+  it was probabbly related to some announcement bar it appeared at some point
+  */
+    border: 1px solid $colborder;
+    @extend %text-color;
+
+}
+
+.ui-draggable form {
+    /*
+  This sets a shadow in the comment reply form that is floaty in some pages
+  */
+    box-shadow: 0 0 3px $colbackgroundinput;
+}
+
+
+
+.filters .expander,
+.filters .expanded .expander {
+    /*
+  these are the buttons to open the filters
+  */
+    @extend %accent-background;
+    @extend %color-text-bg;
+    border: $borderwidth $colaccent;
+    border-radius: $bordershape;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+===========
+  Colors
+===========
+  */
+
+
+%text-color {
+    /*
+  -----------------TEXT COLOR-----------------
+  This is the main text color for all the body of text
+  Use a hex color picker to change this!
+  */
+    color: $coltext;
+}
+
+%background-color {
+    /*
+  -----------------BACKGROUND COLOR-----------------
+  This sets the main background color
+  Use a hex color picker to change this!
+  */
+    background-color: $colbackground;
+    background: $colbackground;
+}
+
+%background-color-alt {
+    /*
+  This sets the secondary background color
+  Use a hex color picker to change this!
+  */
+    background-color: $colbackgroundalt;
+    background: $colbackgroundalt;
+}
+
+%accent-color {
+    /*
+  -----------------ACCENT COLOR-----------------
+  This is the accent text color for all the links and titles and other stuff that
+  is colored differently from the body of text
+  Use a hex color picker to change this!
+  */
+    color: $colaccent;
+}
+
+%accent-background {
+    /*
+  This sets the accent color to the backgrounds.
+  like buttons, footer and stuff like that.
+  Use a hex color picker to change this!
+  */
+    background-color: $colaccent;
+}
+
+#header .primary {
+    background: $colheader;
+}
+
+%color-text-bg {
+    /*
+  Related to the previous classes, this colors the text in a way that it can 
+  be read on the accent color background
+  Use a hex color picker to change this!
+  */
+    color: $colbackground;
+}
+
+
+::-moz-selection,
+::selection,
+::-webkit-selection {
+    background-color: $colaccent;
+    color: $colbackground;
+}
+
+
+.notice,
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash,
+.required .autocomplete,
+.autocomplete .notice,
+#header h2.collections,
+#header h2 {
+    /* 
+  This is the background color of the notices, alert, comment errors and stuff like that 
+  */
+    background-color: $colnotice;
+    @extend %text-color;
+}
+
+#header a,
+#header a:visited,
+#header .current,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus {
+    @extend %text-color;
+}
+
+.required,
+.error,
+.alert.flash,
+.nominations .rejected {
+    /* 
+  This sets the warning text color for alerts, error, and stuff like that
+  */
+    color: $colalert;
+
+}
+
+a.modal.help:hover {
+    background-color: transparent;
+}
+
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+.secondary,
+th,
+thead,
+tbody tr,
+.wrapper,
+li.blurb,
+fieldset,
+form dl,
+dl.meta,
+li.post.group,
+.splash .news li:last-of-type,
+li.comment,
+.faq .example,
+.guideline .example {
+    /* 
+  this sets the borders color
+  Use a hex color picker to change this!
+  */
+    border-color: $colborder;
+}
+
+/*
+These next 3 are related to exchanges.
+They modify the colors in the sign-up list
+*/
+span.offered.requested {
+    color: $colrequestedoffered;
+}
+
+span.offered,
+.replied,
+.nominations .approved {
+    color: $coloffered;
+}
+
+span.requested,
+.nominations .rejected {
+    color: $colrequested;
+}
+
+@if $cardbackground {
+ //for skins that have a card background
+    fieldset,
+    li.blurb,
+    .wrapper,
+    li.comment,
+    #main li.blurb, div#user-fandoms, .draft, li.post.group, .fandom .group.listbox {
+        background-color: $cardbackground;
+        border-radius: $bordershape;
+    }
+
+    form.verbose legend {
+        background-color: $colbackgroundinput;
+    }
+}
+
+@if $needscontrast {
+//when the notice need a contrast text
+    .notice,
+    .comment_notice,
+    ul.notes,
+    .caution,
+    .error,
+    .comment_error,
+    .alert.flash,
+    .required .autocomplete,
+    .autocomplete .notice,
+    #header h2.collections,
+    #header h2 {
+        color: $needscontrast;
+    }
+}
+
+.thread .even {
+  /*comments alternate*/
+    background-color: $colbackgroundinput;
+}
+

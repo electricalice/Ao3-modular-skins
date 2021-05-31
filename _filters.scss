@@ -1,0 +1,167 @@
+/*
+============
+  Filters!
+============
+*/
+
+.filters .expander,
+.filters .expanded .expander {
+    /* 
+    sets the spacing and font of the filter expander text 
+    */
+    padding: 0px;
+    font-size: 1.05em;
+    background: none;
+
+}
+
+.filters .expander::before {
+    /* 
+    This is the arrow for the filters 
+    */
+    content: "\2799";
+}
+
+.filters .expanded .expander::before {
+    /* 
+    This is the arrow for the filters when expanded 
+    */
+    content: "\2798";
+}
+
+.filters input:checked+.indicator+span {
+    /*
+    resets the weight from the Ao3 default skin
+    */
+    font-weight: inherit;
+}
+
+
+/*
+=================
+      Forms
+=================
+*/
+
+/*
+This is the very complicated code for the checkboxes and the radio
+yes I hate it too.
+
+*/
+
+.filters [type="radio"]+.indicator:before,
+.filters [type="radio"]:checked+.indicator:before,
+.filters [type="checkbox"]+.indicator:before,
+.filters .exclude [type="checkbox"]+.indicator:before,
+.filters [type="checkbox"]:checked+.indicator:before,
+.filters .exclude [type="checkbox"]:checked+.indicator:before,
+input[type="checkbox"],
+input[type="radio"],
+input[type="checkbox"]:checked,
+input[type="radio"]:checked,
+.actions input[type="checkbox"]:checked,
+label.action input[type="checkbox"]:checked,
+input[type="checkbox"]:hover,
+.actions input[type="checkbox"]:hover {
+    /*
+  sets the size of the checkboxes and radio boxes around the website
+  including filters
+  */
+    width: $checkboxsize;
+    height: $checkboxsize;
+
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+
+.filters [type="radio"]+.indicator:before {
+    content: "";
+    vertical-align: -.125em;
+    background: none;
+    background-color: $colbackgroundinput;
+    border: none;
+}
+
+.filters [type="radio"]:checked+.indicator:before {
+    content: "";
+    vertical-align: -.125em;
+    background: none;
+    background-color: $colaccent;
+    border: none;
+}
+
+.filters [type="checkbox"]+.indicator:before,
+.filters .exclude [type="checkbox"]+.indicator:before {
+    content: "";
+    padding: 0px;
+    border-radius: 0px;
+    vertical-align: -.125em;
+    background: none;
+    background-color: $colbackgroundinput;
+    border: none;
+
+}
+
+.filters [type="checkbox"]:checked+.indicator:before,
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+    content: "";
+    padding: 0px;
+    border-radius: 0px;
+    vertical-align: -.125em;
+    background: none;
+    background-color: $colaccent;
+    border: none;
+}
+
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+    /* 
+    the exclude filters have a different color when checked
+    */
+    background-color: $colalert;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+.actions input[type="checkbox"],
+label.action input[type="checkbox"] {
+    background-color: $colbackgroundinput;
+    border: $borderwidth $colborder;
+
+
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="checkbox"]:checked,
+input[type="radio"]:checked,
+.actions input[type="checkbox"]:checked,
+label.action input[type="checkbox"]:checked,
+input[type="checkbox"]:hover,
+.actions input[type="checkbox"]:hover {
+    /* 
+    removes browser-specific appearance of checkboxes and radio 
+    */
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked,
+.actions input[type="checkbox"]:checked,
+label.action input[type="checkbox"]:checked,
+input[type="checkbox"]:hover,
+.actions input[type="checkbox"]:hover {
+    background-color: $colaccent;
+    border: none;
+}

@@ -1,0 +1,153 @@
+/*
+===========================
+General font and text stuff
+===========================
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    /*
+    -----------------TITLE FONT-----------------
+  This is the font for the titles, not for the body of text. 
+  If you want to change it remember to provide fallback fonts 
+  (something like 'serif' or 'sans-serif', separated by a comma)
+  */
+    font-family: $fontheading;
+    border-bottom: none;
+    font-weight: $fontweightheading;
+}
+
+body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+button,
+blockquote,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander,
+.bookmark .user .meta,
+.datetime,
+a.work,
+span.symbol, .splash .news .meta, select {
+    /*
+  -----------------MAIN FONT-----------------
+  This is the font for the entire body of text. If you need to change it please do it here
+  Please also remember to provide fallback fonts 
+  (something like 'serif' or 'sans-serif', separated by a comma)
+  */
+    font-family: $fontbody;
+}
+
+
+%text-size {
+  /*
+  -----------------TEXT SIZE-----------------
+  This sets the default text size
+  if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 1.1em, 1.2em, 1.15em before going a number up (or down)
+  */
+    font-size: $fontbasesize;
+}
+
+
+.home .header h2,
+.preface h3,
+.faq .categories h3,
+.userstuff h3,
+#footer a {
+  /*
+  Removes all the underlines from titles
+  */
+    border-bottom: none;
+}
+
+%line-height {
+  /*
+  -----------------LINE HEIGHT-----------------
+  This is the line height of the text.
+
+    if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 1.7em, 1.5em, 1.65em before going a number up (or down)
+  */
+    line-height: $lineheight;
+}
+
+
+body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+button, #main, select {
+    @extend %text-size;
+    @extend %line-height;
+}
+
+blockquote {
+    @extend %text-size;
+    @extend %line-height;
+}
+
+p.note {
+
+    @extend %text-size;
+    @extend %line-height; 
+}
+
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander {
+  /* 
+  a smaller text for the filters
+  just remove the font-size line if you want it bigger
+  */
+    font-size: $fontbasesize/$ratio;
+    @extend %line-height;
+
+}
+
+h4.heading {
+  /*ALLTHETITLESSSS*/
+    font-size: $fontbasesize*$ratio*$ratio;
+    font-weight: $fontweightheading;
+}
+
+
+h4 {
+  /* should this be here if I reset it later? */
+    font-size: $fontbasesize*$ratio;
+}
+
+h4.heading .datetime {
+    /* slightly bigger date on blurbs*/
+    padding: 5px;
+    font-size: $fontbasesize/$ratio/$ratio/$ratio;
+}
+
+.preface a:hover {
+    text-decoration: none;
+}
+
+#header {
+  /*
+  font size  of the stuff in the header menu
+  */
+  font-size: $fontbasesize/$ratioheader;
+}
+
+.news h4.heading {
+  margin: 0;
+}
