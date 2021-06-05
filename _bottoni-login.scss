@@ -1,5 +1,10 @@
 a.dropdown-toggle[href*="/works/new"] {
+
+  @if $bottonilogin == darkbuttons {
   background: url(https://i.ibb.co/SXJTJQw/add.png) !important;
+} @else if $bottonilogin == lightbuttons {
+  background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important;  
+}
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -9,7 +14,12 @@ a.dropdown-toggle[href*="/works/new"] {
 }
 
 a[href*="/users/logout"] {
+    @if $bottonilogin == darkbuttons {
   background: url(https://i.ibb.co/Np06xNb/log-off.png) !important;
+} @else if $bottonilogin == lightbuttons {
+  background: url(https://i.ibb.co/QXF4HkB/log-off-white.png) !important; 
+}
+
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -17,3 +27,5 @@ a[href*="/users/logout"] {
   height: 15px !important;
   padding: 0px !important;
 }
+
+

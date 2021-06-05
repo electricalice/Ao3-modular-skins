@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 ===========================
 General font and text stuff
@@ -81,7 +82,7 @@ button, #main, select, blockquote, p.note, .filters dt,
 .filters input[type="submit"],
 .filters .expander {
   /*
-  -----------------TEXT SIZE-----------------
+  -----------------LINE HEIGHT-----------------
   This is the line height of the text.
 
     if you need to increase or decrease, please keep in mind that "em"
@@ -130,7 +131,7 @@ h4.heading .datetime {
   margin: 0px;
   padding: .8em;
   border-bottom: 1px solid;
-  border-color: #495e75; }
+  border-color: #3b3b3b; }
 
 #header .search {
   float: none; }
@@ -498,14 +499,14 @@ input[type="radio"] {
   content: "";
   vertical-align: -.125em;
   background: none;
-  background-color: #3e405c;
+  background-color: #545454;
   border: none; }
 
 .filters [type="radio"]:checked + .indicator:before {
   content: "";
   vertical-align: -.125em;
   background: none;
-  background-color: #a1bd95;
+  background-color: #8cbebd;
   border: none; }
 
 .filters [type="checkbox"] + .indicator:before,
@@ -515,7 +516,7 @@ input[type="radio"] {
   border-radius: 0px;
   vertical-align: -.125em;
   background: none;
-  background-color: #3e405c;
+  background-color: #545454;
   border: none; }
 
 .filters [type="checkbox"]:checked + .indicator:before,
@@ -525,7 +526,7 @@ input[type="radio"] {
   border-radius: 0px;
   vertical-align: -.125em;
   background: none;
-  background-color: #a1bd95;
+  background-color: #8cbebd;
   border: none; }
 
 .filters .exclude [type="checkbox"]:checked + .indicator:before {
@@ -538,8 +539,8 @@ input[type="checkbox"],
 input[type="radio"],
 .actions input[type="checkbox"],
 label.action input[type="checkbox"] {
-  background-color: #3e405c;
-  border: 1px solid #495e75; }
+  background-color: #545454;
+  border: 1px solid #3b3b3b; }
 
 input[type="checkbox"],
 input[type="radio"],
@@ -568,7 +569,7 @@ input[type="radio"]:checked,
 label.action input[type="checkbox"]:checked,
 input[type="checkbox"]:hover,
 .actions input[type="checkbox"]:hover {
-  background-color: #a1bd95;
+  background-color: #8cbebd;
   border: none; }
 
 /*
@@ -644,7 +645,7 @@ li.comment {
     sets the border shapes 
     */
   border: 1px solid;
-  border-radius: 0px; }
+  border-radius: 5px; }
 
 th,
 thead,
@@ -666,7 +667,7 @@ li.post.group {
   this removes it
   */
   border-bottom: 1px solid;
-  border-radius: 0px; }
+  border-radius: 5px; }
 
 tr,
 th,
@@ -771,6 +772,13 @@ properly positioned
 .fandom .group.listbox {
   width: 100%; }
 
+form.inbox {
+  overflow-x: initial; }
+
+#dashboard {
+  /*this deals with the border on ipad*/
+  border-color: transparent; }
+
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important;
   background-size: 15px 15px !important;
@@ -797,8 +805,8 @@ body,
 #modal,
 .filters .expander,
 .autocomplete div.dropdown ul {
-  color: #dde6e5;
-  background-color: #2d2a49; }
+  color: #fafafa;
+  background-color: #2e2e2e; }
 
 li.blurb,
 .dashboard li.own,
@@ -808,25 +816,13 @@ fieldset,
 li.post.group,
 li.comment {
   /* dark mode cards */
-  background-color: #495e75; }
-
-li.relationships a {
-  background-color: #2d2a49; }
-
-.listbox > .heading,
-.listbox .heading a:visited,
-form dd.required,
-#header .primary .menu a,
-#header .primary .menu .current,
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  color: #dde6e5; }
+  background-color: #3b3b3b; }
 
 ::-moz-selection,
 ::selection,
 ::-webkit-selection {
-  background-color: #a1bd95;
-  color: #2d2a49; }
+  background-color: #8cbebd;
+  color: #2e2e2e; }
 
 .actions a,
 .actions a:link,
@@ -838,82 +834,118 @@ input[type="submit"],
 button,
 .current,
 .actions label,
-.dropdown,
-.splash .favorite li:nth-of-type(odd) a,
-input#site_search:focus,
-#header #search input:focus,
-.toggled form,
-.dynamic form,
-.secondary,
-.dropdown,
-form.verbose legend {
-  color: #dde6e5;
-  background-color: #36395c; }
+.listbox > .heading,
+.listbox .heading a:visited,
+form dd.required,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander,
+#header .primary .menu a,
+#header .primary .menu .current,
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  color: #fafafa; }
 
 a,
 a:link,
 a:visited,
 a.tag,
-a.tag:visited,
 a.tag:link,
+a.tag:visited,
+.listbox .index a,
 .listbox .index a:link,
 .listbox .index a:visited,
-.listbox .index a,
-#header a,
-#header a:link,
-#header a:visited,
 #header .heading a,
+#header .heading a:link,
+#header .heading a:visited,
 .splash .module h3,
 .blurb h4 a:link,
 .blurb h4 a,
+.blurb h4 a:link,
 .blurb h4 a:visited,
 #header a,
+#header a:link,
 #header a:visited,
 #header .current,
 #header .primary .open a,
+#header .primary .open a:link,
+#header .primary .open a:visited,
 #header .primary .dropdown:hover a,
+#header .primary .dropdown:hover a:link,
+#header .primary .dropdown:hover a:visited,
 #header .primary .dropdown a:focus,
 #dashboard a,
+#dashboard a:link,
+#dashboard a:visited,
 #dashboard span,
 li::marker,
 .draggable,
 .droppable {
-  color: #a1bd95; }
+  color: #8cbebd; }
 
-.blurb h4 a:visited {
-  color: #a1bd95 !important; }
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.action:visited,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+.dropdown,
+.splash .favorite li:nth-of-type(odd) a,
+input#site_search:focus,
+#header #search input:focus,
+.autocomplete div.dropdown ul,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+form.verbose legend {
+  color: #fafafa;
+  background-color: #525151; }
 
-#footer,
 a:hover,
+a:visited:hover,
 a.tag:hover,
+a.tag:visited:hover,
+.listbox .heading a.tag:hover,
 .listbox .heading a.tag:visited:hover,
+.listbox .index a:hover,
+.listbox .index a:visited:hover,
 #dashboard a:hover,
+#dashboard a:visited:hover,
 .actions a:hover,
-.actions input:hover,
+.actions a:visited:hover,
 .actions a:focus,
+.actions input:hover,
 .actions input:focus,
 label.action:hover,
 .action:hover,
+.action:visited:hover,
 .action:focus,
 .splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:visited:hover,
 .splash .favorite li:nth-of-type(odd) a:focus,
+.blurb h4 a:visited:hover,
 .blurb h4 a:hover,
-a:visited:hover,
 input[type="submit"]:hover,
 #header .dropdown .menu a:hover,
+#header .dropdown .menu a:visited:hover,
 #header .dropdown .menu a:focus,
 a[href*="/users/logout"],
-a.tag:hover,
 .event .userstuff,
 .event .userstuff a,
 .event .userstuff a:link,
-.event .userstuff a:visited,
-.listbox .index a:hover,
-.autocomplete div.dropdown ul,
-.autocomplete .dropdown ul li:hover,
-li.selected {
-  background-color: #255c7e;
-  color: #dde6e5; }
+.event .userstuff a:visited {
+  background-color: #8cbebd;
+  color: #2e2e2e; }
+
+.blurb h4 a:visited {
+  color: #8cbebd !important; }
 
 #dashboard .current,
 #header .menu,
@@ -928,13 +960,21 @@ li.selected {
 tr:hover,
 #outer .current,
 .thread .even,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown {
+  background-color: #525151;
+  /* needs this too to override some instances */
+  background: #525151; }
+
 .autocomplete .dropdown ul li:hover,
 li.selected {
-  background-color: #36395c;
-  /* needs this too to override some instances */
-  background: #36395c; }
+  /* cos'è sta roba e perchè l'ho fatta in modo diverso su dark e light*/
+  background-color: #525151;
+  background: #525151; }
 
-a.modal.help:hover {
+a.modal.help:hover, li.relationships a {
   background-color: transparent; }
 
 .notice,
@@ -949,20 +989,15 @@ ul.notes,
 #header h2.collections,
 #header h2 {
   background-color: #b3dcdb;
-  color: #2d2a49; }
+  color: #2e2e2e; }
 
 #footer {
   border-top: none;
-  background-color: #255c7e; }
+  background-color: #588f90; }
 
-.required,
-.error,
-.alert.flash,
-.nominations .rejected {
-  color: #ffb6b9; }
-
-p.required.notice {
-  color: #d41212 !important; }
+#header {
+  background-color: #3b3b3b;
+  border-color: #3b3b3b; }
 
 fieldset,
 form dl,
@@ -989,20 +1024,22 @@ tbody tr,
 .filters fieldset,
 .wrapper,
 li.blurb,
-fieldset,
-form dl,
 dl.meta,
 .faq .example,
 .guideline .example,
 li.post.group,
 li.comment,
 .splash .news li:last-of-type {
-  border-color: #495e75; }
+  border-color: #3b3b3b; }
 
 .required,
 .error,
-.alert.flash {
+.alert.flash,
+.nominations .rejected {
   color: #ffb6b9 !important; }
+
+p.required.notice {
+  color: #d41212 !important; }
 
 form.search input[type="text"],
 dd.autocomplete li.input,
@@ -1020,44 +1057,41 @@ select:focus,
 textarea:focus,
 input,
 textarea {
-  border-top-color: #3e405c;
-  border-color: #3e405c;
-  background-color: #3e405c; }
+  color: #fafafa;
+  border-top-color: #545454;
+  border-color: #545454;
+  background-color: #545454; }
 
 .filters [type="radio"] + .indicator:before,
 .filters [type="checkbox"] + .indicator:before,
 .filters .exclude [type="checkbox"] + .indicator:before {
-  background-color: #3e405c; }
+  background-color: #545454; }
 
 .filters [type="radio"]:checked + .indicator:before,
 .filters [type="checkbox"]:checked + .indicator:before,
 .filters .exclude [type="checkbox"]:checked + .indicator:before {
-  background-color: #a1bd95; }
+  background-color: #8cbebd; }
 
 .filters .exclude [type="checkbox"]:checked + .indicator:before {
   background-color: #ffb6b9; }
 
-.blurb .header h4.heading a:hover {
-  color: #dde6e5 !important; }
-
-#header {
-  background-color: #495e75;
-  border-color: #495e75; }
+.secondary {
+  background-color: #2e2e2e; }
 
 .javascript {
   background-color: #3b3b3b !important; }
 
 .announcement input[type="submit"],
 .announcement .action {
-  background: #2d2a49;
-  border: 1px solid #495e75;
-  color: #dde6e5; }
+  background: #2e2e2e;
+  border: 1px solid #3b3b3b;
+  color: #fafafa; }
 
-.blurb .header img {
-  background-color: #a1bd95; }
+.ui-draggable form {
+  box-shadow: 0 0 3px #545454; }
 
 .userstuff blockquote {
-  border-inline-start: 2px solid #a1bd95; }
+  border-inline-start: 2px solid #8cbebd; }
 
 span.offered.requested {
   color: yellow; }
@@ -1068,8 +1102,22 @@ span.offered,
   color: green; }
 
 .chapter .preface {
-  border-color: #495e75; }
+  border-color: #3b3b3b; }
 
 span.requested,
 .nominations .rejected {
   color: red; }
+
+.blurb .header h4.heading a:hover, .blurb .header h4.heading a:visited:hover {
+  color: #fafafa !important; }
+
+.blurb .header img {
+  background-color: #8cbebd; }
+
+#workskin,
+.blurb .userstuff,
+.news .userstuff,
+.system .userstuff,
+.collection blockquote.userstuff {
+  width: 70%;
+  max-width: 45em; }
