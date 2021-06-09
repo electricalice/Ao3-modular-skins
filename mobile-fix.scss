@@ -91,6 +91,11 @@ div.preface {
   margin: 0px;
 }
 
+.blurb .header p.notice, .blurb ul.series {
+    margin: 10px 0;
+}
+
+
 //end blurb stuff
 .filters dt {
   background-color: transparent;
@@ -132,7 +137,7 @@ p.kudos {
     margin-inline-start: 1em;
 }
 
-li.showme a.actions {
+li.showme a.actions, dl.stats dd {
 
     white-space: normal;
     height: initial;
@@ -188,4 +193,42 @@ div.preface,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 100% !important;
+}
+
+.skins .header .heading, .user.pseud.picture.blurb .header .heading {
+  margin: .375em .375em 0 65px !important;
+}
+
+  div#inner {
+
+    width: 100% !important;
+
+}
+
+
+/*
+===========
+  Icons
+===========
+*/
+
+.user .primary p.icon,
+.admin .primary .icon, .collection .icon {
+  /* 
+  centers the icons on profile pages, collections and news posts
+  */
+    position: initial;
+    margin: 10px auto;
+}
+
+.primary .icon {
+    position: relative;
+}
+.user h2.heading,
+.admin h2.heading, .collection h2.heading {
+  /*
+  Centers Usernames and titles in admin pages and collections
+  */
+    margin: 10px auto;
+    text-align: center;
 }

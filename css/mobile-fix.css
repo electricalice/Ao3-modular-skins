@@ -1,16 +1,20 @@
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 #footer .module {
   max-width: 40%;
-  margin: auto; }
+  margin: auto;
+}
 
 .userstuff, #header {
-  font-size: 110% !important; }
+  font-size: 110% !important;
+}
 
 #footer .heading,
 .comment h4.byline {
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+}
 
 #header .heading,
 #login,
@@ -20,16 +24,19 @@ h4 {
   margin: auto;
   width: 100%;
   text-align: center;
-  float: none; }
+  float: none;
+}
 
 #header .user {
   float: none;
-  text-align: center; }
+  text-align: center;
+}
 
 .home .header .userstuff,
 .home .header dl.stats,
 .home .header .type {
-  margin-left: auto; }
+  margin-left: auto;
+}
 
 #header .menu,
 #small_login,
@@ -37,78 +44,101 @@ h4 {
 #header .menu,
 #small_login,
 #header .dropdown:hover .current + .menu {
-  width: auto; }
+  width: auto;
+}
 
 div.preface {
-  margin: 1.5em; }
+  margin: 1.5em;
+}
 
 #dashboard,
 #dashboard.own {
   border-bottom: 0px;
   border-top: 0px;
-  border: 0px; }
+  border: 0px;
+}
 
 .blurb .header .heading {
-  margin: .375em .375em 0 65px;
-  overflow-wrap: break-word; }
+  margin: 0.375em 0.375em 0 65px;
+  overflow-wrap: break-word;
+}
 
 .blurb .datetime {
-  position: initial; }
+  position: initial;
+}
 
 /* the following lines of codes rearrange the required tags icons*/
 .blurb h4.heading {
-  margin: 0 !important; }
+  margin: 0 !important;
+}
 
 .blurb ul.required-tags {
   position: initial;
   top: initial;
-  display: flex; }
+  display: flex;
+}
 
 .blurb ul.required-tags li + li + li, .blurb ul.required-tags li + li + li + li {
   position: initial;
-  left: initial; }
+  left: initial;
+}
 
 .blurb ul.required-tags li {
-  padding-right: 6px; }
+  padding-right: 6px;
+}
 
 .blurb .header h5.fandoms {
-  margin: 0px; }
+  margin: 0px;
+}
+
+.blurb .header p.notice, .blurb ul.series {
+  margin: 10px 0;
+}
 
 .filters dt {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 #ui-datepicker-div {
-  top: 522px !important; }
+  top: 522px !important;
+}
 
 .javascript {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
-.assigned.module th[scope="col"],
-thead th[scope="col"] {
+.assigned.module th[scope=col],
+thead th[scope=col] {
   max-width: 18px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .primary li:nth-of-type(4) .menu {
-  margin-left: -70px; }
+  margin-left: -70px;
+}
 
 p.kudos {
   background: url(/images/imageset.png) no-repeat -110px -580px;
   padding: 4em 0 0 0;
   min-height: 50px;
-  word-break: break-word; }
+  word-break: break-word;
+}
 
 .faq .userstuff .notice, .faq .userstuff .caution, .faq .example, .guideline .userstuff .notice, .guideline .userstuff .caution, .guideline .example {
   /* mostly for stuff in the guidelines 
   lowers the indent*/
-  margin: 0; }
+  margin: 0;
+}
 
 .userstuff dd {
   /*less indent*/
-  margin-inline-start: 1em; }
+  margin-inline-start: 1em;
+}
 
-li.showme a.actions {
+li.showme a.actions, dl.stats dd {
   white-space: normal;
-  height: initial; }
+  height: initial;
+}
 
 /*
 ===========
@@ -119,7 +149,8 @@ li.showme a.actions {
   /*
   This resets the main page width to a decent size for mobile
   */
-  width: 100% !important; }
+  width: 100% !important;
+}
 
 p.kudos {
   /*
@@ -128,17 +159,20 @@ p.kudos {
   background: none;
   padding: 0;
   min-height: 0;
-  word-break: break-word; }
+  word-break: break-word;
+}
 
 p.kudos::before {
-  content: "Kudos:"; }
+  content: "Kudos:";
+}
 
 div.preface,
 .preface.group blockquote.userstuff {
   /*
   reduces the indent in the blockquotes and the author's note
   */
-  margin: 0; }
+  margin: 0;
+}
 
 .chapter .secondary, .download .secondary {
   /*
@@ -147,11 +181,48 @@ div.preface,
   */
   top: initial;
   right: 0;
-  margin: 10px; }
+  margin: 10px;
+}
 
 #workskin,
 .blurb .userstuff,
 .news .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
-  width: 100% !important; }
+  width: 100% !important;
+}
+
+.skins .header .heading, .user.pseud.picture.blurb .header .heading {
+  margin: 0.375em 0.375em 0 65px !important;
+}
+
+div#inner {
+  width: 100% !important;
+}
+
+/*
+===========
+  Icons
+===========
+*/
+.user .primary p.icon,
+.admin .primary .icon, .collection .icon {
+  /* 
+  centers the icons on profile pages, collections and news posts
+  */
+  position: initial;
+  margin: 10px auto;
+}
+
+.primary .icon {
+  position: relative;
+}
+
+.user h2.heading,
+.admin h2.heading, .collection h2.heading {
+  /*
+  Centers Usernames and titles in admin pages and collections
+  */
+  margin: 10px auto;
+  text-align: center;
+}

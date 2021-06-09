@@ -30,6 +30,7 @@ $paragraphheight: 2em;
 $bordershape: 5px;
 $borderwidth: 1px solid;
 $borderbutton: none;
+$boxbackground: yes;
 
 $checkboxsize: .8em;
 
@@ -53,8 +54,8 @@ $colbackground: #2e2e2e;
 $coltext: #fafafa;
 $colaccent: #8cbebd;
 $colbackgroundalt: #525151;
-$colbackgroundalt2: #3b3b3b;
-$colborder: #3b3b3b;
+$colbackgroundalt2: lighten($colbackground, 2%);
+$colborder: $colbackgroundalt2;
 $colnotice: #b3dcdb;
 $textnotice: $colbackground;
 $colalert: #ffb6b9;

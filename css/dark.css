@@ -19,7 +19,8 @@ h6,
   */
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   border-bottom: none;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 body,
 input,
@@ -31,7 +32,7 @@ button,
 blockquote,
 .filters dt,
 .filters dd,
-.filters input[type="submit"],
+.filters input[type=submit],
 .filters .expander,
 .bookmark .user .meta,
 .datetime,
@@ -43,15 +44,16 @@ span.symbol, .splash .news .meta, select {
   Please also remember to provide fallback fonts 
   (something like 'serif' or 'sans-serif', separated by a comma)
   */
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif; }
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
 
-body,
+p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
 .secondary,
 .dropdown,
-button, #main, select, blockquote, p.note {
+button, #main, select {
   /*
   -----------------TEXT SIZE-----------------
   This sets the default text size
@@ -59,7 +61,8 @@ button, #main, select, blockquote, p.note {
   as a measurement changes A LOT between numbers, so you might want to try
   decimals like 1.1em, 1.2em, 1.15em before going a number up (or down)
   */
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 .home .header h2,
 .preface h3,
@@ -69,18 +72,19 @@ button, #main, select, blockquote, p.note {
   /*
   Removes all the underlines from titles
   */
-  border-bottom: none; }
+  border-bottom: none;
+}
 
-body,
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
 .secondary,
 .dropdown,
-button, #main, select, blockquote, p.note, .filters dt,
-.filters dd,
-.filters input[type="submit"],
-.filters .expander {
+button, #main, select {
   /*
   -----------------LINE HEIGHT-----------------
   This is the line height of the text.
@@ -89,146 +93,183 @@ button, #main, select, blockquote, p.note, .filters dt,
   as a measurement changes A LOT between numbers, so you might want to try
   decimals like 1.7em, 1.5em, 1.65em before going a number up (or down)
   */
-  line-height: 1.125; }
+  line-height: 1.125;
+}
 
 .filters dt,
 .filters dd,
-.filters input[type="submit"],
+.filters input[type=submit],
 .filters .expander {
   /* 
   a smaller text for the filters
   just remove the font-size line if you want it bigger
   */
-  font-size: 0.83333em; }
+  font-size: 0.8333333333em;
+}
 
 h4.heading {
   /*ALLTHETITLESSSS*/
   font-size: 1.44em;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 h4 {
   /* should this be here if I reset it later? */
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 h4.heading .datetime {
   /* slightly bigger date on blurbs*/
   padding: 5px;
-  font-size: 0.5787em; }
+  font-size: 0.5787037037em;
+}
 
 .preface a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #header {
   /*
   font size  of the stuff in the header menu
   */
-  font-size: 0.83333em; }
+  font-size: 0.8333333333em;
+}
 
 .news h4.heading {
-  margin: 0; }
+  margin: 0;
+}
 
 #header {
   margin: 0px;
-  padding: .8em;
+  padding: 0.8em;
   border-bottom: 1px solid;
-  border-color: #3b3b3b; }
+  border-color: #333333;
+}
 
 #header .search {
-  float: none; }
+  float: none;
+}
 
 input#site_search {
-  width: 60px; }
+  width: 60px;
+}
 
 input#site_search:focus {
-  width: auto; }
+  width: auto;
+}
 
 #header .heading {
   position: relative;
   display: inline-block;
   z-index: 1;
   padding: 0;
-  margin-left: .5em; }
+  margin-left: 0.5em;
+}
 
 #login,
 #greeting {
   float: right;
   position: relative;
   display: inline-block;
-  padding: .5em;
-  margin-right: .5em; }
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
 
 #header .primary {
   position: relative;
   display: block;
   float: none;
   background: none;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  box-shadow: none; }
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-shadow: none;
+}
 
 #header .primary a {
-  color: currentColor; }
+  color: currentColor;
+}
 
 #header .logo,
 #header .heading sup,
 #greeting p.icon {
-  display: none; }
+  display: none;
+}
 
 #header li {
   display: inline-block;
   float: none;
-  position: relative; }
+  position: relative;
+}
 
 #header input,
 #header #search > *,
 #header #search .submit {
   display: inline;
   float: none;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 #header .user {
-  padding: 0px; }
+  padding: 0px;
+}
 
 #header h1 {
-  vertical-align: sub; }
+  vertical-align: sub;
+}
 
 #header .user a:hover,
 #header .user a:focus,
 #header .user .current {
   color: currentColor;
-  border-radius: 0px; }
+  border-radius: 0px;
+}
 
 #footer {
   background-image: none;
-  border-top: 1px solid; }
+  border-top: 1px solid;
+}
 
 #inner.wrapper {
-  min-height: 80vh; }
+  min-height: 80vh;
+}
 
 #main {
-  padding-top: 2em; }
+  padding-top: 2em;
+}
 
 #main.dashboard {
-  margin-top: 0px; }
+  margin-top: 0px;
+}
 
 #header .menu li {
   border-bottom: none;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
 ========
 Buttons!
 ========
 */
-.actions a,
-.actions a:link,
-.action,
-.action:link,
-button,
-.current,
-.actions label, .actions input,
-input[type="submit"],
-textarea, input, #header .primary,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+.event .userstuff, .notice,
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash,
+.actions a:hover,
+.actions input:hover,
+.actions a:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus,
+.dynamic form,
+.ui-draggable form, #header .primary,
 .group.listbox,
 fieldset fieldset.listbox,
 #main li.blurb,
@@ -252,65 +293,69 @@ fieldset fieldset dl dl,
 dd.hideme,
 .delete a,
 span.delete,
-#header ul.primary, .notice,
-.comment_notice,
-ul.notes,
-.caution,
-.error,
-.comment_error,
-.alert.flash,
-.actions a:hover,
-.actions input:hover,
-.actions a:focus,
-.actions input:focus,
-label.action:hover,
-.action:hover,
-.action:focus,
-.dynamic form,
-.ui-draggable form, #header .menu,
-#small_login,
-#header .dropdown:hover .current + .menu,
-.event .userstuff {
+#header ul.primary, input, .actions input,
+input[type=submit],
+textarea, .actions a,
+.actions a:link,
+.action,
+.action:link,
+button,
+.current,
+.actions label {
   /*
   This resets the shadows in several places
   */
-  box-shadow: none; }
+  box-shadow: none;
+}
 
-.actions a,
+#footer,
+.autocomplete .dropdown ul li:hover,
+li.selected,
+.autocomplete a:hover, form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend, input, .actions input,
+input[type=submit],
+textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
 button,
 .current,
-.actions label, .actions input,
-input[type="submit"],
-textarea, input, form .notice,
-form ul.notes,
-form.verbose legend,
-.verbose form legend, #footer,
-.autocomplete .dropdown ul li:hover,
-li.selected,
-.autocomplete a:hover {
+.actions label {
   /*
   This resets the background image from default skin in several places
   */
-  background-image: none; }
+  background-image: none;
+}
 
-.actions a,
+.actions input,
+input[type=submit],
+textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
 button,
 .current,
-.actions label, .actions input,
-input[type="submit"],
-textarea {
+.actions label {
   /*
   Further 3d elements to reset in webkit browsers
   */
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
-.notice,
+form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend,
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+input[type=submit],
+button,
+.current,
+.actions label, .notice,
 .comment_notice,
 ul.notes,
 .caution,
@@ -326,20 +371,10 @@ label.action:hover,
 .action:focus,
 .toggled form,
 .dynamic form,
-.ui-draggable form, form .notice,
-form ul.notes,
-form.verbose legend,
-.verbose form legend,
-.actions a,
-.actions a:link,
-.action,
-.action:link,
-input[type="submit"],
-button,
-.current,
-.actions label {
+.ui-draggable form {
   /* Sets the style for border buttons */
-  border: none; }
+  border: none;
+}
 
 .actions a,
 .actions a:link,
@@ -348,11 +383,13 @@ button,
 button,
 .current,
 .actions label {
-  border: none; }
+  border: none;
+}
 
 input {
   width: 96%;
-  border: 1px solid; }
+  border: 1px solid;
+}
 
 .actions a:hover,
 a:hover,
@@ -383,7 +420,8 @@ dl.index dd,
   /* resets the border color */
   border-color: initial;
   /* extra aggressive shadow removing */
-  box-shadow: none !important; }
+  box-shadow: none !important;
+}
 
 form .notice,
 form ul.notes,
@@ -393,11 +431,12 @@ form.verbose legend,
 .actions a:link,
 .action,
 .action:link,
-input[type="submit"],
+input[type=submit],
 button,
 .current,
 .actions label {
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 .listbox .index,
 .dashboard .listbox .index,
@@ -405,29 +444,33 @@ button,
 form dt,
 .picture .header {
   /* 
-    some stuff needs some aggressive non-bordering 
-    */
+  some stuff needs some aggressive non-bordering 
+  */
   border: none;
   border-bottom: none;
   border-top: none;
   border-left: none;
-  border-right: none; }
+  border-right: none;
+}
 
 #header .menu,
 #small_login,
 #header .dropdown:hover .current + .menu,
 .event .userstuff {
   /* 
-    removes some more effects of default skin
-    */
-  filter: none; }
+  removes some more effects of default skin
+  */
+  filter: none;
+}
 
 .autocomplete input,
 .autocomplete .dropdown ul li {
-  min-width: 10px; }
+  min-width: 10px;
+}
 
 fieldset.work.meta .fandom.required ul.autocomplete {
-  background: transparent; }
+  background: transparent;
+}
 
 /*
 ============
@@ -437,29 +480,33 @@ fieldset.work.meta .fandom.required ul.autocomplete {
 .filters .expander,
 .filters .expanded .expander {
   /* 
-    sets the spacing and font of the filter expander text 
-    */
+  sets the spacing and font of the filter expander text 
+  */
   padding: 0px;
   font-size: 1.05em;
-  background: none; }
+  background: none;
+}
 
 .filters .expander::before {
   /* 
-    This is the arrow for the filters 
-    */
-  content: "\2799"; }
+  This is the arrow for the filters 
+  */
+  content: "➙";
+}
 
 .filters .expanded .expander::before {
   /* 
-    This is the arrow for the filters when expanded 
-    */
-  content: "\2798"; }
+  This is the arrow for the filters when expanded 
+  */
+  content: "➘";
+}
 
 .filters input:checked + .indicator + span {
   /*
-    resets the weight from the Ao3 default skin
-    */
-  font-weight: inherit; }
+  resets the weight from the Ao3 default skin
+  */
+  font-weight: inherit;
+}
 
 /*
 =================
@@ -471,88 +518,96 @@ This is the very complicated code for the checkboxes and the radio
 yes I hate it too.
 
 */
-.filters [type="radio"] + .indicator:before,
-.filters [type="radio"]:checked + .indicator:before,
-.filters [type="checkbox"] + .indicator:before,
-.filters .exclude [type="checkbox"] + .indicator:before,
-.filters [type="checkbox"]:checked + .indicator:before,
-.filters .exclude [type="checkbox"]:checked + .indicator:before,
-input[type="checkbox"],
-input[type="radio"],
-input[type="checkbox"]:checked,
-input[type="radio"]:checked,
-.actions input[type="checkbox"]:checked,
-label.action input[type="checkbox"]:checked,
-input[type="checkbox"]:hover,
-.actions input[type="checkbox"]:hover {
+.filters [type=radio] + .indicator:before,
+.filters [type=radio]:checked + .indicator:before,
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before,
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before,
+input[type=checkbox],
+input[type=radio],
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
   /*
   sets the size of the checkboxes and radio boxes around the website
   including filters
   */
   width: 0.8em;
-  height: 0.8em; }
+  height: 0.8em;
+}
 
-input[type="radio"] {
-  border-radius: 50%; }
+input[type=radio] {
+  border-radius: 50%;
+}
 
-.filters [type="radio"] + .indicator:before {
+.filters [type=radio] + .indicator:before {
   content: "";
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   background: none;
   background-color: #545454;
-  border: none; }
+  border: none;
+}
 
-.filters [type="radio"]:checked + .indicator:before {
+.filters [type=radio]:checked + .indicator:before {
   content: "";
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   background: none;
   background-color: #8cbebd;
-  border: none; }
+  border: none;
+}
 
-.filters [type="checkbox"] + .indicator:before,
-.filters .exclude [type="checkbox"] + .indicator:before {
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before {
   content: "";
   padding: 0px;
   border-radius: 0px;
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   background: none;
   background-color: #545454;
-  border: none; }
+  border: none;
+}
 
-.filters [type="checkbox"]:checked + .indicator:before,
-.filters .exclude [type="checkbox"]:checked + .indicator:before {
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before {
   content: "";
   padding: 0px;
   border-radius: 0px;
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   background: none;
   background-color: #8cbebd;
-  border: none; }
+  border: none;
+}
 
-.filters .exclude [type="checkbox"]:checked + .indicator:before {
+.filters .exclude [type=checkbox]:checked + .indicator:before {
   /* 
-    the exclude filters have a different color when checked
-    */
-  background-color: #ffb6b9; }
+  the exclude filters have a different color when checked
+  */
+  background-color: #ffb6b9;
+}
 
-input[type="checkbox"],
-input[type="radio"],
-.actions input[type="checkbox"],
-label.action input[type="checkbox"] {
+input[type=checkbox],
+input[type=radio],
+.actions input[type=checkbox],
+label.action input[type=checkbox] {
   background-color: #545454;
-  border: 1px solid #3b3b3b; }
+  border: 1px solid #333333;
+}
 
-input[type="checkbox"],
-input[type="radio"],
-input[type="checkbox"]:checked,
-input[type="radio"]:checked,
-.actions input[type="checkbox"]:checked,
-label.action input[type="checkbox"]:checked,
-input[type="checkbox"]:hover,
-.actions input[type="checkbox"]:hover {
+input[type=checkbox],
+input[type=radio],
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
   /* 
-    removes browser-specific appearance of checkboxes and radio 
-    */
+  removes browser-specific appearance of checkboxes and radio 
+  */
   display: inline-block;
   appearance: none;
   -webkit-appearance: none;
@@ -561,16 +616,30 @@ input[type="checkbox"]:hover,
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked,
-.actions input[type="checkbox"]:checked,
-label.action input[type="checkbox"]:checked,
-input[type="checkbox"]:hover,
-.actions input[type="checkbox"]:hover {
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
   background-color: #8cbebd;
-  border: none; }
+  border: none;
+}
+
+/*
+===============================
+  makes the layout smaller
+===============================
+*/
+div#inner {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100em;
+}
 
 /*
 ===============================
@@ -610,10 +679,11 @@ thead,
 tfoot,
 .reading h4.viewed, li.relationships a {
   /* 
-    it removes the color background 
-    where it's set in Ao3's default skin
-    */
-  background: transparent; }
+  it removes the color background 
+  where it's set in Ao3's default skin
+  */
+  background: transparent;
+}
 
 .secondary,
 dl.meta,
@@ -642,24 +712,27 @@ form.verbose legend,
 li.blurb,
 li.comment {
   /* 
-    sets the border shapes 
-    */
+  sets the border shapes 
+  */
   border: 1px solid;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 th,
 thead,
 tbody tr {
   /* 
-    sets the border shapes 
-    */
-  border: 1px solid; }
+  sets the border shapes 
+  */
+  border: 1px solid;
+}
 
 li.post.group {
   /* 
   posts social distancing 
   */
-  padding: 10px; }
+  padding: 10px;
+}
 
 .splash .news li:last-of-type {
   /* 
@@ -667,7 +740,8 @@ li.post.group {
   this removes it
   */
   border-bottom: 1px solid;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 tr,
 th,
@@ -677,7 +751,8 @@ tfoot {
   /* 
   this is for tables
   */
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .bookmark .user,
 .filters dl,
@@ -697,7 +772,8 @@ a,
 a:link,
 a:visited:hover {
   /* remove borders */
-  border: none; }
+  border: none;
+}
 
 #dashboard.own,
 #dashboard ul,
@@ -711,7 +787,8 @@ a:visited:hover {
   set in ao3's default skin
   */
   border-top: none;
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 span.symbol {
   /* 
@@ -719,7 +796,8 @@ span.symbol {
   */
   color: initial;
   border: 1px solid;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .blurb .header img {
   /* 
@@ -728,7 +806,8 @@ span.symbol {
   */
   vertical-align: baseline;
   padding: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 /* 
 I make the icons smaller, 
@@ -737,29 +816,36 @@ properly positioned
 */
 .icon {
   height: 80px;
-  width: 80px; }
+  width: 80px;
+}
 
 .tag .primary .icon,
 .tagset .primary .icon {
-  background: url(/images/imageset.png) -10px -285px; }
+  background: url(/images/imageset.png) -10px -285px;
+}
 
 .skins .primary .icon {
-  background: url(/images/imageset.png) -10px -185px; }
+  background: url(/images/imageset.png) -10px -185px;
+}
 
 .comment h4.byline {
-  padding: .25em; }
+  padding: 0.25em;
+}
 
 .abbreviated h4.byline {
-  padding-left: .25em; }
+  padding-left: 0.25em;
+}
 
 .comment div.icon {
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .comment .icon .visitor {
   background: url(/images/imageset.png) no-repeat -10px -85px;
-  display: block; }
+  display: block;
+}
 
 /*end of stuff regarding the icon resizing*/
 .comment .posted {
@@ -767,17 +853,21 @@ properly positioned
   positions the date of a comment 
   */
   display: block;
-  float: none; }
+  float: none;
+}
 
 .fandom .group.listbox {
-  width: 100%; }
+  width: 100%;
+}
 
 form.inbox {
-  overflow-x: initial; }
+  overflow-x: initial;
+}
 
 #dashboard {
   /*this deals with the border on ipad*/
-  border-color: transparent; }
+  border-color: transparent;
+}
 
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important;
@@ -786,7 +876,8 @@ a.dropdown-toggle[href*="/works/new"] {
   display: block-inline;
   width: 15px !important;
   height: 15px !important;
-  padding: 0px !important; }
+  padding: 0px !important;
+}
 
 a[href*="/users/logout"] {
   background: url(https://i.ibb.co/QXF4HkB/log-off-white.png) !important;
@@ -795,7 +886,8 @@ a[href*="/users/logout"] {
   display: block-inline;
   width: 15px !important;
   height: 15px !important;
-  padding: 0px !important; }
+  padding: 0px !important;
+}
 
 body,
 #header,
@@ -806,7 +898,8 @@ body,
 .filters .expander,
 .autocomplete div.dropdown ul {
   color: #fafafa;
-  background-color: #2e2e2e; }
+  background-color: #2e2e2e;
+}
 
 li.blurb,
 .dashboard li.own,
@@ -816,13 +909,15 @@ fieldset,
 li.post.group,
 li.comment {
   /* dark mode cards */
-  background-color: #3b3b3b; }
+  background-color: #333333;
+}
 
 ::-moz-selection,
 ::selection,
 ::-webkit-selection {
   background-color: #8cbebd;
-  color: #2e2e2e; }
+  color: #2e2e2e;
+}
 
 .actions a,
 .actions a:link,
@@ -830,7 +925,7 @@ li.comment {
 .action,
 .action:link,
 .actions input,
-input[type="submit"],
+input[type=submit],
 button,
 .current,
 .actions label,
@@ -839,13 +934,14 @@ button,
 form dd.required,
 .filters dt,
 .filters dd,
-.filters input[type="submit"],
+.filters input[type=submit],
 .filters .expander,
 #header .primary .menu a,
 #header .primary .menu .current,
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  color: #fafafa; }
+input[type=radio] + label,
+input[type=checkbox] + label {
+  color: #fafafa;
+}
 
 a,
 a:link,
@@ -871,9 +967,9 @@ a.tag:visited,
 #header .primary .open a,
 #header .primary .open a:link,
 #header .primary .open a:visited,
-#header .primary .dropdown:hover a,
-#header .primary .dropdown:hover a:link,
-#header .primary .dropdown:hover a:visited,
+#header .primary .dropdown a,
+#header .primary .dropdown a:link,
+#header .primary .dropdown a:visited,
 #header .primary .dropdown a:focus,
 #dashboard a,
 #dashboard a:link,
@@ -882,7 +978,8 @@ a.tag:visited,
 li::marker,
 .draggable,
 .droppable {
-  color: #8cbebd; }
+  color: #8cbebd;
+}
 
 .actions a,
 .actions a:link,
@@ -891,7 +988,7 @@ li::marker,
 .action:link,
 .action:visited,
 .actions input,
-input[type="submit"],
+input[type=submit],
 button,
 .current,
 .actions label,
@@ -906,7 +1003,8 @@ input#site_search:focus,
 .dropdown,
 form.verbose legend {
   color: #fafafa;
-  background-color: #525151; }
+  background-color: #525151;
+}
 
 a:hover,
 a:visited:hover,
@@ -932,20 +1030,22 @@ label.action:hover,
 .splash .favorite li:nth-of-type(odd) a:focus,
 .blurb h4 a:visited:hover,
 .blurb h4 a:hover,
-input[type="submit"]:hover,
+input[type=submit]:hover,
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:visited:hover,
-#header .dropdown .menu a:focus,
+#header .dropdown .menu a:focus:hover,
 a[href*="/users/logout"],
 .event .userstuff,
 .event .userstuff a,
 .event .userstuff a:link,
 .event .userstuff a:visited {
   background-color: #8cbebd;
-  color: #2e2e2e; }
+  color: #2e2e2e;
+}
 
 .blurb h4 a:visited {
-  color: #8cbebd !important; }
+  color: #8cbebd !important;
+}
 
 #dashboard .current,
 #header .menu,
@@ -966,22 +1066,24 @@ tr:hover,
 .dropdown {
   background-color: #525151;
   /* needs this too to override some instances */
-  background: #525151; }
+  background: #525151;
+}
 
 .autocomplete .dropdown ul li:hover,
 li.selected {
   /* cos'è sta roba e perchè l'ho fatta in modo diverso su dark e light*/
   background-color: #525151;
-  background: #525151; }
+  background: #525151;
+}
 
 a.modal.help:hover, li.relationships a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .notice,
 .comment_notice,
 ul.notes,
 .caution,
-.error,
 .comment_error,
 .alert.flash,
 .required .autocomplete,
@@ -989,15 +1091,28 @@ ul.notes,
 #header h2.collections,
 #header h2 {
   background-color: #b3dcdb;
-  color: #2e2e2e; }
+  color: #2e2e2e;
+}
+
+.notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
+  color: #2e2e2e;
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #b3dcdb;
+  color: #d41212;
+}
 
 #footer {
   border-top: none;
-  background-color: #588f90; }
+  background-color: #588f90;
+}
 
 #header {
-  background-color: #3b3b3b;
-  border-color: #3b3b3b; }
+  background-color: #333333;
+  border-color: #333333;
+}
 
 fieldset,
 form dl,
@@ -1030,23 +1145,25 @@ dl.meta,
 li.post.group,
 li.comment,
 .splash .news li:last-of-type {
-  border-color: #3b3b3b; }
+  border-color: #333333;
+}
 
 .required,
-.error,
 .alert.flash,
 .nominations .rejected {
-  color: #ffb6b9 !important; }
+  color: #ffb6b9 !important;
+}
 
 p.required.notice {
-  color: #d41212 !important; }
+  color: #d41212 !important;
+}
 
-form.search input[type="text"],
+form.search input[type=text],
 dd.autocomplete li.input,
-input[type="radio"],
+input[type=radio],
 select,
-input[type="checkbox"],
-input[type="file"],
+input[type=checkbox],
+input[type=file],
 input.number,
 p input,
 p select,
@@ -1060,59 +1177,83 @@ textarea {
   color: #fafafa;
   border-top-color: #545454;
   border-color: #545454;
-  background-color: #545454; }
+  background-color: #545454;
+}
 
-.filters [type="radio"] + .indicator:before,
-.filters [type="checkbox"] + .indicator:before,
-.filters .exclude [type="checkbox"] + .indicator:before {
-  background-color: #545454; }
+.filters [type=radio] + .indicator:before,
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before {
+  background-color: #545454;
+}
 
-.filters [type="radio"]:checked + .indicator:before,
-.filters [type="checkbox"]:checked + .indicator:before,
-.filters .exclude [type="checkbox"]:checked + .indicator:before {
-  background-color: #8cbebd; }
+.filters [type=radio]:checked + .indicator:before,
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #8cbebd;
+}
 
-.filters .exclude [type="checkbox"]:checked + .indicator:before {
-  background-color: #ffb6b9; }
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #ffb6b9;
+}
 
 .secondary {
-  background-color: #2e2e2e; }
+  background-color: #2e2e2e;
+}
 
 .javascript {
-  background-color: #3b3b3b !important; }
+  background-color: #3b3b3b !important;
+}
 
-.announcement input[type="submit"],
+.announcement input[type=submit],
 .announcement .action {
   background: #2e2e2e;
-  border: 1px solid #3b3b3b;
-  color: #fafafa; }
+  border: 1px solid #333333;
+  color: #fafafa;
+}
 
 .ui-draggable form {
-  box-shadow: 0 0 3px #545454; }
+  box-shadow: 0 0 3px #545454;
+}
 
 .userstuff blockquote {
-  border-inline-start: 2px solid #8cbebd; }
+  border-inline-start: 2px solid #8cbebd;
+}
 
 span.offered.requested {
-  color: yellow; }
+  color: yellow;
+}
 
 span.offered,
 .replied,
 .nominations .approved {
-  color: green; }
+  color: green;
+}
 
 .chapter .preface {
-  border-color: #3b3b3b; }
+  border-color: #333333;
+}
 
 span.requested,
 .nominations .rejected {
-  color: red; }
+  color: red;
+}
 
-.blurb .header h4.heading a:hover, .blurb .header h4.heading a:visited:hover {
-  color: #fafafa !important; }
+.blurb .header h4.heading a:hover,
+.blurb .header h4.heading a:visited:hover {
+  color: #2e2e2e !important;
+}
 
 .blurb .header img {
-  background-color: #8cbebd; }
+  background-color: #8cbebd;
+}
+
+div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
+  background: #2e2e2e;
+  border-color: #2e2e2e;
+}
+div.work.listbox.group ul.index.group, div.series.listbox.group ul.index.group, div.bookmark.listbox.group ul.index.group {
+  padding: 0;
+}
 
 #workskin,
 .blurb .userstuff,
@@ -1120,4 +1261,5 @@ span.requested,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 70%;
-  max-width: 45em; }
+  max-width: 45em;
+}

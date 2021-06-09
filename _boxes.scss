@@ -1,3 +1,23 @@
+$dyslexia: null !default;
+
+@if $dyslexia != yes {
+
+/*
+===============================
+  makes the layout smaller
+===============================
+*/
+
+  div#inner {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 100em;
+    //min-width: 1024px;
+}
+}
+
+
 /*
 ===============================
 Borders and boxes in the layout
@@ -218,6 +238,9 @@ properly positioned
 @if $borderwidth == none {
   .group.listbox {
   border: 1px solid transparent; }
+
+
+
 }
 
 

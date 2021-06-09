@@ -1,6 +1,6 @@
 //Import common stuff
 
-
+$dyslexia: yes;
 
 
 @import 'font';
@@ -278,6 +278,10 @@ body,
     @extend %letter-spacing;
     @extend %word-spacing;
 }
+
+ .userstuff h1, .userstuff h2, .userstuff h3, .userstuff h4, .userstuff h5, .userstuff h6 {
+    @extend %text-color;
+ }
 
 body,
 #inner.wrapper,

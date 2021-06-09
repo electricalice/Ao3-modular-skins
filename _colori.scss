@@ -49,7 +49,7 @@ form dd.required,
 #header .primary .menu a,
 #header .primary .menu .current,
 input[type="radio"]+label,
-input[type="checkbox"]+label  {
+input[type="checkbox"]+label, .userstuff h1, .userstuff h2, .userstuff h3, .userstuff h4, .userstuff h5, .userstuff h6  {
     color: $coltext;
 }
 
@@ -77,9 +77,9 @@ a.tag:visited,
 #header .primary .open a,
 #header .primary .open a:link,
 #header .primary .open a:visited,
-#header .primary .dropdown:hover a,
-#header .primary .dropdown:hover a:link,
-#header .primary .dropdown:hover a:visited,
+#header .primary .dropdown a,
+#header .primary .dropdown a:link,
+#header .primary .dropdown a:visited,
 #header .primary .dropdown a:focus,
 #dashboard a,
 #dashboard a:link,
@@ -143,7 +143,7 @@ label.action:hover,
 input[type="submit"]:hover,
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:visited:hover,
-#header .dropdown .menu a:focus,
+#header .dropdown .menu a:focus:hover,
 a[href*="/users/logout"],
 .event .userstuff,
 .event .userstuff a,
@@ -204,7 +204,6 @@ a.modal.help:hover,  li.relationships a {
 .comment_notice,
 ul.notes,
 .caution,
-.error,
 .comment_error,
 .alert.flash,
 .required .autocomplete,
@@ -213,6 +212,16 @@ ul.notes,
 #header h2 {
     background-color: $colnotice;
     color: $textnotice;
+}
+
+.notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
+    color: $textnotice;
+    text-decoration: underline;    
+}
+
+.error {
+    background-color: $colnotice;
+    color: $colalertonlightbg;
 }
 
 #footer {
@@ -261,7 +270,6 @@ li.comment,
 }
 
 .required,
-.error,
 .alert.flash,
 .nominations .rejected {
     color: $colalert !important;
@@ -356,11 +364,26 @@ span.requested,
 .nominations .rejected {
     color: $colrequested;
 }
-.blurb .header h4.heading a:hover, .blurb .header h4.heading a:visited:hover {
-    color: $coltext !important;
+.blurb .header h4.heading a:hover, 
+.blurb .header h4.heading a:visited:hover {
+    color: $colbackground !important;
 }
 
 .blurb .header img {
     background-color: $lockbg;
 }
+
+
+//box background only
+@if $boxbackground == yes {
+div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
+  background: $colbackground;
+  border-color: $colbackground;
+  ul.index.group {
+    padding: 0;
+  }
+}
+}
+
+
 
