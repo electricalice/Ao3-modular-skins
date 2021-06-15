@@ -548,7 +548,10 @@ input {
 }
 
 
-
+#header .primary a {
+    /*colors of the primary menu links*/
+    color: $textheader;
+}
 
 
 
@@ -569,7 +572,7 @@ form dd.required,
 .filters dd,
 .filters input[type="submit"],
 .filters .expander,
-#header .primary .menu a,
+#header .primary .menu a, 
 #header .primary .menu .current, #outer .current, .userstuff h2, label, .autocomplete li.added, .post .meta dd ul li.added {
     @extend %text-color; //already commented
 }
@@ -589,7 +592,7 @@ a.tag:link,
 .blurb h4 a,
 .blurb h4 a:visited,
 #dashboard a,
-#dashboard span,
+#dashboard span, 
 #header .user a:hover,
 #header .user a:focus,
 #header .user .current,
@@ -598,6 +601,8 @@ li::marker,
 .droppable {
     @extend %accent-color; //already commented
 }
+
+
 
 .blurb ul li,
 .blurb dd ul li,
@@ -674,7 +679,7 @@ li.dropdown {
 #header .actions a:hover,
 #header .actions a:focus,
 #header .dropdown:hover a,
-#header .open a,
+#header .open a, 
 #header #search input:focus,
 #header #search input,
 tr:hover,
@@ -1027,5 +1032,10 @@ span.requested,
 .thread .even {
   /*comments alternate*/
     background-color: $colbackgroundinput;
+}
+
+#footer .heading, #footer a, #footer {
+    /*changes the color of the footer text. Necessary for squidgeworld*/
+    color: $colbackground;
 }
 

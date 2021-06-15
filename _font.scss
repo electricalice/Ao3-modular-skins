@@ -106,6 +106,10 @@ p.note {
     @extend %line-height; 
 }
 
+.userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4  {
+    @extend %line-height;   
+}
+
 .filters dt,
 .filters dd,
 .filters input[type="submit"],

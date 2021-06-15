@@ -127,7 +127,7 @@ textarea,
 #modal, h3, .filters dt,
 .filters dd,
 .filters input[type=submit],
-.filters .expander, p.note, blockquote, body,
+.filters .expander, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
@@ -315,7 +315,7 @@ textarea,
   as a measurement changes A LOT between numbers, so you might want to try
   decimals like 0.22em, 0.25em, 0.3em before going a number up (or down)
   */
-  word-spacing: 0.21em;
+  word-spacing: 0.15em;
 }
 
 .blurb dl.stats,
@@ -359,7 +359,7 @@ p.type,
   as a measurement changes A LOT between numbers, so you might want to try
   decimals like 0.025em, 0.03em, 0.035em before going a number up (or down)
   */
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 #chapters,
@@ -1113,6 +1113,11 @@ a.tag:link {
   padding-left: 0;
 }
 
+#header .primary a {
+  /*colors of the primary menu links*/
+  color: #edf1f9;
+}
+
 .blurb ul li,
 .blurb dd ul li,
 .meta dd ul li {
@@ -1722,6 +1727,11 @@ ul.notes,
 .thread .even {
   /*comments alternate*/
   background-color: #43566b;
+}
+
+#footer .heading, #footer a, #footer {
+  /*changes the color of the footer text. Necessary for squidgeworld*/
+  color: #1c232d;
 }
 
 .blurb .header img {

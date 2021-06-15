@@ -49,7 +49,14 @@ form dd.required,
 #header .primary .menu a,
 #header .primary .menu .current,
 input[type="radio"]+label,
-input[type="checkbox"]+label, .userstuff h1, .userstuff h2, .userstuff h3, .userstuff h4, .userstuff h5, .userstuff h6  {
+input[type="checkbox"]+label,
+.userstuff h1,
+.userstuff h2,
+.userstuff h3,
+.userstuff h4,
+.userstuff h5,
+.userstuff h6,
+dd.fandom li.added.tag  {
     color: $coltext;
 }
 

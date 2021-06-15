@@ -10,8 +10,8 @@ $fontbody: Verdana, "Trebuchet MS",
 Calibri,
 sans-serif;
 $fontweightheading: bolder;
-$letterspacing: 0.03em;
-$wordspacing: 0.21em;
+$letterspacing: 0.04em;
+$wordspacing: 0.15em;
 $lineheight: 1.8em;
 $fontbasesize: 1.05em;
 $paragraphheight: 2em;
@@ -45,6 +45,7 @@ $colbackgroundinput: #43566b;
 $cardbackground: #212d3b;
 $needscontrast: $colbackground;
 $colheader: $cardbackground;
+$textheader: $coltext;
 
 //the following are relative to exchanges
 $colrequested: #f64e5b;
