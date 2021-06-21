@@ -1,8 +1,12 @@
 #workskin,
 .blurb .userstuff,
-.news .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
 	width: $percentparagraph;
 	max-width: $maxparagraph;
+}
+
+
+.blurb blockquote {
+	text-align: left;
 }

@@ -53,6 +53,7 @@ $checkboxsize: .8em;
 $colbackground: #2e2e2e;
 $coltext: #fafafa;
 $colaccent: #8cbebd;
+$accentgradient: linear-gradient(126deg, rgba(140,190,189,1) 0%, rgba(57,175,200,1) 100%);
 $colbackgroundalt: #525151;
 $colbackgroundalt2: lighten($colbackground, 2%);
 $colborder: $colbackgroundalt2;
@@ -64,6 +65,7 @@ $colbackgroundfilters: #3b3b3b;
 $colbackgroundinput: #545454;
 $colbackgroundfooter: #588f90;
 $lockbg: $colaccent;
+$tagshadow: 1px 3px 10px -3px darken($colbackground, 20%);
 
 //the following are relative to exchanges - CAMBIALI CHE FANNO SCHIFO
 $colrequested: red;
@@ -85,4 +87,6 @@ $what: darkbg;
 
 @import 'colori';
 @import 'paragraphs';
+@import 'blurb';
+@import 'tags';
 

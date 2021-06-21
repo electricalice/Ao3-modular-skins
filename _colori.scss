@@ -156,7 +156,7 @@ a[href*="/users/logout"],
 .event .userstuff a,
 .event .userstuff a:link,
 .event .userstuff a:visited {
-    background-color: $colaccent;
+    background: $accentgradient;
     color: $colbackground;
 }
 
@@ -177,7 +177,6 @@ a[href*="/users/logout"],
 #header #search input,
 tr:hover,
 #outer .current,
-.thread .even,
 .toggled form,
 .dynamic form,
 .secondary,
@@ -185,6 +184,12 @@ tr:hover,
     background-color: $colbackgroundalt;
     /* needs this too to override some instances */
     background: $colbackgroundalt;
+}
+
+.thread .even { 
+    //FIND A SOLUTION FOR COMMENTS EVEN
+    //(one that works for light and dark btw)
+    background-color: $colbackgroundalt2;
 }
 
 .autocomplete .dropdown ul li:hover,
@@ -233,7 +238,7 @@ ul.notes,
 
 #footer {
     border-top: none;
-    background-color: $colbackgroundfooter;
+    background: $colbackgroundfooter;
 }
 @if $what == darkbg {
     #header {
@@ -376,7 +381,7 @@ span.requested,
     color: $colbackground !important;
 }
 
-.blurb .header img {
+.blurb .header img, #workskin h2.heading img {
     background-color: $lockbg;
 }
 

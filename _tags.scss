@@ -1,0 +1,28 @@
+
+a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
+    background: $accentgradient !important;
+    box-shadow: $tagshadow !important;
+}
+a.tag {
+    background: $colbackgroundalt !important;
+    padding: 2px 10px;
+    margin: 4px 0px;
+    border-radius: 0 15px 15px;
+    display: inline-block;
+}
+
+li.relationships a.tag {
+    background: mix($colbackgroundalt, $colaccent, $weight:95%) !important;    
+}
+li.characters a.tag {
+    background: mix($colbackgroundalt, $colaccent, $weight:98%)!important;    
+}
+
+.commas li:after {
+    content: "";
+}
+
+.tag .primary .icon, .tagset .primary .icon {
+    /* idgaf about icons in the tag pages they are useless */
+    display: none;
+}

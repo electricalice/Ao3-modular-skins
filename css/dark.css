@@ -78,7 +78,7 @@ button, #main, select {
 .filters dt,
 .filters dd,
 .filters input[type=submit],
-.filters .expander, p.note, blockquote, body,
+.filters .expander, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
@@ -799,7 +799,7 @@ span.symbol {
   vertical-align: middle;
 }
 
-.blurb .header img {
+.blurb .header img, #workskin h2.heading img {
   /* 
   Aligns vertically the little lock next to the title in the blurb
   it also gives a bit of a space enough to have a background if needed in dark mode, later
@@ -1046,7 +1046,7 @@ a[href*="/users/logout"],
 .event .userstuff a,
 .event .userstuff a:link,
 .event .userstuff a:visited {
-  background-color: #8cbebd;
+  background: linear-gradient(126deg, #8cbebd 0%, #39afc8 100%);
   color: #2e2e2e;
 }
 
@@ -1066,7 +1066,6 @@ a[href*="/users/logout"],
 #header #search input,
 tr:hover,
 #outer .current,
-.thread .even,
 .toggled form,
 .dynamic form,
 .secondary,
@@ -1074,6 +1073,10 @@ tr:hover,
   background-color: #525151;
   /* needs this too to override some instances */
   background: #525151;
+}
+
+.thread .even {
+  background-color: #333333;
 }
 
 .autocomplete .dropdown ul li:hover,
@@ -1113,7 +1116,7 @@ ul.notes,
 
 #footer {
   border-top: none;
-  background-color: #588f90;
+  background: #588f90;
 }
 
 #header {
@@ -1250,7 +1253,7 @@ span.requested,
   color: #2e2e2e !important;
 }
 
-.blurb .header img {
+.blurb .header img, #workskin h2.heading img {
   background-color: #8cbebd;
 }
 
@@ -1264,9 +1267,53 @@ div.work.listbox.group ul.index.group, div.series.listbox.group ul.index.group, 
 
 #workskin,
 .blurb .userstuff,
-.news .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 70%;
   max-width: 45em;
+}
+
+ol.thread div.post.comment {
+  z-index: -1;
+}
+
+.blurb h4.heading {
+  text-align: center;
+  padding: 10px 0;
+  line-height: 150%;
+}
+
+.blurb h4.heading a[rel=author], .blurb h4.heading a:last-of-type {
+  display: inline-block;
+  font-size: 100%;
+}
+
+.blurb h4.heading a, .blurb h4.heading a:first-of-type {
+  display: block;
+  font-size: 140%;
+  border-radius: 5px;
+}
+
+.blurb .header .heading {
+  margin: 0.375em 5.25em;
+}
+
+h5.fandoms.heading {
+  text-align: center;
+}
+
+a.tag:hover {
+  background: linear-gradient(126deg, #8cbebd 0%, #39afc8 100%) !important;
+}
+
+a.tag {
+  background: #525151 !important;
+  padding: 2px 10px;
+  margin: 4px 0px;
+  border-radius: 0 15px 15px;
+  display: inline-block;
+}
+
+.commas li:after {
+  content: "";
 }

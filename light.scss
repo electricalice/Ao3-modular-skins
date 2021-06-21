@@ -25,7 +25,7 @@ $ratio: 1.2;
 $ratioheader: $ratio;
 $paragraphheight: 2em;
 
-$bordershape: none;
+$bordershape: 5px;
 $borderwidth: 1px solid;
 $borderbutton: none;
 $boxbackground: no;
@@ -35,6 +35,7 @@ $checkboxsize: .8em;
 $colbackground: #fafafa;
 $coltext: #2e2e2e;
 $colaccent: #d84549;
+$accentgradient: linear-gradient(126deg, rgba(216,69,73,1) 0%, rgba(225,76,116,1) 100%);
 $colbackgroundalt: #f2f2f2;
 $colbackgroundalt2: transparent;
 $colborder: #e8e8e8;
@@ -44,8 +45,9 @@ $colalert: #bd203a;
 $colalertonlightbg: #2e2e2e;
 $colbackgroundfilters: #fafafa;
 $colbackgroundinput: #ebebeb;
-$colbackgroundfooter: $colaccent;
+$colbackgroundfooter: $accentgradient;
 $lockbg: transparent;
+$tagshadow: 1px 3px 10px -3px darken($colbackground, 20%);
 
 //the following are relative to exchanges - CAMBIALI CHE FANNO SCHIFO
 $colrequested: #A62637;
@@ -68,3 +70,5 @@ $what: lightbg;
 @import 'bottoni-login';
 @import 'colori';
 @import 'paragraphs';
+@import 'blurb';
+@import 'tags';

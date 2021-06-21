@@ -1,0 +1,22 @@
+.blurb h4.heading {
+    text-align: center;
+    padding: 10px 0;
+    line-height: 150%;
+}
+.blurb h4.heading a[rel="author"], .blurb h4.heading a:last-of-type {
+    display: inline-block;
+    font-size: 100%;
+}
+.blurb h4.heading a, .blurb h4.heading a:first-of-type {
+    display: block;
+    font-size: 140%;
+    border-radius: $bordershape;
+}
+
+.blurb .header .heading {
+    margin: .375em 5.25em;
+}
+
+h5.fandoms.heading {
+    text-align: center;
+}

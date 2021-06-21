@@ -8,7 +8,7 @@ h4 {
 }
 
 .userstuff, #header {
-  font-size: 110% !important;
+  font-size: 110%;  //tolto important qua
 }
 
 #footer .heading,
@@ -59,7 +59,7 @@ div.preface {
 }
 // blurb stuff
 .blurb .header .heading {
-  margin: .375em .375em 0 65px;
+  margin: .375em .375em;
   overflow-wrap: break-word;
 }
 
@@ -69,7 +69,7 @@ div.preface {
 /* the following lines of codes rearrange the required tags icons*/
 
 .blurb h4.heading {
-  margin: 0 !important;
+  margin: 0;  //tolto important qua
 }
 
 .blurb ul.required-tags {
@@ -95,6 +95,10 @@ div.preface {
     margin: 10px 0;
 }
 
+.blurb .tags li {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 //end blurb stuff
 .filters dt {
@@ -153,7 +157,7 @@ li.showme a.actions, dl.stats dd {
   /*
   This resets the main page width to a decent size for mobile
   */
-    width: 100% !important;
+    width: 100%;  //tolto important qua
 }
 
 p.kudos {
@@ -196,7 +200,7 @@ div.preface,
 }
 
 .skins .header .heading, .user.pseud.picture.blurb .header .heading {
-  margin: .375em .375em 0 65px !important;
+  margin: .375em .375em;  //tolto important qua
 }
 
   div#inner {
@@ -231,4 +235,9 @@ div.preface,
   */
     margin: 10px auto;
     text-align: center;
+}
+
+
+.comment .icon .visitor {
+    background: url(/images/imageset.png) no-repeat 0 -525px transparent; //tolto important qua
 }
