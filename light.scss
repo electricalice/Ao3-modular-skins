@@ -34,6 +34,7 @@ $checkboxsize: .8em;
 
 $colbackground: #fafafa;
 $coltext: #2e2e2e;
+$coltextlighter: lighten($coltext, 30%);
 $colaccent: #d84549;
 $accentgradient: linear-gradient(126deg, rgba(216,69,73,1) 0%, rgba(225,76,116,1) 100%);
 $colbackgroundalt: #f2f2f2;

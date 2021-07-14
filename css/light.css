@@ -154,6 +154,10 @@ input#site_search {
   width: 60px;
 }
 
+#header #search .text {
+  margin: 0;
+}
+
 input#site_search:focus {
   width: auto;
 }
@@ -248,6 +252,15 @@ input#site_search:focus {
 
 #header .open .menu, #header .dropdown:hover .menu, .open + #small_login, #header .menu li {
   border-radius: 5px;
+}
+
+.notice a,
+.notice a:link,
+.notice a:visited,
+.announcement a,
+.announcement a:link,
+.announcement a:visited {
+  text-decoration: underline;
 }
 
 /*
@@ -874,7 +887,7 @@ form.inbox {
 }
 
 a.dropdown-toggle[href*="/works/new"] {
-  background: url(https://i.ibb.co/SXJTJQw/add.png) !important;
+  background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -884,7 +897,7 @@ a.dropdown-toggle[href*="/works/new"] {
 }
 
 a[href*="/users/logout"] {
-  background: url(https://i.ibb.co/Np06xNb/log-off.png) !important;
+  background: url(https://64.media.tumblr.com/28db0028536206eb80f4f6238634738f/8b704f26c7323545-9b/s100x200/4519ffcbaeeee4c8dd80799e98111f8ef459fc83.png) !important;
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -1073,7 +1086,7 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown {
+.dropdown, .statistics .index li:nth-of-type(even) {
   background-color: #f2f2f2;
   /* needs this too to override some instances */
   background: #f2f2f2;
@@ -1256,8 +1269,11 @@ span.requested,
   background-color: transparent;
 }
 
+tbody tr:hover {
+  border-color: #e8e8e8;
+}
+
 #workskin,
-.blurb .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 70%;
@@ -1268,21 +1284,31 @@ span.requested,
   text-align: left;
 }
 
+.comment blockquote.userstuff {
+  margin-block-start: 0;
+}
+
+.splash .comment .userstuff {
+  width: 95%;
+  margin: auto;
+}
+
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
   line-height: 150%;
 }
 
-.blurb h4.heading a[rel=author], .blurb h4.heading a:last-of-type {
+.blurb h4.heading a {
   display: inline-block;
   font-size: 100%;
+  border-radius: 5px;
 }
 
-.blurb h4.heading a, .blurb h4.heading a:first-of-type {
+.blurb h4.heading a:first-of-type {
   display: block;
   font-size: 140%;
-  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .blurb .header .heading {
@@ -1291,6 +1317,61 @@ span.requested,
 
 h5.fandoms.heading {
   text-align: center;
+}
+
+.splash blockquote.userstuff.summary {
+  width: 95%;
+  margin: auto 10px;
+}
+
+dl.stats dt {
+  display: none;
+}
+
+li.collection dl.stats dt, li.series dl.stats dt {
+  display: inline-block !important;
+}
+
+dl.stats dd.kudos::before {
+  background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
+}
+
+dl.stats dd.words::before {
+  background: url(https://64.media.tumblr.com/7453ae8f68ca0b9aec02a1e206a876ec/8b704f26c7323545-1d/s100x200/9539dd52cc70e9125cfedff9629ab7ed01ea2c99.png);
+}
+
+dl.stats dd.chapters::before {
+  background: url(https://64.media.tumblr.com/05dfbc6eac61a516ab842fb97132f5be/8b704f26c7323545-ce/s100x200/3651bd1d102707d79b9b25cd42a7eb7daa28e714.png);
+}
+
+dl.stats dd.comments::before {
+  background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
+}
+
+dl.stats dd.bookmarks::before {
+  background: url(https://64.media.tumblr.com/e61846b8282228fe2c81e8ac22135142/8b704f26c7323545-83/s100x200/cddf3a9004df196cf60be04d3285bf3e9e540e14.png);
+}
+
+dl.stats dd.hits::before {
+  background: url(https://64.media.tumblr.com/3287a69822044de32506324a14e582d9/8b704f26c7323545-9f/s100x200/d85d22b21a630d809cdf8b13e961d869148e6321.png);
+}
+
+dl.stats dd.collections::before {
+  background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
+}
+
+li.work dl.stats dd::before, dl.work dl.stats dd::before {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  content: " ";
+  background-size: 14px 14px !important;
+  margin-right: 5px;
+}
+
+dl.stats dd.published::before, dl.stats dd.status::before {
+  width: 0px;
+  margin-right: 0px;
 }
 
 a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
@@ -1321,4 +1402,8 @@ li.characters a.tag {
 .tag .primary .icon, .tagset .primary .icon {
   /* idgaf about icons in the tag pages they are useless */
   display: none;
+}
+
+h2.heading a.tag {
+  font-size: 75%;
 }

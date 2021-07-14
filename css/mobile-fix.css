@@ -7,7 +7,8 @@ h4 {
   margin: auto;
 }
 
-.userstuff, #header {
+.userstuff,
+#header {
   font-size: 110%;
 }
 
@@ -27,6 +28,14 @@ h4 {
   float: none;
 }
 
+#login, #greeting {
+  padding: 0;
+}
+
+#header .dropdown .menu a, #header .dropdown .menu .current {
+  white-space: nowrap;
+}
+
 #header .user {
   float: none;
   text-align: center;
@@ -36,6 +45,24 @@ h4 {
 .home .header dl.stats,
 .home .header .type {
   margin-left: auto;
+}
+
+.home .header h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  text-align: center;
+  word-break: break-word;
+}
+
+.home .header ul.actions,
+ul.actions,
+p.actions,
+li.actions,
+span.actions,
+fieldset.actions,
+dd.actions {
+  float: none;
 }
 
 #header .menu,
@@ -65,6 +92,8 @@ div.preface {
 
 .blurb .datetime {
   position: initial;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* the following lines of codes rearrange the required tags icons*/
@@ -75,29 +104,68 @@ div.preface {
 .blurb ul.required-tags {
   position: initial;
   top: initial;
-  display: flex;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
 }
 
-.blurb ul.required-tags li + li + li, .blurb ul.required-tags li + li + li + li {
+.blurb ul.required-tags li + li + li,
+.blurb ul.required-tags li + li + li + li {
   position: initial;
   left: initial;
 }
 
 .blurb ul.required-tags li {
-  padding-right: 6px;
+  display: inline-flex;
+}
+
+.bookmark p.status {
+  position: relative;
+  right: initial;
+  z-index: initial;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.bookmark .status span, .bookmark .status a {
+  display: inline-block;
+}
+
+.bookmark span.count {
+  line-height: initial;
+  position: initial;
+  top: initial;
+  left: initial;
+  text-align: center;
+}
+
+.bookmark .status a:focus {
+  overflow: initial;
+}
+
+.bookmark .status .count {
+  background: none;
 }
 
 .blurb .header h5.fandoms {
   margin: 0px;
 }
 
-.blurb .header p.notice, .blurb ul.series {
+.blurb .header p.notice,
+.blurb ul.series {
   margin: 10px 0;
 }
 
 .blurb .tags li {
   padding-left: 0;
   padding-right: 0;
+}
+
+a.tag {
+  word-break: break-word;
 }
 
 .filters dt {
@@ -129,7 +197,16 @@ p.kudos {
   word-break: break-word;
 }
 
-.faq .userstuff .notice, .faq .userstuff .caution, .faq .example, .guideline .userstuff .notice, .guideline .userstuff .caution, .guideline .example {
+.blurb h4.heading a {
+  word-break: break-word;
+}
+
+.faq .userstuff .notice,
+.faq .userstuff .caution,
+.faq .example,
+.guideline .userstuff .notice,
+.guideline .userstuff .caution,
+.guideline .example {
   /* mostly for stuff in the guidelines 
   lowers the indent*/
   margin: 0;
@@ -140,7 +217,14 @@ p.kudos {
   margin-inline-start: 1em;
 }
 
-li.showme a.actions, dl.stats dd {
+li.showme a.actions,
+dl.stats dd,
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.action:visited {
   white-space: normal;
   height: initial;
 }
@@ -150,7 +234,8 @@ li.showme a.actions, dl.stats dd {
  Work Page
 ===========
 */
-#workskin, .collection blockquote.userstuff {
+#workskin,
+.collection blockquote.userstuff {
   /*
   This resets the main page width to a decent size for mobile
   */
@@ -179,7 +264,8 @@ div.preface,
   margin: 0;
 }
 
-.chapter .secondary, .download .secondary {
+.chapter .secondary,
+.download .secondary {
   /*
   This moves the download option and the chapter option
   in a better position
@@ -197,12 +283,22 @@ div.preface,
   width: 100% !important;
 }
 
-.skins .header .heading, .user.pseud.picture.blurb .header .heading {
+.skins .header .heading,
+.user.pseud.picture.blurb .header .heading {
   margin: 0.375em 0.375em;
 }
 
 div#inner {
   width: 100% !important;
+}
+
+.blurb dl.tags dd,
+dl.meta dd {
+  margin-left: 0;
+}
+
+.meta dd {
+  margin: 0.643em 0;
 }
 
 /*
@@ -211,7 +307,8 @@ div#inner {
 ===========
 */
 .user .primary p.icon,
-.admin .primary .icon, .collection .icon {
+.admin .primary .icon,
+.collection .icon {
   /* 
   centers the icons on profile pages, collections and news posts
   */
@@ -224,7 +321,8 @@ div#inner {
 }
 
 .user h2.heading,
-.admin h2.heading, .collection h2.heading {
+.admin h2.heading,
+.collection h2.heading {
   /*
   Centers Usernames and titles in admin pages and collections
   */
@@ -234,4 +332,17 @@ div#inner {
 
 .comment .icon .visitor {
   background: url(/images/imageset.png) no-repeat 0 -525px transparent;
+}
+
+input#site_search {
+  width: auto;
+}
+
+/* COMMENTS*/
+.comment blockquote.userstuff p {
+  width: 95%;
+  margin-left: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block: 0;
 }

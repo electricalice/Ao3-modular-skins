@@ -14,6 +14,10 @@ input#site_search {
   width: 60px;
 }
 
+#header #search .text {
+  margin: 0;
+}
+
 input#site_search:focus {
   width: auto;
 }
@@ -109,4 +113,15 @@ input#site_search:focus {
 
 #header .open .menu, #header .dropdown:hover .menu, .open+#small_login, #header .menu li {
   border-radius: $bordershape;
+}
+
+
+.notice a,
+.notice a:link,
+.notice a:visited,
+.announcement a,
+.announcement a:link,
+.announcement a:visited,
+ {
+    text-decoration: underline;
 }

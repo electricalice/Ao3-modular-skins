@@ -10,7 +10,7 @@ $fontheading: Palatino,
 "Book Antiqua",
 Georgia,
 serif;
-$fontbody: "Trebuchet MS",
+$fontbody: Verdana, "Trebuchet MS",
 "Lucida Grande",
 "Lucida Sans Unicode",
 "Lucida Sans",
@@ -20,7 +20,7 @@ $lineheight: 1.125;
 $maxparagraph: 45em;
 $percentparagraph: 70%;
 
-$letterspacing: .02em;
+$letterspacing: .04em;
 $wordspacing: .21em;
 $fontbasesize: 1em;
 $ratio: 1.2;
@@ -35,35 +35,26 @@ $boxbackground: yes;
 $checkboxsize: .8em;
 
 
-// $colbackground: #2d2a49;
-// $coltext: #dde6e5;
-// $colaccent: #a1bd95;
-// $colbackgroundalt: #36395c;
-// $colbackgroundalt2: #495e75;
-// $colborder: #495e75;
-// $colnotice: #b3dcdb;
-// $textnotice: $colbackground;
-// $colalert: #ffb6b9;
-// $colalertonlightbg: #d41212;
-// $colbackgroundfilters: #3b3b3b;
-// $colbackgroundinput: #3e405c;
-// $colbackgroundfooter: #255c7e;
-// $lockbg: $colaccent;
 
 $colbackground: #2e2e2e;
 $coltext: #fafafa;
-$colaccent: #8cbebd;
-$accentgradient: linear-gradient(126deg, rgba(140,190,189,1) 0%, rgba(57,175,200,1) 100%);
-$colbackgroundalt: #525151;
-$colbackgroundalt2: lighten($colbackground, 2%);
+$coltextlighter: darken($coltext, 30%);
+
+//$colaccent: #8cbebd;
+//$accentgradient: linear-gradient(126deg, rgba(140,190,189,1) 0%, rgba(57,175,200,1) 100%);
+//$colbackgroundfooter: #588f90;
+$colaccent: #8BC6EC;
+$accentgradient: linear-gradient(135deg, $colaccent 0%, #9599E2 100%);
+$colbackgroundalt: lighten($colbackground, 9%);
+$colbackgroundalt2: lighten($colbackground, 3%);
 $colborder: $colbackgroundalt2;
 $colnotice: #b3dcdb;
 $textnotice: $colbackground;
 $colalert: #ffb6b9;
 $colalertonlightbg: #d41212;
-$colbackgroundfilters: #3b3b3b;
-$colbackgroundinput: #545454;
-$colbackgroundfooter: #588f90;
+$colbackgroundfilters: lighten($colbackground, 13%);;
+$colbackgroundinput: lighten($colbackground, 11%);;
+$colbackgroundfooter: $accentgradient;
 $lockbg: $colaccent;
 $tagshadow: 1px 3px 10px -3px darken($colbackground, 20%);
 

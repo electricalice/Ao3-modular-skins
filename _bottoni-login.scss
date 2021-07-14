@@ -1,9 +1,11 @@
 a.dropdown-toggle[href*="/works/new"] {
 
   @if $bottonilogin == darkbuttons {
-  background: url(https://i.ibb.co/SXJTJQw/add.png) !important;
+  //background: url(https://i.ibb.co/SXJTJQw/add.png) !important;
+  background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
 } @else if $bottonilogin == lightbuttons {
-  background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important;  
+  //background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important; 
+  background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
 }
   background-size: 15px 15px !important;
   text-indent: -9999px;
@@ -15,9 +17,11 @@ a.dropdown-toggle[href*="/works/new"] {
 
 a[href*="/users/logout"] {
     @if $bottonilogin == darkbuttons {
-  background: url(https://i.ibb.co/Np06xNb/log-off.png) !important;
+  //background: url(https://i.ibb.co/Np06xNb/log-off.png) !important;
+  background: url(https://64.media.tumblr.com/28db0028536206eb80f4f6238634738f/8b704f26c7323545-9b/s100x200/4519ffcbaeeee4c8dd80799e98111f8ef459fc83.png) !important;
 } @else if $bottonilogin == lightbuttons {
-  background: url(https://i.ibb.co/QXF4HkB/log-off-white.png) !important; 
+  //background: url(https://i.ibb.co/QXF4HkB/log-off-white.png) !important; 
+  background: url(https://64.media.tumblr.com/28db0028536206eb80f4f6238634738f/8b704f26c7323545-9b/s100x200/4519ffcbaeeee4c8dd80799e98111f8ef459fc83.png) !important;
 }
 
   background-size: 15px 15px !important;

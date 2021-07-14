@@ -695,8 +695,13 @@ tr:hover,
 
 .notice a,
 .notice a:link,
-.notice a:visited {
+.notice a:visited,
+.announcement a,
+.announcement a:link,
+.announcement a:visited,
+ {
     @extend %color-text-bg; //already commented
+    text-decoration: underline;
 }
 
 
@@ -1014,7 +1019,7 @@ span.requested,
 
 @if $needscontrast {
 //when the notice need a contrast text
-    .notice,
+    .notice, .announcement,
     .comment_notice,
     ul.notes,
     .caution,
@@ -1037,5 +1042,9 @@ span.requested,
 #footer .heading, #footer a, #footer {
     /*changes the color of the footer text. Necessary for squidgeworld*/
     color: $colbackground;
+}
+
+.announcement blockquote.userstuff {
+    @extend %resets-bgimage;
 }
 

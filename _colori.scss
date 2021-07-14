@@ -180,7 +180,7 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown {
+.dropdown, .statistics .index li:nth-of-type(even) {
     background-color: $colbackgroundalt;
     /* needs this too to override some instances */
     background: $colbackgroundalt;
@@ -395,6 +395,11 @@ div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
     padding: 0;
   }
 }
+}
+
+
+tbody tr:hover {
+    border-color: $colborder;
 }
 
 

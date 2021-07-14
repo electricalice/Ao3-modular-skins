@@ -1,5 +1,4 @@
 #workskin,
-.blurb .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
 	width: $percentparagraph;
@@ -9,4 +8,14 @@
 
 .blurb blockquote {
 	text-align: left;
+}
+
+.comment blockquote.userstuff {
+    margin-block-start: 0;
+}
+
+.splash .comment .userstuff {
+	width: 95%;
+	margin: auto;
+
 }

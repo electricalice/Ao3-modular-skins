@@ -44,7 +44,7 @@ span.symbol, .splash .news .meta, select {
   Please also remember to provide fallback fonts 
   (something like 'serif' or 'sans-serif', separated by a comma)
   */
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-family: Verdana, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
 }
 
 p.note, blockquote, body,
@@ -143,7 +143,7 @@ h4.heading .datetime {
   margin: 0px;
   padding: 0.8em;
   border-bottom: 1px solid;
-  border-color: #333333;
+  border-color: #363636;
 }
 
 #header .search {
@@ -152,6 +152,10 @@ h4.heading .datetime {
 
 input#site_search {
   width: 60px;
+}
+
+#header #search .text {
+  margin: 0;
 }
 
 input#site_search:focus {
@@ -244,6 +248,19 @@ input#site_search:focus {
 #header .menu li {
   border-bottom: none;
   margin: 0;
+}
+
+#header .open .menu, #header .dropdown:hover .menu, .open + #small_login, #header .menu li {
+  border-radius: 5px;
+}
+
+.notice a,
+.notice a:link,
+.notice a:visited,
+.announcement a,
+.announcement a:link,
+.announcement a:visited {
+  text-decoration: underline;
 }
 
 /*
@@ -548,7 +565,7 @@ input[type=radio] {
   content: "";
   vertical-align: -0.125em;
   background: none;
-  background-color: #545454;
+  background-color: #4a4a4a;
   border: none;
 }
 
@@ -556,7 +573,7 @@ input[type=radio] {
   content: "";
   vertical-align: -0.125em;
   background: none;
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
   border: none;
 }
 
@@ -567,7 +584,7 @@ input[type=radio] {
   border-radius: 0px;
   vertical-align: -0.125em;
   background: none;
-  background-color: #545454;
+  background-color: #4a4a4a;
   border: none;
 }
 
@@ -578,7 +595,7 @@ input[type=radio] {
   border-radius: 0px;
   vertical-align: -0.125em;
   background: none;
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
   border: none;
 }
 
@@ -593,8 +610,8 @@ input[type=checkbox],
 input[type=radio],
 .actions input[type=checkbox],
 label.action input[type=checkbox] {
-  background-color: #545454;
-  border: 1px solid #333333;
+  background-color: #4a4a4a;
+  border: 1px solid #363636;
 }
 
 input[type=checkbox],
@@ -625,7 +642,7 @@ input[type=radio]:checked,
 label.action input[type=checkbox]:checked,
 input[type=checkbox]:hover,
 .actions input[type=checkbox]:hover {
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
   border: none;
 }
 
@@ -870,7 +887,7 @@ form.inbox {
 }
 
 a.dropdown-toggle[href*="/works/new"] {
-  background: url(https://i.ibb.co/ctc0tXs/add-white.png) !important;
+  background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -880,7 +897,7 @@ a.dropdown-toggle[href*="/works/new"] {
 }
 
 a[href*="/users/logout"] {
-  background: url(https://i.ibb.co/QXF4HkB/log-off-white.png) !important;
+  background: url(https://64.media.tumblr.com/28db0028536206eb80f4f6238634738f/8b704f26c7323545-9b/s100x200/4519ffcbaeeee4c8dd80799e98111f8ef459fc83.png) !important;
   background-size: 15px 15px !important;
   text-indent: -9999px;
   display: block-inline;
@@ -909,13 +926,13 @@ fieldset,
 li.post.group,
 li.comment {
   /* dark mode cards */
-  background-color: #333333;
+  background-color: #363636;
 }
 
 ::-moz-selection,
 ::selection,
 ::-webkit-selection {
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
   color: #2e2e2e;
 }
 
@@ -985,7 +1002,7 @@ a.tag:visited,
 li::marker,
 .draggable,
 .droppable {
-  color: #8cbebd;
+  color: #8BC6EC;
 }
 
 .actions a,
@@ -1010,7 +1027,7 @@ input#site_search:focus,
 .dropdown,
 form.verbose legend {
   color: #fafafa;
-  background-color: #525151;
+  background-color: #454545;
 }
 
 a:hover,
@@ -1046,12 +1063,12 @@ a[href*="/users/logout"],
 .event .userstuff a,
 .event .userstuff a:link,
 .event .userstuff a:visited {
-  background: linear-gradient(126deg, #8cbebd 0%, #39afc8 100%);
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
   color: #2e2e2e;
 }
 
 .blurb h4 a:visited {
-  color: #8cbebd !important;
+  color: #8BC6EC !important;
 }
 
 #dashboard .current,
@@ -1069,21 +1086,21 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown {
-  background-color: #525151;
+.dropdown, .statistics .index li:nth-of-type(even) {
+  background-color: #454545;
   /* needs this too to override some instances */
-  background: #525151;
+  background: #454545;
 }
 
 .thread .even {
-  background-color: #333333;
+  background-color: #363636;
 }
 
 .autocomplete .dropdown ul li:hover,
 li.selected {
   /* cos'è sta roba e perchè l'ho fatta in modo diverso su dark e light*/
-  background-color: #525151;
-  background: #525151;
+  background-color: #454545;
+  background: #454545;
 }
 
 a.modal.help:hover, li.relationships a {
@@ -1116,12 +1133,12 @@ ul.notes,
 
 #footer {
   border-top: none;
-  background: #588f90;
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 }
 
 #header {
-  background-color: #333333;
-  border-color: #333333;
+  background-color: #363636;
+  border-color: #363636;
 }
 
 fieldset,
@@ -1155,7 +1172,7 @@ dl.meta,
 li.post.group,
 li.comment,
 .splash .news li:last-of-type {
-  border-color: #333333;
+  border-color: #363636;
 }
 
 .required,
@@ -1185,21 +1202,21 @@ textarea:focus,
 input,
 textarea {
   color: #fafafa;
-  border-top-color: #545454;
-  border-color: #545454;
-  background-color: #545454;
+  border-top-color: #4a4a4a;
+  border-color: #4a4a4a;
+  background-color: #4a4a4a;
 }
 
 .filters [type=radio] + .indicator:before,
 .filters [type=checkbox] + .indicator:before,
 .filters .exclude [type=checkbox] + .indicator:before {
-  background-color: #545454;
+  background-color: #4a4a4a;
 }
 
 .filters [type=radio]:checked + .indicator:before,
 .filters [type=checkbox]:checked + .indicator:before,
 .filters .exclude [type=checkbox]:checked + .indicator:before {
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
 }
 
 .filters .exclude [type=checkbox]:checked + .indicator:before {
@@ -1211,22 +1228,22 @@ textarea {
 }
 
 .javascript {
-  background-color: #3b3b3b !important;
+  background-color: #4f4f4f !important;
 }
 
 .announcement input[type=submit],
 .announcement .action {
   background: #2e2e2e;
-  border: 1px solid #333333;
+  border: 1px solid #363636;
   color: #fafafa;
 }
 
 .ui-draggable form {
-  box-shadow: 0 0 3px #545454;
+  box-shadow: 0 0 3px #4a4a4a;
 }
 
 .userstuff blockquote {
-  border-inline-start: 2px solid #8cbebd;
+  border-inline-start: 2px solid #8BC6EC;
 }
 
 span.offered.requested {
@@ -1240,7 +1257,7 @@ span.offered,
 }
 
 .chapter .preface {
-  border-color: #333333;
+  border-color: #363636;
 }
 
 span.requested,
@@ -1254,7 +1271,7 @@ span.requested,
 }
 
 .blurb .header img, #workskin h2.heading img {
-  background-color: #8cbebd;
+  background-color: #8BC6EC;
 }
 
 div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
@@ -1265,6 +1282,10 @@ div.work.listbox.group ul.index.group, div.series.listbox.group ul.index.group, 
   padding: 0;
 }
 
+tbody tr:hover {
+  border-color: #363636;
+}
+
 #workskin,
 .blurb .userstuff,
 .system .userstuff,
@@ -1273,8 +1294,17 @@ div.work.listbox.group ul.index.group, div.series.listbox.group ul.index.group, 
   max-width: 45em;
 }
 
-ol.thread div.post.comment {
-  z-index: -1;
+.blurb blockquote {
+  text-align: left;
+}
+
+.comment blockquote.userstuff {
+  margin-block-start: 0;
+}
+
+.splash .comment .userstuff {
+  width: 95%;
+  margin: auto;
 }
 
 .blurb h4.heading {
@@ -1283,15 +1313,16 @@ ol.thread div.post.comment {
   line-height: 150%;
 }
 
-.blurb h4.heading a[rel=author], .blurb h4.heading a:last-of-type {
+.blurb h4.heading a {
   display: inline-block;
   font-size: 100%;
+  border-radius: 5px;
 }
 
-.blurb h4.heading a, .blurb h4.heading a:first-of-type {
+.blurb h4.heading a:first-of-type {
   display: block;
   font-size: 140%;
-  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .blurb .header .heading {
@@ -1302,18 +1333,91 @@ h5.fandoms.heading {
   text-align: center;
 }
 
-a.tag:hover {
-  background: linear-gradient(126deg, #8cbebd 0%, #39afc8 100%) !important;
+.splash blockquote.userstuff.summary {
+  width: 95%;
+  margin: auto 10px;
+}
+
+dl.stats dt {
+  display: none;
+}
+
+li.collection dl.stats dt, li.series dl.stats dt {
+  display: inline-block !important;
+}
+
+dl.stats dd.kudos::before {
+  background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
+}
+
+dl.stats dd.words::before {
+  background: url(https://64.media.tumblr.com/7453ae8f68ca0b9aec02a1e206a876ec/8b704f26c7323545-1d/s100x200/9539dd52cc70e9125cfedff9629ab7ed01ea2c99.png);
+}
+
+dl.stats dd.chapters::before {
+  background: url(https://64.media.tumblr.com/05dfbc6eac61a516ab842fb97132f5be/8b704f26c7323545-ce/s100x200/3651bd1d102707d79b9b25cd42a7eb7daa28e714.png);
+}
+
+dl.stats dd.comments::before {
+  background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
+}
+
+dl.stats dd.bookmarks::before {
+  background: url(https://64.media.tumblr.com/e61846b8282228fe2c81e8ac22135142/8b704f26c7323545-83/s100x200/cddf3a9004df196cf60be04d3285bf3e9e540e14.png);
+}
+
+dl.stats dd.hits::before {
+  background: url(https://64.media.tumblr.com/3287a69822044de32506324a14e582d9/8b704f26c7323545-9f/s100x200/d85d22b21a630d809cdf8b13e961d869148e6321.png);
+}
+
+dl.stats dd.collections::before {
+  background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
+}
+
+li.work dl.stats dd::before, dl.work dl.stats dd::before {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  content: " ";
+  background-size: 14px 14px !important;
+  margin-right: 5px;
+}
+
+dl.stats dd.published::before, dl.stats dd.status::before {
+  width: 0px;
+  margin-right: 0px;
+}
+
+a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%) !important;
+  box-shadow: 1px 3px 10px -3px black !important;
 }
 
 a.tag {
-  background: #525151 !important;
+  background: #454545 !important;
   padding: 2px 10px;
   margin: 4px 0px;
   border-radius: 0 15px 15px;
   display: inline-block;
 }
 
+li.relationships a.tag {
+  background: #494b4d !important;
+}
+
+li.characters a.tag {
+  background: #464848 !important;
+}
+
 .commas li:after {
   content: "";
+}
+
+.tag .primary .icon, .tagset .primary .icon {
+  /* idgaf about icons in the tag pages they are useless */
+  display: none;
+}
+
+h2.heading a.tag {
+  font-size: 75%;
 }
