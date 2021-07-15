@@ -310,7 +310,7 @@ fieldset fieldset dl dl,
 dd.hideme,
 .delete a,
 span.delete,
-#header ul.primary, input, .actions input,
+#header ul.primary, .ui-sortable li, input, .actions input,
 input[type=submit],
 textarea, .actions a,
 .actions a:link,
@@ -1086,13 +1086,13 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown, .statistics .index li:nth-of-type(even) {
+.dropdown, .statistics .index li:nth-of-type(even), .ui-sortable li {
   background-color: #454545;
   /* needs this too to override some instances */
   background: #454545;
 }
 
-.thread .even {
+.thread .even, .ui-sortable li:hover {
   background-color: #363636;
 }
 
@@ -1171,7 +1171,7 @@ dl.meta,
 .guideline .example,
 li.post.group,
 li.comment,
-.splash .news li:last-of-type {
+.splash .news li:last-of-type, .ui-sortable li {
   border-color: #363636;
 }
 
@@ -1247,13 +1247,13 @@ textarea {
 }
 
 span.offered.requested {
-  color: yellow;
+  color: #8693cd;
 }
 
 span.offered,
 .replied,
 .nominations .approved {
-  color: green;
+  color: #73c074;
 }
 
 .chapter .preface {
@@ -1262,7 +1262,7 @@ span.offered,
 
 span.requested,
 .nominations .rejected {
-  color: red;
+  color: #cd8687;
 }
 
 .blurb .header h4.heading a:hover,
@@ -1287,7 +1287,6 @@ tbody tr:hover {
 }
 
 #workskin,
-.blurb .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 70%;
@@ -1374,7 +1373,15 @@ dl.stats dd.collections::before {
   background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
 }
 
-li.work dl.stats dd::before, dl.work dl.stats dd::before {
+dl.work dl.stats dd.published::before {
+  background: url(https://64.media.tumblr.com/d1d918497133d2b579c017149ae799a6/8b704f26c7323545-71/s250x400/2d128debfe1f43f88f139e0a1bc650aa8b0e174e.png);
+}
+
+dl.work dl.stats dd.status::before {
+  background: url(https://64.media.tumblr.com/a27eacf7d3e5e49f2e2c6671ef427157/8b704f26c7323545-da/s250x400/d247e8b2e3a82635f8c12d7bfcd45cd6cc0895f6.png);
+}
+
+li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -1402,11 +1409,11 @@ a.tag {
 }
 
 li.relationships a.tag {
-  background: #494b4d !important;
+  background: #50585e !important;
 }
 
 li.characters a.tag {
-  background: #464848 !important;
+  background: #4c5256 !important;
 }
 
 .commas li:after {

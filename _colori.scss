@@ -180,13 +180,13 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown, .statistics .index li:nth-of-type(even) {
+.dropdown, .statistics .index li:nth-of-type(even), .ui-sortable li {
     background-color: $colbackgroundalt;
     /* needs this too to override some instances */
     background: $colbackgroundalt;
 }
 
-.thread .even { 
+.thread .even, .ui-sortable li:hover { 
     //FIND A SOLUTION FOR COMMENTS EVEN
     //(one that works for light and dark btw)
     background-color: $colbackgroundalt2;
@@ -277,7 +277,7 @@ dl.meta,
 .guideline .example,
 li.post.group,
 li.comment, 
-.splash .news li:last-of-type {
+.splash .news li:last-of-type, .ui-sortable li {
     border-color: $colborder;
 }
 

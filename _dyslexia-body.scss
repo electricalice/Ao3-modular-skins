@@ -439,10 +439,10 @@ If you want to remove the border please delete all these lines
 a.tag,
 a.tag:visited,
 a.tag:link {
-
+    display: inline-block;
     @extend %text-color;
     padding: 4px 7px;
-    line-height: 2.3em;
+    margin: 4px 0px;
     border: $bordertagwidth $colaccent;
     border-radius: $bordershape;
 
@@ -611,7 +611,7 @@ li::marker,
   paginates better the tags, so that they tend to not break lines mid-tag.
   it's a readibility thing related to the border for the tags
   */
-    display: inline-block;
+    display: inline;
     margin: 0;
 }
 
@@ -633,7 +633,7 @@ input#site_search:focus,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown {
+.dropdown, .ui-sortable li:hover, .ui-sortable li {
     @extend %text-color; //already commented
     @extend %background-color-alt;
 }

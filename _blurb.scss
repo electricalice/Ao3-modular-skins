@@ -87,6 +87,14 @@ dl.stats dd.collections::before {
     background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
         //color: $coltextlighter;
 }
+dl.work dl.stats dd.published::before {
+    background: url(https://64.media.tumblr.com/d1d918497133d2b579c017149ae799a6/8b704f26c7323545-71/s250x400/2d128debfe1f43f88f139e0a1bc650aa8b0e174e.png);
+}
+
+dl.work dl.stats dd.status::before {
+    background: url(https://64.media.tumblr.com/a27eacf7d3e5e49f2e2c6671ef427157/8b704f26c7323545-da/s250x400/d247e8b2e3a82635f8c12d7bfcd45cd6cc0895f6.png);
+}
+
 //.series .blurb dl.stats dd:nth-of-type(2)::before {
 
 //        background: url(https://64.media.tumblr.com/9800e232399a224b1acffa8b8df3f1c0/ebb78f922c116185-f6/s100x200/54e452f9ede94c8aac6017c058eac4c9d1060951.png);
@@ -95,7 +103,7 @@ dl.stats dd.collections::before {
 
 
 
-li.work dl.stats dd::before, dl.work dl.stats dd::before{
+li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before{
     display: inline-block;
     width: 14px;
     height: 14px;

@@ -145,7 +145,7 @@ dd.hideme,
 form blockquote.userstuff,
 .delete a,
 span.delete,
-#header ul.primary {
+#header ul.primary, .ui-sortable li {
     @extend %resets-boxshadows;
 }
 
