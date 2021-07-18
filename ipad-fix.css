@@ -8,3 +8,11 @@
   width: 90%;
   max-width: 45em;
 }
+
+div#inner {
+  width: 90%;
+}
+
+#header .primary {
+  float: right;
+}

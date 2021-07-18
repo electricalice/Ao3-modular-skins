@@ -43,7 +43,7 @@ dl.stats dt {
 display: none;
 }
 
-li.collection dl.stats dt, li.series dl.stats dt {
+li.collection dl.stats dt, li.series dl.stats dt, dl.series dl.stats dt {
 display: inline-block !important;
 }
 

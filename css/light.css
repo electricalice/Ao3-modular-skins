@@ -230,7 +230,7 @@ input#site_search:focus {
 
 #footer {
   background-image: none;
-  border-top: 1px solid;
+  border-top: none;
 }
 
 #inner.wrapper {
@@ -310,7 +310,7 @@ fieldset fieldset dl dl,
 dd.hideme,
 .delete a,
 span.delete,
-#header ul.primary, input, .actions input,
+#header ul.primary, .ui-sortable li, input, .actions input,
 input[type=submit],
 textarea, .actions a,
 .actions a:link,
@@ -886,6 +886,27 @@ form.inbox {
   border-color: transparent;
 }
 
+.LV_invalid {
+  background: #bd203a;
+  border: 1px solid #bd203a;
+  color: #fafafa;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.LV_invalid:before {
+  border-color: #bd203a transparent;
+  border-width: 0 0.643em 0.643em;
+}
+
+.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+  border-color: #bd203a;
+}
+
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;
@@ -924,7 +945,7 @@ li.skins.own,
 .listbox,
 fieldset,
 li.post.group,
-li.comment {
+li.comment, .wrapper dl.meta, form dl {
   /* dark mode cards */
   background-color: transparent;
 }
@@ -1086,13 +1107,13 @@ tr:hover,
 .toggled form,
 .dynamic form,
 .secondary,
-.dropdown, .statistics .index li:nth-of-type(even) {
+.dropdown, .statistics .index li:nth-of-type(even), .ui-sortable li {
   background-color: #f2f2f2;
   /* needs this too to override some instances */
   background: #f2f2f2;
 }
 
-.thread .even {
+.thread .even, .ui-sortable li:hover {
   background-color: transparent;
 }
 
@@ -1132,7 +1153,15 @@ ul.notes,
 }
 
 #footer {
-  border-top: none;
+  background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
+}
+#footer a,
+#footer .heading,
+#footer li {
+  color: #fafafa;
+}
+
+#footer {
   background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
 }
 
@@ -1166,7 +1195,7 @@ dl.meta,
 .guideline .example,
 li.post.group,
 li.comment,
-.splash .news li:last-of-type {
+.splash .news li:last-of-type, .ui-sortable li {
   border-color: #e8e8e8;
 }
 
@@ -1273,6 +1302,10 @@ tbody tr:hover {
   border-color: #e8e8e8;
 }
 
+#header h2 {
+  border-color: #e8e8e8;
+}
+
 #workskin,
 .system .userstuff,
 .collection blockquote.userstuff {
@@ -1328,7 +1361,7 @@ dl.stats dt {
   display: none;
 }
 
-li.collection dl.stats dt, li.series dl.stats dt {
+li.collection dl.stats dt, li.series dl.stats dt, dl.series dl.stats dt {
   display: inline-block !important;
 }
 
@@ -1396,11 +1429,11 @@ a.tag {
 }
 
 li.relationships a.tag {
-  background: #f1e9ea !important;
+  background: #eed8d9 !important;
 }
 
 li.characters a.tag {
-  background: #f1efef !important;
+  background: #f0e6e6 !important;
 }
 
 .commas li:after {

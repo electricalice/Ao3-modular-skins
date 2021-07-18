@@ -48,17 +48,17 @@ $accentgradient: linear-gradient(135deg, $colaccent 0%, #9599E2 100%);
 $colbackgroundalt: lighten($colbackground, 9%);
 $colbackgroundalt2: lighten($colbackground, 3%);
 $colborder: $colbackgroundalt2;
-$colnotice: #b3dcdb;
+$colnotice: #82b1d0;
 $textnotice: $colbackground;
 $colalert: #ffb6b9;
 $colalertonlightbg: #d41212;
-$colbackgroundfilters: lighten($colbackground, 13%);;
-$colbackgroundinput: lighten($colbackground, 11%);;
+$colbackgroundfilters: lighten($colbackground, 13%);
+$colbackgroundinput: lighten($colbackground, 11%);
 $colbackgroundfooter: $accentgradient;
 $lockbg: $colaccent;
 $tagshadow: 1px 3px 10px -3px darken($colbackground, 20%);
 
-//the following are relative to exchanges - CAMBIALI CHE FANNO SCHIFO
+//the following are relative to exchanges
 $colrequested: #cd8687;
 $colrequestedoffered: #8693cd;
 $coloffered: #73c074;

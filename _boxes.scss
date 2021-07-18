@@ -257,3 +257,25 @@ form.inbox {
   /*this deals with the border on ipad*/
   border-color: transparent;
 }
+
+
+.LV_invalid {
+    background: $colalert;
+    border: $borderwidth $colalert;
+    color: $colbackground;
+    border-radius: $bordershape;
+    box-shadow:none;
+}
+
+.LV_invalid:before {
+    border-color: $colalert transparent;
+    border-width: 0 .643em .643em;
+}
+
+.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+    border-color: $colalert;
+}

@@ -17,7 +17,7 @@ li.skins.own,
 .listbox,
 fieldset,
 li.post.group,
-li.comment {
+li.comment, .wrapper dl.meta, form dl {
     /* dark mode cards */
     background-color: $colbackgroundalt2;
 }
@@ -236,9 +236,21 @@ ul.notes,
     color: $colalertonlightbg;
 }
 
+
 #footer {
-    border-top: none;
     background: $colbackgroundfooter;
+
+        a,
+        .heading,
+        li {
+            color: $colbackground;
+        }
+
+}
+
+#footer {
+    background: $colbackgroundfooter;
+
 }
 @if $what == darkbg {
     #header {
@@ -395,6 +407,7 @@ div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
     padding: 0;
   }
 }
+
 }
 
 
@@ -402,5 +415,7 @@ tbody tr:hover {
     border-color: $colborder;
 }
 
-
+#header h2 {
+    border-color: $colborder;
+}
 
