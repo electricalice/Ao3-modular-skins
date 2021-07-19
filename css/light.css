@@ -1326,6 +1326,12 @@ tbody tr:hover {
   margin: auto;
 }
 
+#main.system h2.heading {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;

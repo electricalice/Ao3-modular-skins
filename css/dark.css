@@ -899,6 +899,14 @@ form.inbox {
   border-width: 0 0.643em 0.643em;
 }
 
+.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+  border-color: #ffb6b9;
+}
+
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;
@@ -927,7 +935,7 @@ body,
 #modal,
 .filters .expander,
 .autocomplete div.dropdown ul {
-  color: #fafafa;
+  color: #e7e7e7;
   background-color: #2e2e2e;
 }
 
@@ -977,7 +985,7 @@ input[type=checkbox] + label,
 .userstuff h5,
 .userstuff h6,
 dd.fandom li.added.tag {
-  color: #fafafa;
+  color: #e7e7e7;
 }
 
 a,
@@ -1039,7 +1047,7 @@ input#site_search:focus,
 .secondary,
 .dropdown,
 form.verbose legend {
-  color: #fafafa;
+  color: #e7e7e7;
   background-color: #454545;
 }
 
@@ -1222,7 +1230,7 @@ select:focus,
 textarea:focus,
 input,
 textarea {
-  color: #fafafa;
+  color: #e7e7e7;
   border-top-color: #4a4a4a;
   border-color: #4a4a4a;
   background-color: #4a4a4a;
@@ -1256,7 +1264,7 @@ textarea {
 .announcement .action {
   background: #2e2e2e;
   border: 1px solid #363636;
-  color: #fafafa;
+  color: #e7e7e7;
 }
 
 .ui-draggable form {
@@ -1329,6 +1337,12 @@ tbody tr:hover {
 .splash .comment .userstuff {
   width: 95%;
   margin: auto;
+}
+
+#main.system h2.heading {
+  text-align: center;
+  margin: auto;
+  display: block;
 }
 
 .blurb h4.heading {
