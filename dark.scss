@@ -1,8 +1,5 @@
 @charset "iso-8859-1";
-//ERRORI:
-//rifai i colori che così fa schifo al cazzo
-//magari usa i colori di dyslexia skin
-//testo su commenti non si legge. AT ALL.
+
 
 $fontheading: Palatino,
 "Palatino Linotype",
@@ -43,8 +40,17 @@ $coltextlighter: darken($coltext, 30%);
 //$colaccent: #8cbebd;
 //$accentgradient: linear-gradient(126deg, rgba(140,190,189,1) 0%, rgba(57,175,200,1) 100%);
 //$colbackgroundfooter: #588f90;
+
 $colaccent: #8BC6EC;
 $accentgradient: linear-gradient(135deg, $colaccent 0%, #9599E2 100%);
+
+//the following is a nice pink option
+//$colaccent: #ea6c83;
+//$accentgradient: linear-gradient(126deg, rgba(234,108,131,1) 0%, rgba(226,87,153,1) 100%);
+
+
+
+
 $colbackgroundalt: lighten($colbackground, 9%);
 $colbackgroundalt2: lighten($colbackground, 3%);
 $colborder: $colbackgroundalt2;
