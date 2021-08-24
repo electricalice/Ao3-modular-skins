@@ -1,0 +1,236 @@
+@charset "iso-8859-1";
+
+
+$fontheading: Palatino,
+"Palatino Linotype",
+"Palatino LT STD",
+"Book Antiqua",
+Georgia,
+serif;
+$fontbody: "Trebuchet MS",
+"Lucida Grande",
+"Lucida Sans Unicode",
+"Lucida Sans",
+sans-serif;
+$fontweightheading: normal;
+$lineheight: 1.125;
+$maxparagraph: 40em;
+$percentparagraph: 70%;
+
+
+$letterspacing: .02em;
+$wordspacing: .21em;
+$fontbasesize: 1em;
+$ratio: 1.2;
+$ratioheader: $ratio;
+$paragraphheight: 2em;
+
+$bordershape: 5px;
+$borderwidth: 1px solid;
+$borderbutton: none;
+$boxbackground: no;
+
+$checkboxsize: .8em;
+
+$colbackground: #fafafa;
+$coltext: #2e2e2e;
+$coltextlighter: lighten($coltext, 30%);
+$colaccent: rgba(21,144,152,1);
+$accentgradient: linear-gradient(126deg, rgba(38,176,193,1) 0%, rgba(21,144,152,1) 100%);
+$colbackgroundalt: #f2f2f2;
+$colbackgroundalt2: transparent;
+$colborder: #e8e8e8;
+$colnotice: #d1e9eb;
+$textnotice: $coltext;
+$colalert: #bd203a;
+$colalertonlightbg: #2e2e2e;
+$colbackgroundfilters: #fafafa;
+$colbackgroundinput: #ebebeb;
+$colbackgroundfooter: $accentgradient;
+$lockbg: transparent;
+$tagshadow: 1px 3px 10px -3px darken($colbackground, 20%);
+
+//the following are relative to exchanges
+$colrequested: #A62637;
+$colrequestedoffered: #F2AA4C;
+$coloffered: #75BD57;
+
+$bottonilogin: darkbuttons;
+$what: lightbg;
+
+//colors for rainbow flag tags!
+
+$reltagcolor: rgba(119,189,30,1);
+$reltaggradient: linear-gradient(126deg, rgba(182,200,41,1) 0%, $reltagcolor 100%);
+$chartagcolor: rgba(1,152,207,1);
+$chartaggradient: linear-gradient(126deg, rgba(22,207,235,1) 0%, $chartagcolor 100%);
+$fftagcolor: rgba(114,32,130,1);
+$fftaggradient: linear-gradient(126deg, rgba(175,44,155,1) 0%, $fftagcolor 100%);
+
+
+
+
+@import 'font';
+@import 'header';
+@import 'bottoni';
+@import 'filters';
+@import 'boxes';
+
+@import 'bottoni-login';
+@import 'colori';
+@import 'paragraphs';
+@import 'blurb';
+//@import 'tags'; MODIFICHE PER IZZY
+
+a.tag:hover, a.tag:visited:hover {
+	background: $accentgradient !important;
+    box-shadow: $tagshadow !important;
+}
+a.tag {
+    background: $colbackgroundalt !important;
+    padding: 2px 10px;
+    margin: 4px 0px;
+    border-radius: 0 15px 15px;
+    display: inline-block;
+}
+
+li.relationships a.tag,
+dl.meta dd.relationship a.tag {
+    background: mix($colbackgroundalt, $reltagcolor, $weight:95%) !important;    
+}
+li.characters a.tag,
+dl.meta dd.character a.tag {
+    background: mix($colbackgroundalt, $chartagcolor, $weight:95%)!important;    
+}
+
+li.freeforms a.tag,
+dl.meta dd.freeform a.tag {
+    background: mix($colbackgroundalt, $fftagcolor, $weight:95%)!important;    
+}
+
+
+li.relationships a:hover,
+li.relationships a:visited:hover,
+dl.meta dd.relationship a.tag:hover,
+dl.meta dd.relationship a.tag:visited:hover {
+  background: $reltaggradient !important;
+}
+
+
+li.characters a:hover,
+li.characters a:visited:hover,
+dl.meta dd.character a.tag:hover,
+dl.meta dd.character a.tag:visited:hover {
+  background: $chartaggradient !important;
+}
+
+
+li.freeforms a:hover,
+li.freeforms a:visited:hover,
+dl.meta dd.freeform a.tag:hover,
+dl.meta dd.freeform a.tag:visited:hover {
+  background: $fftaggradient !important;
+}
+
+
+
+
+
+.commas li:after {
+    content: "";
+}
+
+.tag .primary .icon, .tagset .primary .icon {
+    /* idgaf about icons in the tag pages they are useless */
+    display: none;
+}
+
+h2.heading a.tag {
+    font-size: 75%;
+
+}
+
+
+
+
+.assigned tr a {
+	padding: 2px;
+	border-radius: 5px;
+	display: inline-block;
+}
+.assigned tr:nth-of-type(6n+1) a {
+  background: rgba(246, 48, 63, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+1) a:hover,
+.assigned tr:nth-of-type(6n+1) a:visited:hover {
+  background: #f6303f;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+2) a {
+  background: rgba(241, 137, 4, 0.1);
+  color: inherit !important;
+}
+
+.tags-show .child .tags li,
+.tags-show .parent .tags li,
+.tags-show .synonym .tags li {
+  display: block;
+}
+
+.tags-show .child .tags li:after,
+.tags-show .parent .tags li:after,
+.tags-show .synonym .tags li:after {
+  content: none;
+}
+.assigned tr:nth-of-type(6n+2) a:hover,
+.assigned tr:nth-of-type(6n+2) a:visited:hover {
+  background: #f18904;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+3) a {
+  background: rgba(253, 221, 0, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+3) a:hover,
+.assigned tr:nth-of-type(6n+3) a:visited:hover {
+  background: #fddd00;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+4) a {
+  background: rgba(119, 189, 30, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+4) a:hover,
+.assigned tr:nth-of-type(6n+4) a:visited:hover {
+  background: #77bd1e;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+5) a {
+  background: rgba(1, 152, 207, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+5) a:hover,
+.assigned tr:nth-of-type(6n+5) a:visited:hover {
+  background: #0198cf;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+6) a {
+  background: rgba(114, 32, 130, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+6) a:hover,
+.assigned tr:nth-of-type(6n+6) a:visited:hover {
+  background: #722082;
+  color: white !important;
+}
