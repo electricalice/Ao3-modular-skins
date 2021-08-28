@@ -56,7 +56,11 @@ th,
 td,
 thead,
 tfoot,
-.reading h4.viewed, li.relationships a {
+.reading h4.viewed, 
+li.relationships a,
+#bookmark_form_placement form, 
+#collection-form form
+{ 
     /* 
     it removes the color background 
     where it's set in Ao3's default skin
@@ -89,7 +93,8 @@ fieldset fieldset.listbox,
 form.verbose legend,
 .verbose form legend,
 li.blurb,
-li.comment {
+li.comment, #bookmark_form_placement form, 
+#collection-form form  {
     /* 
     sets the border shapes 
     */
@@ -240,6 +245,9 @@ properly positioned
   border: 1px solid transparent; }
 
 
+#bookmark_form_placement form, 
+#collection-form form {
+  border: none; }
 
 }
 
@@ -279,3 +287,5 @@ textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active {
     border-color: $colalert;
 }
+
+

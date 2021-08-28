@@ -44,7 +44,7 @@ span.symbol, .splash .news .meta, select {
   Please also remember to provide fallback fonts 
   (something like 'serif' or 'sans-serif', separated by a comma)
   */
-  font-family: Verdana, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
 }
 
 p.note, blockquote, body,
@@ -143,7 +143,7 @@ h4.heading .datetime {
   margin: 0px;
   padding: 0.8em;
   border-bottom: 1px solid;
-  border-color: #363636;
+  border-color: #e8e8e8;
 }
 
 #header .search {
@@ -565,7 +565,7 @@ input[type=radio] {
   content: "";
   vertical-align: -0.125em;
   background: none;
-  background-color: #4a4a4a;
+  background-color: #ebebeb;
   border: none;
 }
 
@@ -573,7 +573,7 @@ input[type=radio] {
   content: "";
   vertical-align: -0.125em;
   background: none;
-  background-color: #8BC6EC;
+  background-color: #159098;
   border: none;
 }
 
@@ -584,7 +584,7 @@ input[type=radio] {
   border-radius: 0px;
   vertical-align: -0.125em;
   background: none;
-  background-color: #4a4a4a;
+  background-color: #ebebeb;
   border: none;
 }
 
@@ -595,7 +595,7 @@ input[type=radio] {
   border-radius: 0px;
   vertical-align: -0.125em;
   background: none;
-  background-color: #8BC6EC;
+  background-color: #159098;
   border: none;
 }
 
@@ -603,15 +603,15 @@ input[type=radio] {
   /* 
   the exclude filters have a different color when checked
   */
-  background-color: #ffb6b9;
+  background-color: #bd203a;
 }
 
 input[type=checkbox],
 input[type=radio],
 .actions input[type=checkbox],
 label.action input[type=checkbox] {
-  background-color: #4a4a4a;
-  border: 1px solid #363636;
+  background-color: #ebebeb;
+  border: 1px solid #e8e8e8;
 }
 
 input[type=checkbox],
@@ -642,7 +642,7 @@ input[type=radio]:checked,
 label.action input[type=checkbox]:checked,
 input[type=checkbox]:hover,
 .actions input[type=checkbox]:hover {
-  background-color: #8BC6EC;
+  background-color: #159098;
   border: none;
 }
 
@@ -891,15 +891,15 @@ form.inbox {
 }
 
 .LV_invalid {
-  background: #ffb6b9;
-  border: 1px solid #ffb6b9;
-  color: #2e2e2e;
+  background: #bd203a;
+  border: 1px solid #bd203a;
+  color: #fafafa;
   border-radius: 5px;
   box-shadow: none;
 }
 
 .LV_invalid:before {
-  border-color: #ffb6b9 transparent;
+  border-color: #bd203a transparent;
   border-width: 0 0.643em 0.643em;
 }
 
@@ -908,7 +908,7 @@ input.LV_invalid_field:hover,
 input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active {
-  border-color: #ffb6b9;
+  border-color: #bd203a;
 }
 
 a.dropdown-toggle[href*="/works/new"] {
@@ -939,8 +939,8 @@ body,
 #modal,
 .filters .expander,
 .autocomplete div.dropdown ul {
-  color: #e7e7e7;
-  background-color: #2e2e2e;
+  color: #2e2e2e;
+  background-color: #fafafa;
 }
 
 li.blurb,
@@ -952,14 +952,14 @@ li.post.group,
 li.comment, .wrapper dl.meta, form dl, #bookmark_form_placement form,
 #collection-form form {
   /* dark mode cards */
-  background-color: #363636;
+  background-color: transparent;
 }
 
 ::-moz-selection,
 ::selection,
 ::-webkit-selection {
-  background-color: #8BC6EC;
-  color: #2e2e2e;
+  background-color: #159098;
+  color: #fafafa;
 }
 
 .actions a,
@@ -990,7 +990,7 @@ input[type=checkbox] + label,
 .userstuff h5,
 .userstuff h6,
 dd.fandom li.added.tag {
-  color: #e7e7e7;
+  color: #2e2e2e;
 }
 
 a,
@@ -1028,7 +1028,7 @@ a.tag:visited,
 li::marker,
 .draggable,
 .droppable {
-  color: #8BC6EC;
+  color: #159098;
 }
 
 .actions a,
@@ -1052,8 +1052,8 @@ input#site_search:focus,
 .secondary,
 .dropdown,
 form.verbose legend {
-  color: #e7e7e7;
-  background-color: #454545;
+  color: #2e2e2e;
+  background-color: #f2f2f2;
 }
 
 a:hover,
@@ -1089,12 +1089,12 @@ a[href*="/users/logout"],
 .event .userstuff a,
 .event .userstuff a:link,
 .event .userstuff a:visited {
-  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-  color: #2e2e2e;
+  background: linear-gradient(126deg, #26b0c1 0%, #159098 100%);
+  color: #fafafa;
 }
 
 .blurb h4 a:visited {
-  color: #8BC6EC !important;
+  color: #159098 !important;
 }
 
 #dashboard .current,
@@ -1113,20 +1113,20 @@ tr:hover,
 .dynamic form,
 .secondary,
 .dropdown, .statistics .index li:nth-of-type(even), .ui-sortable li {
-  background-color: #454545;
+  background-color: #f2f2f2;
   /* needs this too to override some instances */
-  background: #454545;
+  background: #f2f2f2;
 }
 
 .thread .even, .ui-sortable li:hover {
-  background-color: #363636;
+  background-color: transparent;
 }
 
 .autocomplete .dropdown ul li:hover,
 li.selected {
   /* cos'è sta roba e perchè l'ho fatta in modo diverso su dark e light*/
-  background-color: #454545;
-  background: #454545;
+  background-color: #159098;
+  color: #fafafa;
 }
 
 a.modal.help:hover, li.relationships a {
@@ -1143,7 +1143,7 @@ ul.notes,
 .autocomplete .notice,
 #header h2.collections,
 #header h2 {
-  background-color: #82b1d0;
+  background-color: #d1e9eb;
   color: #2e2e2e;
 }
 
@@ -1153,26 +1153,21 @@ ul.notes,
 }
 
 .error {
-  background-color: #82b1d0;
-  color: #d41212;
-}
-
-#footer {
-  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-}
-#footer a,
-#footer .heading,
-#footer li {
+  background-color: #d1e9eb;
   color: #2e2e2e;
 }
 
 #footer {
-  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background: linear-gradient(126deg, #26b0c1 0%, #159098 100%);
+}
+#footer a,
+#footer .heading,
+#footer li {
+  color: #fafafa;
 }
 
-#header {
-  background-color: #363636;
-  border-color: #363636;
+#footer {
+  background: linear-gradient(126deg, #26b0c1 0%, #159098 100%);
 }
 
 fieldset,
@@ -1209,17 +1204,17 @@ li.comment,
 .ui-sortable li,
 #bookmark_form_placement form,
 #collection-form form {
-  border-color: #363636;
+  border-color: #e8e8e8;
 }
 
 .required,
 .alert.flash,
 .nominations .rejected {
-  color: #ffb6b9 !important;
+  color: #bd203a !important;
 }
 
 p.required.notice {
-  color: #d41212 !important;
+  color: #2e2e2e !important;
 }
 
 form.search input[type=text],
@@ -1238,100 +1233,92 @@ select:focus,
 textarea:focus,
 input,
 textarea {
-  color: #e7e7e7;
-  border-top-color: #4a4a4a;
-  border-color: #4a4a4a;
-  background-color: #4a4a4a;
+  color: #2e2e2e;
+  border-top-color: #ebebeb;
+  border-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
 .filters [type=radio] + .indicator:before,
 .filters [type=checkbox] + .indicator:before,
 .filters .exclude [type=checkbox] + .indicator:before {
-  background-color: #4a4a4a;
+  background-color: #ebebeb;
 }
 
 .filters [type=radio]:checked + .indicator:before,
 .filters [type=checkbox]:checked + .indicator:before,
 .filters .exclude [type=checkbox]:checked + .indicator:before {
-  background-color: #8BC6EC;
+  background-color: #159098;
 }
 
 .filters .exclude [type=checkbox]:checked + .indicator:before {
-  background-color: #ffb6b9;
+  background-color: #bd203a;
 }
 
 .secondary {
-  background-color: #2e2e2e;
+  background-color: #fafafa;
 }
 
 .javascript {
-  background-color: #4f4f4f !important;
+  background-color: #fafafa !important;
 }
 
 .announcement input[type=submit],
 .announcement .action {
-  background: #2e2e2e;
-  border: 1px solid #363636;
-  color: #e7e7e7;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  color: #2e2e2e;
 }
 
 .ui-draggable form {
-  box-shadow: 0 0 3px #4a4a4a;
+  box-shadow: 0 0 3px #ebebeb;
 }
 
 .userstuff blockquote {
-  border-inline-start: 2px solid #8BC6EC;
+  border-inline-start: 2px solid #159098;
 }
 
 span.offered.requested {
-  color: #8693cd;
+  color: #F2AA4C;
 }
 
 span.offered,
 .replied,
 .nominations .approved {
-  color: #73c074;
+  color: #75BD57;
 }
 
 .chapter .preface {
-  border-color: #363636;
+  border-color: #e8e8e8;
 }
 
 span.requested,
 .nominations .rejected {
-  color: #cd8687;
+  color: #A62637;
 }
 
 .blurb .header h4.heading a:hover,
 .blurb .header h4.heading a:visited:hover {
-  color: #2e2e2e !important;
+  color: #fafafa !important;
 }
 
 .blurb .header img, #workskin h2.heading img {
-  background-color: #8BC6EC;
-}
-
-div.work.listbox.group, div.series.listbox.group, div.bookmark.listbox.group {
-  background: #2e2e2e;
-  border-color: #2e2e2e;
-}
-div.work.listbox.group ul.index.group, div.series.listbox.group ul.index.group, div.bookmark.listbox.group ul.index.group {
-  padding: 0;
+  background-color: transparent;
 }
 
 tbody tr:hover {
-  border-color: #363636;
+  border-color: #e8e8e8;
 }
 
 #header h2 {
-  border-color: #363636;
+  border-color: #e8e8e8;
 }
 
 #workskin,
 .system .userstuff,
 .collection blockquote.userstuff {
   width: 70%;
-  max-width: 45em;
+  max-width: 40em;
 }
 
 .blurb blockquote {
@@ -1442,25 +1429,53 @@ dl.stats dd.published::before, dl.stats dd.status::before {
   margin-right: 0px;
 }
 
-a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
-  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%) !important;
-  box-shadow: 1px 3px 10px -3px black !important;
+a.tag:hover, a.tag:visited:hover {
+  background: linear-gradient(126deg, #26b0c1 0%, #159098 100%) !important;
+  box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
 }
 
 a.tag {
-  background: #454545 !important;
+  background: #f2f2f2 !important;
   padding: 2px 10px;
   margin: 4px 0px;
   border-radius: 0 15px 15px;
   display: inline-block;
 }
 
-li.relationships a.tag {
-  background: #50585e !important;
+li.relationships a.tag,
+dl.meta dd.relationship a.tag {
+  background: #ecefe7 !important;
 }
 
-li.characters a.tag {
-  background: #4a4e51 !important;
+li.characters a.tag,
+dl.meta dd.character a.tag {
+  background: #e6eef0 !important;
+}
+
+li.freeforms a.tag,
+dl.meta dd.freeform a.tag {
+  background: #ece8ec !important;
+}
+
+li.relationships a:hover,
+li.relationships a:visited:hover,
+dl.meta dd.relationship a.tag:hover,
+dl.meta dd.relationship a.tag:visited:hover {
+  background: linear-gradient(126deg, #b6c829 0%, #77bd1e 100%) !important;
+}
+
+li.characters a:hover,
+li.characters a:visited:hover,
+dl.meta dd.character a.tag:hover,
+dl.meta dd.character a.tag:visited:hover {
+  background: linear-gradient(126deg, #16cfeb 0%, #0198cf 100%) !important;
+}
+
+li.freeforms a:hover,
+li.freeforms a:visited:hover,
+dl.meta dd.freeform a.tag:hover,
+dl.meta dd.freeform a.tag:visited:hover {
+  background: linear-gradient(126deg, #af2c9b 0%, #722082 100%) !important;
 }
 
 .commas li:after {
@@ -1474,4 +1489,88 @@ li.characters a.tag {
 
 h2.heading a.tag {
   font-size: 75%;
+}
+
+.assigned tr a {
+  padding: 2px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.assigned tr:nth-of-type(6n+1) a {
+  background: rgba(246, 48, 63, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+1) a:hover,
+.assigned tr:nth-of-type(6n+1) a:visited:hover {
+  background: #f6303f;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+2) a {
+  background: rgba(241, 137, 4, 0.1);
+  color: inherit !important;
+}
+
+.tags-show .child .tags li,
+.tags-show .parent .tags li,
+.tags-show .synonym .tags li {
+  display: block;
+}
+
+.tags-show .child .tags li:after,
+.tags-show .parent .tags li:after,
+.tags-show .synonym .tags li:after {
+  content: none;
+}
+
+.assigned tr:nth-of-type(6n+2) a:hover,
+.assigned tr:nth-of-type(6n+2) a:visited:hover {
+  background: #f18904;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+3) a {
+  background: rgba(253, 221, 0, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+3) a:hover,
+.assigned tr:nth-of-type(6n+3) a:visited:hover {
+  background: #fddd00;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+4) a {
+  background: rgba(119, 189, 30, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+4) a:hover,
+.assigned tr:nth-of-type(6n+4) a:visited:hover {
+  background: #77bd1e;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+5) a {
+  background: rgba(1, 152, 207, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+5) a:hover,
+.assigned tr:nth-of-type(6n+5) a:visited:hover {
+  background: #0198cf;
+  color: white !important;
+}
+
+.assigned tr:nth-of-type(6n+6) a {
+  background: rgba(114, 32, 130, 0.1);
+  color: inherit !important;
+}
+
+.assigned tr:nth-of-type(6n+6) a:hover,
+.assigned tr:nth-of-type(6n+6) a:visited:hover {
+  background: #722082;
+  color: white !important;
 }

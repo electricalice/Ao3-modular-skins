@@ -974,7 +974,9 @@ li.post.group,
 .splash .news li:last-of-type,
 li.comment,
 .faq .example,
-.guideline .example {
+.guideline .example, 
+#bookmark_form_placement form, 
+#collection-form form { 
     /* 
   this sets the borders color
   Use a hex color picker to change this!
@@ -1007,7 +1009,12 @@ span.requested,
     li.blurb,
     .wrapper,
     li.comment,
-    #main li.blurb, div#user-fandoms, .draft, li.post.group, .fandom .group.listbox {
+    #main li.blurb, 
+    div#user-fandoms, 
+    .draft, li.post.group, 
+    .fandom .group.listbox,
+    #bookmark_form_placement form, 
+    #collection-form form {
         background-color: $cardbackground;
         border-radius: $bordershape;
     }

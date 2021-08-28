@@ -17,7 +17,8 @@ li.skins.own,
 .listbox,
 fieldset,
 li.post.group,
-li.comment, .wrapper dl.meta, form dl {
+li.comment, .wrapper dl.meta, form dl, #bookmark_form_placement form, 
+#collection-form form { //CAMBIATO QUAAAA
     /* dark mode cards */
     background-color: $colbackgroundalt2;
 }
@@ -289,7 +290,10 @@ dl.meta,
 .guideline .example,
 li.post.group,
 li.comment, 
-.splash .news li:last-of-type, .ui-sortable li {
+.splash .news li:last-of-type, 
+.ui-sortable li, 
+#bookmark_form_placement form, 
+#collection-form form {
     border-color: $colborder;
 }
 
