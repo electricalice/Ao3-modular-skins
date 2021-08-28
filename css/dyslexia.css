@@ -967,6 +967,11 @@ textarea.LV_invalid_field:active {
   border-color: #A62637;
 }
 
+#bookmark-form,
+#collection-form {
+  margin-top: 20px;
+}
+
 /*
 ======================
   General settings
