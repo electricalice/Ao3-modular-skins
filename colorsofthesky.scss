@@ -1,0 +1,51 @@
+$coloriiniz: #ffffff, #ffffff, #69D0FB, #69D0FB, #236AA0, #1E528E, #E4CE69, #C14E15, #5C2507, #6F71AA, #A17AA7, #FD8996, #F68581, #F0CDC9, #F1E2DF, #ECFEFE, #ECFEFE, #ffffff;
+
+$colori: ();
+
+@each $colore in $coloriiniz {
+	$lunghezza: length($coloriiniz);
+
+	@if lightness($colore) < 40 {
+	$colorchiaro: lighten($colore, 40%);
+	$satura: saturate($colorchiaro, 20%);
+	$colori: append($colori, $satura, $separator: auto);
+
+
+	} @else {
+	$colori: append($colori, $colore, $separator: auto);
+
+	}
+
+}
+
+@mixin stripes($direction, $colors) {
+  $length: length($colors);
+  
+  @if $length > 1 {
+    $stripes: ();
+    
+    @for $i from 1 through $length {
+      $stripe: (100% / $length) * ($i - 1);
+      
+      @if $i > 1 {
+        $stripes: append($stripes, nth($colors, $i) $stripe - 2, comma);
+      }
+      
+      $stripes: append($stripes, nth($colors, $i) $stripe, comma);
+    }
+    
+    background-image: linear-gradient($direction, $stripes);
+  } @else if $length == 1 {
+    background-color: $colors;
+  }
+}
+
+body,
+#header,
+#outer.wrapper
+{
+    @include stripes(to bottom, $colori);
+  background-size: 20000px 20000px;
+  background-repeat: repeat;
+}
+
