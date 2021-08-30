@@ -97,7 +97,7 @@ dl.work dl.stats dd.status::before {
 
 
 
-li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before{
+ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before{
     display: inline-block;
     width: 14px;
     height: 14px;
