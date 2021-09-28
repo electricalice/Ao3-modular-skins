@@ -57,7 +57,7 @@ input[type="checkbox"]+label,
 .userstuff h4,
 .userstuff h5,
 .userstuff h6,
-dd.fandom li.added.tag  {
+dd.fandom li.added.tag, span.unreviewed.symbol, ul.notes li::marker  {
     color: $coltext;
 }
 

@@ -279,7 +279,7 @@ body,
     @extend %word-spacing;
 }
 
- .userstuff h1, .userstuff h2, .userstuff h3, .userstuff h4, .userstuff h5, .userstuff h6 {
+ .userstuff h1, .userstuff h2, .userstuff h3, .userstuff h4, .userstuff h5, .userstuff h6, span.unreviewed.symbol, ul.notes li::marker {
     @extend %text-color;
  }
 

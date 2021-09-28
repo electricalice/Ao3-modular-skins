@@ -267,12 +267,17 @@ form.inbox {
 }
 
 
-.LV_invalid {
+.LV_invalid, .qtip-content { /*tooltips in tagsets and error messages in forms*/
     background: $colalert;
     border: $borderwidth $colalert;
     color: $colbackground;
     border-radius: $bordershape;
     box-shadow:none;
+}
+
+.qtip-content {  /*tooltips in tagsets*/
+border-radius: 0 5px 5px;
+    @extend %text-size;
 }
 
 .LV_invalid:before {
