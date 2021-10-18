@@ -25,3 +25,10 @@
     margin: auto;
     display: block;
 }
+
+
+::selection {
+
+	background-color: $colaccent;
+	color: $colbackground;
+}

@@ -94,9 +94,9 @@ dl.work dl.stats dd.status::before {
 //        background: url(https://64.media.tumblr.com/9800e232399a224b1acffa8b8df3f1c0/ebb78f922c116185-f6/s100x200/54e452f9ede94c8aac6017c058eac4c9d1060951.png);
 
 //}
-
-
-
+ul.statistics dl.stats dd.subscriptions::before {
+    background: url(https://64.media.tumblr.com/64db76a65209eff79515dfc23842eb54/fd0b10e0262ddb71-14/s250x400/921de73c3d5bb819f4e3c58c7c45bd4c6edfe55f.png);
+}
 ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before{
     display: inline-block;
     width: 14px;
