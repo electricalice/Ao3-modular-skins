@@ -205,8 +205,9 @@ td,
   font-size: 100%;
 }
 
-dl.stats {
+dl.stats, .datetime, .byline, .blurb ul.series {
   text-transform: uppercase;
+  font-size: 90%;
 }
 
 /*
@@ -439,7 +440,7 @@ fieldset.work.meta .fandom.required ul.autocomplete {
 #main .actions a:link,
 #main .actions a:visited,
 input[type=submit],
-button, .blurb .actions a, .blurb .actions a:link {
+button, .blurb .actions a, .blurb .actions a:link, #main .actions .current {
   color: #f8f9f9;
   background: linear-gradient(140deg, #f27979 44%, #fd98aa 100%);
   background-size: 600px 600px;
@@ -447,7 +448,6 @@ button, .blurb .actions a, .blurb .actions a:link {
   transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
   text-transform: uppercase;
   padding: 2% 4%;
-  font-size: 80%;
   letter-spacing: 0.1em;
   border-radius: 5px;
 }
@@ -462,7 +462,7 @@ button:hover, .actions a:active,
 input[type=submit]:active,
 button:active {
   box-shadow: 1px 1px 20px #8f3952 inset !important;
-  transform: scale(1.03);
+  transform: scale(0.98);
 }
 
 .comment ul.actions, .blurb ul.actions {
@@ -741,6 +741,10 @@ tfoot {
   this is for tables
   */
   vertical-align: middle;
+}
+
+col.name {
+  background: transparent;
 }
 
 .bookmark .user,
@@ -1170,6 +1174,11 @@ p.kudos {
   word-break: break-word;
 }
 
+.blurb dl.stats, dl.stats + .landmark + .actions, .blurb ul.series {
+  float: none;
+  text-align: center;
+}
+
 /*
 ===========
  various fixes
@@ -1509,8 +1518,20 @@ dd.actions {
   font-size: 110%;
 }
 
+#header li, #greeting p.icon {
+  float: none;
+}
+
+#header .primary {
+  background: transparent;
+}
+
 #header .search {
   display: block;
+}
+
+#greeting li, #header .primary li {
+  display: inline-block;
 }
 
 #header .heading,
@@ -1524,7 +1545,11 @@ dd.actions {
   float: none;
 }
 
-#login, #greeting {
+#header h1.heading {
+  margin: 30px 0;
+}
+
+#login, #greeting, #header .heading {
   padding: 0;
 }
 
@@ -1548,4 +1573,8 @@ dd.actions {
 
 div.preface {
   margin: 1.5em;
+}
+
+#header .logo {
+  display: none;
 }

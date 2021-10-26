@@ -2,18 +2,19 @@
 #main .actions a:link,
 #main .actions a:visited,
  input[type="submit"],
- button, .blurb .actions a, .blurb .actions a:link {
+ button, .blurb .actions a, .blurb .actions a:link, #main .actions .current {
     color: $colbackground;
     background: $accentgradient;
     background-size: 600px 600px;
     background-position: 0px 0px;
     transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
     text-transform: uppercase;
-    padding: 2% 4%;
-    font-size: 80%;
+    padding: 2% 4%;   
     letter-spacing: 0.1em;
     border-radius: 5px;
 }
+
+
 
 
 
@@ -27,7 +28,7 @@ button:hover, .actions a:active,
 input[type="submit"]:active,
 button:active {
     box-shadow: 1px 1px 20px $coloreaccento1 inset !important;
-    transform: scale(1.03);
+    transform: scale(0.98);
 }
 
 

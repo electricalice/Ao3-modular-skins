@@ -134,3 +134,8 @@ p.kudos {
     word-break: break-word;
 }
 
+.blurb dl.stats, dl.stats+.landmark+.actions, .blurb ul.series {
+    float: none;
+    text-align: center;
+}
+

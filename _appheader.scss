@@ -9,8 +9,20 @@
     font-size: 110%; //tolto important qua
 }
 
+#header li, #greeting p.icon {
+    float: none;
+}
+
+#header .primary {
+    background: transparent;
+}
+
 #header .search {
     display: block;
+}
+
+#greeting li, #header .primary li {
+    display: inline-block;
 }
 
 #header .heading,
@@ -24,7 +36,12 @@
     float: none;
 }
 
-#login, #greeting {
+#header h1.heading {
+    margin: 30px 0;
+}
+
+
+#login, #greeting, #header .heading {
     padding: 0;
 }
 
@@ -48,4 +65,8 @@
 
 div.preface {
     margin: 1.5em;
+}
+
+#header .logo {
+    display: none;
 }

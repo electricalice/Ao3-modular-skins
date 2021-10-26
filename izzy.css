@@ -1497,7 +1497,7 @@ dl.stats dd.kudos::before {
   background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
 }
 
-dl.stats dd.words::before, .bookmark dl.stats dt.words::before {
+dl.stats dd.words::before {
   background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
@@ -1509,7 +1509,7 @@ dl.stats dd.comments::before {
   background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
 }
 
-dl.stats dd.bookmarks::before, .bookmark dl.stats dt.bookmarks::before {
+dl.stats dd.bookmarks::before {
   background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 
