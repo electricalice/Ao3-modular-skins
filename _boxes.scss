@@ -1,6 +1,7 @@
 $dyslexia: null !default;
+$smallparagraph: null !default;
 
-@if $dyslexia != yes {
+@if $smallparagraph != yes {
 
 /*
 ===============================
@@ -138,6 +139,10 @@ tfoot {
     vertical-align: middle;
 }
 
+col.name {
+    background: transparent;
+}
+
 .bookmark .user,
 .filters dl,
 .filters dt,
@@ -273,6 +278,7 @@ form.inbox {
     color: $colbackground;
     border-radius: $bordershape;
     box-shadow:none;
+    z-index: 1;
 }
 
 .qtip-content {  /*tooltips in tagsets*/

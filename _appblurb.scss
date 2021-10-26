@@ -1,0 +1,136 @@
+/*
+===========
+ Blurb
+===========
+*/
+
+#main li.blurb {
+    box-shadow: $blurbshadow !important;
+}
+
+.blurb h4.heading {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 100%;
+    line-height: 150%;
+}
+
+.blurb h4.heading a {
+     display: inline-block;
+     border-radius: $bordershape;    
+}
+
+.blurb h4.heading a:first-of-type {
+     display: block;
+     font-size: 160%;
+     margin-bottom: 10px;
+}
+
+
+.blurb .header .heading {
+    margin: .375em 5.25em;
+}
+
+h5.fandoms.heading {
+    text-align: center;
+}
+
+
+.splash blockquote.userstuff.summary {
+    width: 95%;
+    margin: auto 10px;
+}
+
+
+.blurb .header .heading {
+    margin: .375em .375em;
+    overflow-wrap: break-word;
+}
+
+.blurb .datetime {
+    position: initial;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* the following lines of codes rearrange the required tags icons*/
+
+.blurb h4.heading, .blurb .header .heading {
+    margin: 0; //tolto important qua
+}
+
+.blurb ul.required-tags {
+    position: initial;
+    top: initial;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+
+}
+
+.blurb ul.required-tags li+li+li,
+.blurb ul.required-tags li+li+li+li {
+    position: initial;
+    left: initial;
+}
+
+.blurb ul.required-tags li {
+    display: inline-flex;
+}
+.bookmark p.status {
+    position: relative;
+    right: initial;
+    z-index: initial; 
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.bookmark .status span, .bookmark .status a {
+    display: inline-block;
+}
+.bookmark span.count {
+ line-height: initial; 
+ position: initial; 
+ top: initial; 
+ left: initial; 
+    text-align: center;
+}
+.bookmark .status a:focus {
+    overflow: initial;
+}
+.bookmark .status .count {
+    background: none;
+}
+
+
+.blurb .header h5.fandoms {
+    margin: 0px;
+}
+
+.blurb .header p.notice,
+.blurb ul.series {
+    margin: 10px 0;
+}
+
+.blurb .tags li {
+    padding-left: 0;
+    padding-right: 0;
+}
+a.tag {
+    word-break: break-word;
+}
+
+p.kudos {
+    background: url(/images/imageset.png) no-repeat -110px -580px;
+    padding: 4em 0 0 0;
+    min-height: 50px;
+    word-break: break-word;
+}
+
+.blurb h4.heading a {
+    word-break: break-word;
+}
+

@@ -1,0 +1,43 @@
+/* COMMENTS*/
+
+.comment blockquote.userstuff p {
+    width: 95%;
+    margin-left: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-block: 0;
+}
+
+.thread .comment blockquote {
+    box-shadow: $blurbshadow !important;
+    padding: .5em;
+}
+
+.thread .even {
+    background: transparent;
+}
+
+.comment h4.heading {
+    font-size: $fontbasesize;
+    display: inline-block;
+}
+
+.comment .icon {
+    height: 30px;
+    margin-bottom: 0;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.comment div.icon {
+    display: inline-block;
+    float: left;
+}
+
+.comment .edited {
+    font-size: 80%;
+}
+
+.comment blockquote.userstuff {
+    width: initial;
+}

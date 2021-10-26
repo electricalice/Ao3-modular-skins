@@ -1,0 +1,36 @@
+#main .actions a,
+#main .actions a:link,
+#main .actions a:visited,
+ input[type="submit"],
+ button, .blurb .actions a, .blurb .actions a:link {
+    color: $colbackground;
+    background: $accentgradient;
+    background-size: 600px 600px;
+    background-position: 0px 0px;
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+    text-transform: uppercase;
+    padding: 2% 4%;
+    font-size: 80%;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+}
+
+
+
+.actions a:hover,
+.actions a:link:hover,
+.actions a:visited:hover,
+input[type="submit"]:hover,
+button:hover, .actions a:active,
+.actions a:link:active,
+.actions a:visited:active,
+input[type="submit"]:active,
+button:active {
+    box-shadow: 1px 1px 20px $coloreaccento1 inset !important;
+    transform: scale(1.03);
+}
+
+
+.comment ul.actions, .blurb ul.actions {
+    font-size: 70%;
+}

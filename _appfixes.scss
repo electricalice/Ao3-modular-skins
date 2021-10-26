@@ -1,0 +1,54 @@
+/*
+===========
+ various fixes
+===========
+*/
+
+
+//end blurb stuff
+.filters dt {
+    background-color: transparent;
+}
+
+#ui-datepicker-div {
+    top: 522px !important;
+}
+
+.javascript {
+    background-color: transparent;
+}
+
+.faq .userstuff .notice,
+.faq .userstuff .caution,
+.faq .example,
+.guideline .userstuff .notice,
+.guideline .userstuff .caution,
+.guideline .example {
+    /* mostly for stuff in the guidelines 
+  lowers the indent*/
+    margin: 0;
+}
+
+.userstuff dd {
+    /*less indent*/
+    margin-inline-start: 1em;
+}
+
+li.showme a.actions,
+dl.stats dd,
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.action:visited {
+
+    white-space: normal;
+    height: initial;
+
+}
+
+
+div#inner {
+    width: 100% !important;
+}

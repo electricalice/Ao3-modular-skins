@@ -122,6 +122,7 @@ input#site_search:focus,
 form.verbose legend {
     color: $coltext;
     background-color: $colbackgroundalt;
+    transition: box-shadow 0.3s ease-out;
 }
 
 a:hover,
@@ -159,12 +160,42 @@ a[href*="/users/logout"],
 .event .userstuff a:visited {
     background: $accentgradient;
     color: $colbackground;
+    box-shadow: $tagshadow;
 }
+
+
+
+
+
+a.tag:hover,
+a.tag:visited:hover,
+.listbox .heading a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+.actions a:hover,
+.actions a:visited:hover,
+.actions a:focus,
+.actions input:hover,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:visited:hover,
+.action:focus,
+input[type="submit"]:hover {
+    box-shadow: $tagshadow !important;
+}
+
+#header .actions a.dropdown-toggle:hover {
+    box-shadow: none !important;
+}
+
 
 .blurb h4 a:visited {
     color: $colaccent !important;
 }
 
+.pagination .current {
+    color: $coltextlighter;
+}
 
 #dashboard .current,
 #header .menu,

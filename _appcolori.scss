@@ -1,0 +1,125 @@
+/*
+===========
+ Colors
+===========
+*/
+
+body,
+#header,
+#outer.wrapper,
+#inner.wrapper,
+.secondary,
+#modal,
+.filters .expander,
+.autocomplete div.dropdown ul {
+    color: $coltext;
+    background-color: $colbackground;
+}
+
+::-moz-selection,
+::selection,
+::-webkit-selection {
+    background-color: $colaccent;
+    color: $colbackground;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.actions input,
+input[type="submit"],
+button,
+{
+    color: $colbackground;
+}
+
+#header .primary .menu a,
+#header .primary .menu .current,
+input[type="radio"]+label,
+input[type="checkbox"]+label,
+.userstuff h1,
+.userstuff h2,
+.userstuff h3,
+.userstuff h4,
+.userstuff h5,
+.userstuff h6,
+dd.fandom li.added.tag, span.unreviewed.symbol, ul.notes li::marker, .current,
+.actions label,
+.listbox>.heading,
+.listbox .heading a:visited,
+form dd.required,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander   {
+    color: $coltext;
+}
+
+
+
+a,
+a:link,
+a:visited,
+a.tag,
+a.tag:link,
+a.tag:visited,
+.listbox .index a,
+.listbox .index a:link,
+.listbox .index a:visited,
+#header .heading a,
+#header .heading a:link,
+#header .heading a:visited,
+.splash .module h3,
+.blurb h4 a:link,
+.blurb h4 a,
+.blurb h4 a:link,
+.blurb h4 a:visited,
+#header a,
+#header a:link,
+#header a:visited,
+#header .current,
+#header .primary .open a,
+#header .primary .open a:link,
+#header .primary .open a:visited,
+#header .primary .dropdown a,
+#header .primary .dropdown a:link,
+#header .primary .dropdown a:visited,
+#header .primary .dropdown a:focus,
+#dashboard a,
+#dashboard a:link,
+#dashboard a:visited,
+#dashboard span,
+li::marker,
+.draggable,
+.droppable {
+    color: $colaccent;
+}
+
+/* lighter texts for labels */
+dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt {
+    color: $coltextlighter;
+}
+
+#footer {
+    background: $accentgradient;
+    background-color: $accentgradient;
+}
+
+
+
+
+
+#header .actions a:active, #header .actions a:hover {
+    box-shadow: none !important;
+    transform: none;
+}
+
+#main .comment .actions a, #main .comment .actions a:link, #main .comment .actions input[type="submit"], .blurb .actions a, .blurb .actions a:link {
+    color: $coltext;
+    background: $colbackgroundinput;
+}
+
+
+

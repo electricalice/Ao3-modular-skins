@@ -1,0 +1,51 @@
+/*
+===========
+ Header
+===========
+*/
+
+.userstuff,
+#header {
+    font-size: 110%; //tolto important qua
+}
+
+#header .search {
+    display: block;
+}
+
+#header .heading,
+#login,
+#greeting,
+#header .primary {
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    float: none;
+}
+
+#login, #greeting {
+    padding: 0;
+}
+
+#header .dropdown .menu a, #header .dropdown .menu .current {
+    white-space: nowrap;
+}
+
+#header .user {
+    float: none;
+    text-align: center;
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu {
+    width: auto;
+}
+
+div.preface {
+    margin: 1.5em;
+}

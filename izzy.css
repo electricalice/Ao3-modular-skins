@@ -78,7 +78,7 @@ button, #main, select {
 .filters dt,
 .filters dd,
 .filters input[type=submit],
-.filters .expander, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
+.filters .expander, .userstuff li, .userstuff ul, .userstuff p, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
@@ -137,6 +137,72 @@ h4.heading .datetime {
 
 .news h4.heading {
   margin: 0;
+}
+
+code, pre {
+  font-family: "Courier New", Courier, Monospace;
+  font-size: 1em;
+  padding: 1em 0.5em;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander {
+  /* 
+  for some weird reason this is needed 
+  or fonts just won't behave
+  */
+  font-size: 100%;
 }
 
 #header {
@@ -775,6 +841,10 @@ tfoot {
   vertical-align: middle;
 }
 
+col.name {
+  background: transparent;
+}
+
 .bookmark .user,
 .filters dl,
 .filters dt,
@@ -897,6 +967,7 @@ form.inbox {
   color: #fafafa;
   border-radius: 5px;
   box-shadow: none;
+  z-index: 1;
 }
 
 .qtip-content {
@@ -1065,6 +1136,7 @@ input#site_search:focus,
 form.verbose legend {
   color: #2e2e2e;
   background-color: #f2f2f2;
+  transition: box-shadow 0.3s ease-out;
 }
 
 a:hover,
@@ -1102,10 +1174,36 @@ a[href*="/users/logout"],
 .event .userstuff a:visited {
   background: linear-gradient(126deg, #26b0c1 0%, #159098 100%);
   color: #fafafa;
+  box-shadow: 1px 3px 10px -3px #c7c7c7;
+}
+
+a.tag:hover,
+a.tag:visited:hover,
+.listbox .heading a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+.actions a:hover,
+.actions a:visited:hover,
+.actions a:focus,
+.actions input:hover,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:visited:hover,
+.action:focus,
+input[type=submit]:hover {
+  box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
+}
+
+#header .actions a.dropdown-toggle:hover {
+  box-shadow: none !important;
 }
 
 .blurb h4 a:visited {
   color: #159098 !important;
+}
+
+.pagination .current {
+  color: #7b7b7b;
 }
 
 #dashboard .current,
@@ -1399,7 +1497,7 @@ dl.stats dd.kudos::before {
   background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
 }
 
-dl.stats dd.words::before {
+dl.stats dd.words::before, .bookmark dl.stats dt.words::before {
   background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
@@ -1411,7 +1509,7 @@ dl.stats dd.comments::before {
   background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
 }
 
-dl.stats dd.bookmarks::before {
+dl.stats dd.bookmarks::before, .bookmark dl.stats dt.bookmarks::before {
   background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 

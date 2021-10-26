@@ -1,0 +1,20 @@
+.commas li:after {
+    content: "";
+}
+a.tag {
+    background: fade-out($coloreaccento2, 0.8);
+    color: $coltext;
+    padding: 0px 7px;
+    margin: 4px 0px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.relationships a.tag {
+        background: fade-out($coloreaccento2, 0.8);
+}
+
+
+li.warnings a.tag[href*=Apply] {
+    display: none;
+}

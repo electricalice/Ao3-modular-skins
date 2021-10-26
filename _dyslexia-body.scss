@@ -1,71 +1,12 @@
 //Import common stuff
 
 $dyslexia: yes;
-
+$smallparagraph: yes;
 
 @import 'font';
 
 
 
-html,
-body,
-div,
-span,
-applet,
-object,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-.filters dt,
-.filters dd,
-.filters input[type="submit"],
-.filters .expander {
-    /* 
-    for some weird reason this is needed 
-    or fonts just won't behave
-    */
-    font-size: 100%;
-}
 
 
 

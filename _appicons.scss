@@ -1,0 +1,55 @@
+/*
+===========
+  Icons
+===========
+*/
+
+.user .primary p.icon,
+.admin .primary .icon,
+.collection .icon {
+    /* 
+  centers the icons on profile pages, collections and news posts
+  */
+    position: initial;
+    margin: 10px auto;
+}
+
+.primary .icon {
+    position: relative;
+}
+
+.user h2.heading,
+.admin h2.heading,
+.collection h2.heading {
+    /*
+  Centers Usernames and titles in admin pages and collections
+  */
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+.comment .icon .visitor {
+    background: url(/images/imageset.png) no-repeat 0 -525px transparent; //tolto important qua
+}
+
+input#site_search {
+    width: auto;
+}
+
+.tag .primary .icon, .tagset .primary .icon {
+    /* idgaf about icons in the tag pages they are useless */
+    display: none;
+}
+
+.skins .header .heading,
+.user.pseud.picture.blurb .header .heading {
+    margin: .375em .375em; 
+}
+
+.user .primary .icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: $blurbshadow;
+}

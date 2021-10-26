@@ -1,0 +1,44 @@
+/*
+======================
+Page Titles & headings
+======================
+*/
+
+.home .header .userstuff,
+.home .header dl.stats,
+.home .header .type {
+    margin-left: auto;
+}
+
+.home .header h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    word-break: break-word;
+}
+
+.home .header ul.actions,
+ul.actions,
+p.actions,
+li.actions,
+span.actions,
+fieldset.actions,
+dd.actions {
+    float: none;
+}
+
+.news ul.actions {
+    display: flow-root;
+}
+
+.news h4.landmark {
+	display: none;
+}
+
+.user .primary h2.heading {
+    margin-bottom: 1em;
+}
+.user .primary ul.navigation.actions {
+    margin-top: 2.5em;
+}

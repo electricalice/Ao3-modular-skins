@@ -4,6 +4,9 @@ General font and text stuff
 ===========================
 */
 
+$fontmonospace: "Courier New", Courier, Monospace !default;
+
+
 h1,
 h2,
 h3,
@@ -60,6 +63,7 @@ span.symbol, .splash .news .meta, select {
 }
 
 
+
 .home .header h2,
 .preface h3,
 .faq .categories h3,
@@ -110,6 +114,11 @@ p.note {
     @extend %line-height;   
 }
 
+.userstuff li, .userstuff ul, .userstuff p {
+    @extend %line-height;  
+
+}
+
 .filters dt,
 .filters dd,
 .filters input[type="submit"],
@@ -154,4 +163,72 @@ h4.heading .datetime {
 
 .news h4.heading {
   margin: 0;
+}
+
+code, pre {
+  font-family: $fontmonospace;
+  font-size: $fontbasesize;
+  padding: 1em .5em;
+
+}
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.filters dt,
+.filters dd,
+.filters input[type="submit"],
+.filters .expander {
+    /* 
+    for some weird reason this is needed 
+    or fonts just won't behave
+    */
+    font-size: 100%;
 }
