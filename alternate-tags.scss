@@ -11,6 +11,7 @@ a.tag:link {
   display: inline-block;
   padding: 3px 6px;
   margin: 4px 0px;
+  /*This bext line changes the color of the border. Change #900900 with another hex color code*/
   border: 2px solid $color-border;
   border-radius: 5px;
 }
@@ -26,21 +27,33 @@ a.tag:link {
   border: none;
 }
 
-/*This change the Relationship Tags. Alternating 3 different colors*/
+/*This change the Relationship Tags. Alternating 3 different colors
+To Personalize this you'll need to change the code that starts with an hashtag
+with a different color code! 
+To find different color codes just google 'Hex Color Picker'
+*/
 @for $i from 1 through 3 {
   .tags li.relationships:nth-of-type(3n+#{$i}) a.tag {
     background-color: lighten(nth($color, 1), $i * 7%);
   }
 }
 
-/*This change the Character Tags. Alternating 3 different colors*/
+/*This change the Character Tags. Alternating 3 different colors
+To Personalize this you'll need to change the code that starts with an hashtag
+with a different color code! 
+To find different color codes just google 'Hex Color Picker'
+*/
 @for $i from 1 through 3 {
   .tags li.characters:nth-of-type(3n+#{$i}) a.tag {
     background-color: lighten(nth($color, 2), $i * 7%);
   }
 }
 
-/*This change the Additional Tags. Alternating 3 different colors*/
+/*This change the Additional Tags. Alternating 3 different colors
+To Personalize this you'll need to change the code that starts with an hashtag
+with a different color code! 
+To find different color codes just google 'Hex Color Picker'
+*/
 @for $i from 1 through 3 {
   .tags li.freeforms:nth-of-type(3n+#{$i}) a.tag {
     background-color: lighten(nth($color, 3), $i * 5%);
