@@ -1,0 +1,66 @@
+/*Border of the tags*/
+a.tag,
+a.tag:visited,
+a.tag:link {
+  display: inline-block;
+  padding: 3px 6px;
+  margin: 4px 0px;
+  border: 2px solid #900900;
+  border-radius: 5px;
+}
+
+/*Removes the comma between tags*/
+.commas li:after {
+  content: "";
+}
+
+/*tags in home*/
+.favorite a.tag {
+  border: none;
+}
+
+/*This change the Relationship Tags. Alternating 3 different colors*/
+.tags li.relationships:nth-of-type(3n+1) a.tag {
+  background-color: #ff8e43;
+}
+
+.tags li.relationships:nth-of-type(3n+2) a.tag {
+  background-color: #ffa366;
+}
+
+.tags li.relationships:nth-of-type(3n+3) a.tag {
+  background-color: #ffb98a;
+}
+
+/*This change the Character Tags. Alternating 3 different colors*/
+.tags li.characters:nth-of-type(3n+1) a.tag {
+  background-color: #f8b920;
+}
+
+.tags li.characters:nth-of-type(3n+2) a.tag {
+  background-color: #f9c443;
+}
+
+.tags li.characters:nth-of-type(3n+3) a.tag {
+  background-color: #facf66;
+}
+
+/*This change the Additional Tags. Alternating 3 different colors*/
+.tags li.freeforms:nth-of-type(3n+1) a.tag {
+  background-color: #d0cfcc;
+}
+
+.tags li.freeforms:nth-of-type(3n+2) a.tag {
+  background-color: #dcdcda;
+}
+
+.tags li.freeforms:nth-of-type(3n+3) a.tag {
+  background-color: #e9e8e7;
+}
+
+/*This change the background color and the text of the tags when you hover them with a mouse*/
+.tags li.freeforms a.tag:hover, .tags li.characters a.tag:hover,
+.tags li.relationships a.tag:hover {
+  background-color: #900900;
+  color: white;
+}
