@@ -3,3 +3,10 @@ dl.stats, .datetime, .byline, .blurb ul.series {
     text-transform: uppercase;	
     font-size: 90%;
 }
+
+/*titles centered*/
+#main h2.heading {
+    display: block;
+    margin: auto;
+    text-align: center;
+}

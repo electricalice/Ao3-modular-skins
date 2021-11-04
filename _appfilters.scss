@@ -1,0 +1,17 @@
+.javascript form.filters {
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: -12em;
+    width: 100%;
+    z-index: 400;
+}
+
+.filters .expander {
+    background: transparent;
+}
+
+.filters .expander button:hover, .filters .expander button:active, .filters button:active, .filters button:hover {
+    box-shadow: none !important;
+}

@@ -861,7 +861,7 @@ div.comment,
 .comment div.icon,
 a,
 a:link,
-a:visited:hover {
+a:visited:hover, .alert .userstuff {
   /* remove borders */
   border: none;
 }
@@ -1202,6 +1202,10 @@ input[type=submit]:hover {
   color: #8BC6EC !important;
 }
 
+.pagination .current {
+  color: #9b9b9b;
+}
+
 #dashboard .current,
 #header .menu,
 #small_login,
@@ -1243,7 +1247,7 @@ a.modal.help:hover, li.relationships a {
 ul.notes,
 .caution,
 .comment_error,
-.alert.flash,
+.alert.flash, .alert .userstuff,
 .required .autocomplete,
 .autocomplete .notice,
 #header h2.collections,
@@ -1463,6 +1467,11 @@ tbody tr:hover {
   color: #2e2e2e;
 }
 
+/*
+=======
+ Blurb
+======= 
+*/
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
@@ -1494,6 +1503,11 @@ h5.fandoms.heading {
   margin: auto 10px;
 }
 
+/*
+===========
+Stats Icons
+===========
+*/
 dl.stats dt {
   display: none;
 }
@@ -1556,6 +1570,12 @@ dl.stats dd.published::before, dl.stats dd.status::before {
   margin-right: 0px;
 }
 
+/*End of Stats Icons*/
+/*
+======
+ Tags
+======
+*/
 a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
   background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%) !important;
   box-shadow: 1px 3px 10px -3px black !important;
@@ -1569,14 +1589,17 @@ a.tag {
   display: inline-block;
 }
 
+/*relationships tags have one background color*/
 li.relationships a.tag {
   background: #50585e !important;
 }
 
+/*and character tags have a different background color*/
 li.characters a.tag {
   background: #4a4e51 !important;
 }
 
+/*removes the comma between tags*/
 .commas li:after {
   content: "";
 }
@@ -1586,10 +1609,12 @@ li.characters a.tag {
   display: none;
 }
 
+/*title in tag pages (sometimes they become SO LONG)*/
 h2.heading a.tag {
   font-size: 75%;
 }
 
+/*useless shadow animation on tags*/
 a.tag {
   transition: color 0.5s ease-out, box-shadow 0.3s;
 }

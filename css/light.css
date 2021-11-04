@@ -861,7 +861,7 @@ div.comment,
 .comment div.icon,
 a,
 a:link,
-a:visited:hover {
+a:visited:hover, .alert .userstuff {
   /* remove borders */
   border: none;
 }
@@ -1247,7 +1247,7 @@ a.modal.help:hover, li.relationships a {
 ul.notes,
 .caution,
 .comment_error,
-.alert.flash,
+.alert.flash, .alert .userstuff,
 .required .autocomplete,
 .autocomplete .notice,
 #header h2.collections,
@@ -1454,6 +1454,11 @@ tbody tr:hover {
   color: #fafafa;
 }
 
+/*
+=======
+ Blurb
+======= 
+*/
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
@@ -1485,6 +1490,11 @@ h5.fandoms.heading {
   margin: auto 10px;
 }
 
+/*
+===========
+Stats Icons
+===========
+*/
 dl.stats dt {
   display: none;
 }
@@ -1497,7 +1507,7 @@ dl.stats dd.kudos::before {
   background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
 }
 
-dl.stats dd.words::before, .bookmark dl.stats dt.words::before {
+dl.stats dd.words::before {
   background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
@@ -1509,7 +1519,7 @@ dl.stats dd.comments::before {
   background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
 }
 
-dl.stats dd.bookmarks::before, .bookmark dl.stats dt.bookmarks::before {
+dl.stats dd.bookmarks::before {
   background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 
@@ -1547,6 +1557,12 @@ dl.stats dd.published::before, dl.stats dd.status::before {
   margin-right: 0px;
 }
 
+/*End of Stats Icons*/
+/*
+======
+ Tags
+======
+*/
 a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
   background: linear-gradient(126deg, #d84549 0%, #e14c74 100%) !important;
   box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
@@ -1560,14 +1576,17 @@ a.tag {
   display: inline-block;
 }
 
+/*relationships tags have one background color*/
 li.relationships a.tag {
   background: #eed8d9 !important;
 }
 
+/*and character tags have a different background color*/
 li.characters a.tag {
   background: #f0e6e6 !important;
 }
 
+/*removes the comma between tags*/
 .commas li:after {
   content: "";
 }
@@ -1577,10 +1596,12 @@ li.characters a.tag {
   display: none;
 }
 
+/*title in tag pages (sometimes they become SO LONG)*/
 h2.heading a.tag {
   font-size: 75%;
 }
 
+/*useless shadow animation on tags*/
 a.tag {
   transition: color 0.5s ease-out, box-shadow 0.3s;
 }

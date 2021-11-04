@@ -852,11 +852,12 @@ ul.notes,
 .required .autocomplete,
 .autocomplete .notice,
 #header h2.collections,
-#header h2 {
+#header h2, .alert .userstuff {
     /* 
   This is the background color of the notices, alert, comment errors and stuff like that 
   */
     background-color: $colnotice;
+    background: $colnotice;
     @extend %text-color;
 }
 
@@ -872,7 +873,7 @@ ul.notes,
 .required,
 .error,
 .alert.flash,
-.nominations .rejected {
+.nominations .rejected, .alert .userstuff {
     /* 
   This sets the warning text color for alerts, error, and stuff like that
   */

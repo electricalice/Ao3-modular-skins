@@ -98,7 +98,7 @@ li::marker,
 }
 
 /* lighter texts for labels */
-dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt {
+dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current {
     color: $coltextlighter;
 }
 
@@ -121,5 +121,117 @@ dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .n
     background: $colbackgroundinput;
 }
 
+.notice,
+.comment_notice,
+ul.notes,
+.caution,
+.comment_error,
+.alert.flash,
+.required .autocomplete,
+.autocomplete .notice,
+#header h2.collections,
+#header h2 {
+    background-color: $colnotice;
+    color: $textnotice;
+}
+
+.notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
+    color: $textnotice;
+    text-decoration: underline;    
+}
+
+.error {
+    background-color: $colnotice;
+    color: $colalertonlightbg;
+}
+
+form.search input[type="text"],
+dd.autocomplete li.input,
+input[type="radio"],
+select,
+input[type="checkbox"],
+input[type="file"],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+    color: $coltext;
+    border-top-color: $colbackgroundinput;
+    border-color: $colbackgroundinput;
+    background-color: $colbackgroundinput;
+}
+
+.filters [type="radio"]+.indicator:before,
+.filters [type="checkbox"]+.indicator:before,
+.filters .exclude [type="checkbox"]+.indicator:before {
+
+    background-color: $colbackgroundinput;
+
+}
+
+.filters [type="radio"]:checked+.indicator:before,
+.filters [type="checkbox"]:checked+.indicator:before,
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+
+    background-color: $colaccent;
+
+}
+
+.filters .exclude [type="checkbox"]:checked+.indicator:before {
+    background-color: $colalert;
+}
+
+.secondary {
+    background-color: $colbackground;
+}
+
+.javascript, .javascript form.filters  {
+    background-color: $colbackgroundfilters !important;
+
+}
+
+.announcement input[type="submit"],
+.announcement .action {
+    background: $colbackground;
+    border: $borderwidth $colborder;
+    color: $coltext;
+
+}
+
+.ui-draggable form {
+    box-shadow: 0 0 3px $colbackgroundinput;
+}
+
+.userstuff blockquote {
+    border-inline-start: 2px solid $colaccent;
+}
+
+span.offered.requested {
+    color: $colrequestedoffered;
+}
+
+span.offered,
+.replied,
+.nominations .approved {
+    color: $coloffered;
+}
+.chapter .preface {
+    border-color: $colborder;
+}
+span.requested,
+.nominations .rejected {
+    color: $colrequested;
+}
 
 
+
+#header ul.menu.dropdown-menu, #header .dropdown:hover a, #header .open a {
+    background: none;
+    background-color: $colbackgroundfilters;
+}

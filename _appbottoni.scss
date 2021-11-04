@@ -27,8 +27,8 @@ button:hover, .actions a:active,
 .actions a:visited:active,
 input[type="submit"]:active,
 button:active {
-    box-shadow: 1px 1px 20px $coloreaccento1 inset !important;
-    transform: scale(0.98);
+    box-shadow: 1px 1px 10px $coloreaccento1 inset !important;
+    transform: scale(0.99);
 }
 
 

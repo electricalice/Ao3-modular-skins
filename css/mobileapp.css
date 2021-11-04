@@ -210,6 +210,13 @@ dl.stats, .datetime, .byline, .blurb ul.series {
   font-size: 90%;
 }
 
+/*titles centered*/
+#main h2.heading {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 /*
 ========
 Buttons!
@@ -461,8 +468,8 @@ button:hover, .actions a:active,
 .actions a:visited:active,
 input[type=submit]:active,
 button:active {
-  box-shadow: 1px 1px 20px #8f3952 inset !important;
-  transform: scale(0.98);
+  box-shadow: 1px 1px 10px #8f3952 inset !important;
+  transform: scale(0.99);
 }
 
 .comment ul.actions, .blurb ul.actions {
@@ -1021,7 +1028,7 @@ li::marker,
 }
 
 /* lighter texts for labels */
-dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt {
+dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current {
   color: #878595;
 }
 
@@ -1038,6 +1045,115 @@ dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .n
 #main .comment .actions a, #main .comment .actions a:link, #main .comment .actions input[type=submit], .blurb .actions a, .blurb .actions a:link {
   color: #555460;
   background: #e8e8e8;
+}
+
+.notice,
+.comment_notice,
+ul.notes,
+.caution,
+.comment_error,
+.alert.flash,
+.required .autocomplete,
+.autocomplete .notice,
+#header h2.collections,
+#header h2 {
+  background-color: #04adbf;
+  color: #1f1f53;
+}
+
+.notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
+  color: #1f1f53;
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #04adbf;
+  color: #0354a0;
+}
+
+form.search input[type=text],
+dd.autocomplete li.input,
+input[type=radio],
+select,
+input[type=checkbox],
+input[type=file],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+  color: #555460;
+  border-top-color: #e8e8e8;
+  border-color: #e8e8e8;
+  background-color: #e8e8e8;
+}
+
+.filters [type=radio] + .indicator:before,
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before {
+  background-color: #e8e8e8;
+}
+
+.filters [type=radio]:checked + .indicator:before,
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #8f3952;
+}
+
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #f27979;
+}
+
+.secondary {
+  background-color: #f8f9f9;
+}
+
+.javascript, .javascript form.filters {
+  background-color: #eff1f1 !important;
+}
+
+.announcement input[type=submit],
+.announcement .action {
+  background: #f8f9f9;
+  border: none #e8e8e8;
+  color: #555460;
+}
+
+.ui-draggable form {
+  box-shadow: 0 0 3px #e8e8e8;
+}
+
+.userstuff blockquote {
+  border-inline-start: 2px solid #8f3952;
+}
+
+span.offered.requested {
+  color: #F2AA4C;
+}
+
+span.offered,
+.replied,
+.nominations .approved {
+  color: #75BD57;
+}
+
+.chapter .preface {
+  border-color: #e8e8e8;
+}
+
+span.requested,
+.nominations .rejected {
+  color: #A62637;
+}
+
+#header ul.menu.dropdown-menu, #header .dropdown:hover a, #header .open a {
+  background: none;
+  background-color: #eff1f1;
 }
 
 /*
@@ -1366,6 +1482,24 @@ p.kudos::before {
   padding: 0;
 }
 
+.javascript form.filters {
+  margin: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  right: -12em;
+  width: 100%;
+  z-index: 400;
+}
+
+.filters .expander {
+  background: transparent;
+}
+
+.filters .expander button:hover, .filters .expander button:active, .filters button:active, .filters button:hover {
+  box-shadow: none !important;
+}
+
 /*
 ===========
   Icons
@@ -1577,4 +1711,20 @@ div.preface {
 
 #header .logo {
   display: none;
+}
+
+#header .dropdown .menu .current {
+  font-weight: normal;
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: fixed;
 }

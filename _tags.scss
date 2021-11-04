@@ -1,3 +1,8 @@
+/*
+======
+ Tags
+======
+*/
 
 a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
     background: $accentgradient !important;
@@ -10,14 +15,15 @@ a.tag {
     border-radius: 0 15px 15px;
     display: inline-block;
 }
-
+/*relationships tags have one background color*/
 li.relationships a.tag {
     background: mix($colbackgroundalt, $colaccent, $weight:85%) !important;    
 }
+/*and character tags have a different background color*/
 li.characters a.tag {
     background: mix($colbackgroundalt, $colaccent, $weight:93%)!important;    
 }
-
+/*removes the comma between tags*/
 .commas li:after {
     content: "";
 }
@@ -26,12 +32,12 @@ li.characters a.tag {
     /* idgaf about icons in the tag pages they are useless */
     display: none;
 }
-
+/*title in tag pages (sometimes they become SO LONG)*/
 h2.heading a.tag {
     font-size: 75%;
-
 }
 
+/*useless shadow animation on tags*/
 a.tag {
     transition: color 0.5s ease-out, box-shadow 0.3s;
 }

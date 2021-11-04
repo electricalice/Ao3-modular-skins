@@ -1,3 +1,10 @@
+/*
+=======
+ Blurb
+======= 
+*/
+
+
 .blurb h4.heading {
     text-align: center;
     padding: 10px 0;
@@ -31,14 +38,14 @@ h5.fandoms.heading {
     margin: auto 10px;
 }
 
-// .blurb {
-//     border: none !important;
-//     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px !important;
-
-// }
 
 
-//esperimenti con gli stats
+
+/*
+===========
+Stats Icons
+===========
+*/
 dl.stats dt {
 display: none;
 }
@@ -110,3 +117,5 @@ dl.stats dd.published::before, dl.stats dd.status::before {
     width: 0px;
     margin-right: 0px;
 }
+
+/*End of Stats Icons*/

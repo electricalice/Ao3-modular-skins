@@ -159,7 +159,7 @@ div.comment,
 .comment div.icon,
 a,
 a:link,
-a:visited:hover {
+a:visited:hover, .alert .userstuff {
     /* remove borders */
     border: none;
 }
