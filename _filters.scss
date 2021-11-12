@@ -159,9 +159,15 @@ input[type="checkbox"]:hover,
 input[type="checkbox"]:checked,
 input[type="radio"]:checked,
 .actions input[type="checkbox"]:checked,
-label.action input[type="checkbox"]:checked,
-input[type="checkbox"]:hover,
-.actions input[type="checkbox"]:hover {
+label.action input[type="checkbox"]:checked {
     background-color: $colaccent;
     border: none;
+}
+
+input[type="checkbox"]:hover,
+.actions input[type="checkbox"]:hover, .filters [type="checkbox"]:hover+.indicator:before,
+.filters [type="radio"]:hover+.indicator:before,  
+.filters .exclude [type="checkbox"]:hover+.indicator:before {
+    background-color: mix($colaccent, $colbackgroundinput, $weight: 60%);
+    border: none;    
 }
