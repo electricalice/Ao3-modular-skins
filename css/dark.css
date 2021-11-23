@@ -1290,6 +1290,10 @@ ul.notes,
   border-color: #363636;
 }
 
+.news dl.meta {
+  padding: 10px;
+}
+
 fieldset,
 form dl,
 fieldset dl dl,

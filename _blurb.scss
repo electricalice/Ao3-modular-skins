@@ -4,6 +4,9 @@
 ======= 
 */
 
+h5.fandoms.heading {
+    color: transparent; //this removes the commas in the fandom tags (yeah, it's weird)
+}
 
 .blurb h4.heading {
     text-align: center;
@@ -50,61 +53,105 @@ dl.stats dt {
 display: none;
 }
 
-li.collection dl.stats dt, li.series dl.stats dt, dl.series dl.stats dt {
-display: inline-block !important;
-}
 
 
-
+/*work blurb*/
 dl.stats dd.kudos::before {
-    //content: "\2665 ";
+        /*kudos*/
         background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
-    //color: $coltextlighter;
+
 }
 
 dl.stats dd.words::before {
-    //content: "W ";
+        /*words*/
         background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
 
 dl.stats dd.chapters::before {
-    //content: "Ch ";
+        /*chapters*/
     background: url(https://64.media.tumblr.com/a8ca48310f24581ae539336583690b26/b2e751421a20aa0c-5c/s100x200/a51b914598b64c3ddf6f705b278f11a68301d443.png);
 }
 dl.stats dd.comments::before {
-    //content: "Co ";
+        /*comments*/
     background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
-        //color: $coltextlighter;
+
 }
 dl.stats dd.bookmarks::before {
-    //content: "B ";
+        /*bookmarks*/
     background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 dl.stats dd.hits::before {
+        /*hits*/    
     background: url(https://64.media.tumblr.com/b2b8862a356132ac1aa41e9e9f0ddd1d/b2e751421a20aa0c-9e/s100x200/dcd2bcb1adbbb8f9e1844b61aee3dd3a653531e3.png);
 }
 dl.stats dd.collections::before {
-    //content: "H ";
+        /*collections*/
     background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
 }
 dl.work dl.stats dd.published::before {
+        /*date published*/
     background: url(https://64.media.tumblr.com/7e13419071a7eeb35f48a76c7aa0ba36/b2e751421a20aa0c-5d/s250x400/7f351f60793ad683e4a9dc4de55e4ee4d625f9d2.png);
 }
 
 dl.work dl.stats dd.status::before {
+        /*completion status*/
     background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
 }
 
-//.series .blurb dl.stats dd:nth-of-type(2)::before {
 
-//        background: url(https://64.media.tumblr.com/9800e232399a224b1acffa8b8df3f1c0/ebb78f922c116185-f6/s100x200/54e452f9ede94c8aac6017c058eac4c9d1060951.png);
-
-//}
 ul.statistics dl.stats dd.subscriptions::before {
+        /*subscriptions (in the stat page)*/
     background: url(https://64.media.tumblr.com/64db76a65209eff79515dfc23842eb54/fd0b10e0262ddb71-14/s250x400/921de73c3d5bb819f4e3c58c7c45bd4c6edfe55f.png);
 }
-ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before{
+
+/*adjustments for the stat page*/
+dl.stats dd.published::before, dl.stats dd.status::before {
+    width: 0px;
+    margin-right: 0px;
+}
+
+
+/*for the collections*/
+li.collection dl.stats dd a[href$="collections"]::before { //collections/subcollections icon
+        /*collections and sub collections*/
+    background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
+
+}
+li.collection dl.stats dd a[href$="works"]::before { //number of works
+        /*works*/
+
+}
+li.collection dl.stats dd a[href$="bookmarks"]::before { 
+        /*bookmarks*/    
+    background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
+}
+li.collection dl.stats dd a[href$="fandoms"]::before { //number of fandoms
+        /*fandoms*/
+}
+
+/*for the series in the bookmarks page
+
+yes, this is the worst code ever*/
+
+
+dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions) a[href$="bookmarks"]::before { //number of bookmarks
+        /*bookmarks*/
+    background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
+}
+
+dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(1)::before { //words
+        /*words*/
+        background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
+}
+
+dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(2)::before { //works
+        /*works*/
+}
+
+/*this creates the space before the stats for the icon*/
+
+ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before, .collection dl.stats dd a[href$="collections"]::before, li.collection dl.stats dd a[href$="works"]::before, li.collection dl.stats dd a[href$="bookmarks"]::before, li.collection dl.stats dd a[href$="fandoms"]::before, li.series dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(1)::before, dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(2)::before, dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions) a[href$="bookmarks"]::before {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -113,9 +160,5 @@ ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.s
         margin-right: 5px;
 }
 
-dl.stats dd.published::before, dl.stats dd.status::before {
-    width: 0px;
-    margin-right: 0px;
-}
 
 /*End of Stats Icons*/
