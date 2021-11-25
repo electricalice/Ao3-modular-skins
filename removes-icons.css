@@ -46,3 +46,6 @@
 background:none;
 }
 
+.index .skins .icon, .blurb .header img {
+    display: none;
+}
