@@ -363,6 +363,10 @@ div.preface,
     margin: 10px;
 }
 
+.chapter .expandable.secondary, .chapter .expandable.secondary select {
+    width: 90%;
+}
+
 .skins .header .heading,
 .user.pseud.picture.blurb .header .heading {
     margin: .375em .375em; 

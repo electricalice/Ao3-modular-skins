@@ -1,0 +1,48 @@
+.blurb .header .heading, .blurb .header ul {
+	margin:  0;
+}
+
+.blurb ul.required-tags {
+	position: initial;
+	top: initial;
+	width: initial;
+	margin: initial;
+}
+.blurb ul.required-tags li,
+.blurb ul.required-tags li a,
+.blurb ul.required-tags li span {
+	display:  inline-block;
+	width: initial;
+	height: initial;
+	margin-top:  initial;
+	margin-bottom: initial;
+	padding-left:  initial;
+}
+.blurb ul.required-tags li {
+	margin-bottom: initial;
+}
+.blurb ul.required-tags li+li+li,
+.blurb ul.required-tags li+li+li+li {
+    position: initial;
+    left: initial;
+}
+
+.blurb ul.required-tags li+li+li, .blurb ul.required-tags li+li+li+li {
+    top: initial;
+}
+
+
+.blurb ul.required-tags li a:focus {
+    overflow: initial;
+}
+.blurb span.text {
+    height: initial;
+    width: initial;
+    font-size: inherit;
+    color: initial;
+}
+
+.required-tags .rating-general-audience, .required-tags .rating-explicit, .required-tags .rating-mature, .required-tags .rating-notrated, .required-tags .category-none, .required-tags .warning-no, .status .count, .required-tags .rating-teen, .required-tags .category-femslash, .required-tags .category-gen, .required-tags .category-slash, .required-tags .category-het, .required-tags .category-multi, .required-tags .category-other, .required-tags .complete-no, .required-tags .complete-yes, .required-tags .warning-yes, .required-tags .warning-choosenotto, .required-tags .external-work, .status .private .text, .status .public, .status .hidden, .status .rec {
+background:none;
+}
+
