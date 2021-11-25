@@ -1140,6 +1140,11 @@ a.tag:link {
   content: "";
 }
 
+h5.fandoms.heading {
+  /*this removes the commas in the fandom tags (yeah, it's weird)*/
+  color: transparent;
+}
+
 .favorite a.tag {
   border: none;
 }
@@ -1331,10 +1336,16 @@ input[type=checkbox]:hover,
 input[type=checkbox]:checked,
 input[type=radio]:checked,
 .actions input[type=checkbox]:checked,
-label.action input[type=checkbox]:checked,
-input[type=checkbox]:hover,
-.actions input[type=checkbox]:hover {
+label.action input[type=checkbox]:checked {
   background-color: #4675C0;
+  border: none;
+}
+
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover, .filters [type=checkbox]:hover + .indicator:before,
+.filters [type=radio]:hover + .indicator:before,
+.filters .exclude [type=checkbox]:hover + .indicator:before {
+  background-color: #85a1d1;
   border: none;
 }
 

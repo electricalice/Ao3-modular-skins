@@ -382,7 +382,7 @@ a.tag:visited,
 a.tag:link {
     display: inline-block;
     @extend %text-color;
-    padding: 4px 7px;
+    padding: 3px 7px;
     margin: 4px 0px;
     border: $bordertagwidth $colaccent;
     border-radius: $bordershape;
@@ -391,6 +391,11 @@ a.tag:link {
 
 .commas li:after {
     content: "";
+}
+
+h5.fandoms.heading {
+/*this removes the commas in the fandom tags (yeah, it's weird)*/
+    color: transparent; 
 }
 
 .favorite a.tag {

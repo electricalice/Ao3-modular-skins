@@ -1,0 +1,60 @@
+@charset "iso-8859-1";
+
+
+// All About Text
+
+$fontheading: "Trebuchet MS",
+Calibri,
+sans-serif;
+$fontbody: "Trebuchet MS",
+Calibri,
+sans-serif;
+$fontweightheading: 700;
+$letterspacing: 0.02em;
+$wordspacing: 0.21em;
+$lineheight: 1.8em;
+$fontbasesize: 1.05em;
+$paragraphheight: 2em;
+$paragraphwidth: 70%;
+$paragraphmaxwidth: 45em;
+
+//Ratio numbers
+
+$ratio: 1.25;
+$ratioheader: 1;
+
+//Borders & Shapes
+
+$bordershape: 5px;
+$borderwidth: 2px solid;
+$bordertagwidth: $borderwidth;
+$borderbutton: none;
+$checkboxsize: .9em;
+
+//ALLTHECOLORSSS!
+
+$colbackground: #FBF6E5;
+$coltext: #5C6D74;
+$colaccent: #928b70;
+$colbackgroundalt: #F4E8D3;
+$colborder: #DBD5C3;
+$colnotice: #c5b89c;
+$colalert: #86300f;
+$colbackgroundfilters: $colbackgroundalt;
+$colbackgroundinput: #F7EEDE;
+$colheader: $colaccent;
+$textheader: $colbackground;
+
+$cardbackground: null !default;
+$needscontrast: null !default;
+
+//the following are relative to exchanges
+$colrequested: #A62637;
+$colrequestedoffered: #F2AA4C;
+$coloffered: #75BD57;
+
+
+
+@import 'dyslexia-body';
+
+
