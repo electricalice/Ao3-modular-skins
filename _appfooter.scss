@@ -13,3 +13,11 @@
 .comment h4.byline {
     overflow-wrap: break-word;
 }
+
+#footer {
+    border-top: none;
+    .actions a:hover, .actions a:link:hover {
+        box-shadow: none !important;
+    }
+}
+

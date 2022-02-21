@@ -1,37 +1,97 @@
-#main .actions a,
-#main .actions a:link,
-#main .actions a:visited,
- input[type="submit"],
- button, .blurb .actions a, .blurb .actions a:link, #main .actions .current {
-    color: $colbackground;
-    background: $accentgradient;
-    background-size: 600px 600px;
-    background-position: 0px 0px;
-    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
-    text-transform: uppercase;
-    padding: 2% 4%;   
-    letter-spacing: 0.1em;
-    border-radius: 5px;
-}
+// #main .actions a,
+// #main .actions a:link,
+// #main .actions a:visited,
+//  input[type="submit"],
+//  button, .blurb .actions a, .blurb .actions a:link, #main .actions .current {
+//     color: $coltext;
+//     background: $accentgradient2;
+//     background-size: 600px 600px;
+//     background-position: 0px 0px;
+//     transition: box-shadow 0.1s ease-in;
+//     text-transform: uppercase;
+//     padding: 2% 4%;   
+//     letter-spacing: 0.1em;
+//     border-radius: $bordershapebuttons;
+// }
 
 
 
-
-
-.actions a:hover,
-.actions a:link:hover,
-.actions a:visited:hover,
-input[type="submit"]:hover,
-button:hover, .actions a:active,
-.actions a:link:active,
-.actions a:visited:active,
-input[type="submit"]:active,
-button:active {
-    box-shadow: 1px 1px 10px $coloreaccento1 inset !important;
-    transform: scale(0.99);
-}
+// .actions a:hover,
+// .actions a:link:hover,
+// .actions a:visited:hover,
+// input[type="submit"]:hover,
+// button:hover, .actions a:active,
+// .actions a:link:active,
+// .actions a:visited:active,
+// input[type="submit"]:active,
+// button:active {
+//     box-shadow: 1px 1px 10px nth($pastel, 1) inset !important;
+//     color: $coltext;
+// }
 
 
 .comment ul.actions, .blurb ul.actions {
     font-size: 70%;
 }
+
+
+
+
+
+
+
+
+// #main .actions a,
+// #main .actions a:link,
+// #main .actions a:visited,
+//  input[type="submit"], 
+//  .actions input,
+//  button, 
+//  .blurb .actions a, 
+//  .blurb .actions a:link, 
+//  #main .actions .current, #header #search .button {
+//     background: $accentgradient;
+//     padding: 12px 24px;
+
+//     border-radius: 6px;
+//     border-bottom: 4px solid $colaccent;
+//     border-top: 0px;
+//     transition: all 0.1s ease-in-out;
+
+//     &:hover {
+//         border-bottom-width: 0;
+//         border-top-width: 4px;
+//         color: $colbackground;
+//     }
+// }
+
+
+#main .actions a,
+#main .actions a:link,
+#main .actions a:visited,
+ input[type="submit"], 
+ .actions input,
+ button, 
+ .blurb .actions a, 
+ .blurb .actions a:link, 
+ #main .actions .current, #header #search .button {
+
+  border-color: black;
+  color: #fff;
+  background: {
+    image: linear-gradient(45deg, black 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: all 300ms ease-in-out;
+  
+  &:hover {
+    background-position: 0;
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+

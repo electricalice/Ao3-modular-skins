@@ -4,6 +4,11 @@ dl.stats, .datetime, .byline, .blurb ul.series {
     font-size: 90%;
 }
 
+body {
+    letter-spacing: $letterspacing;
+    word-spacing: $wordspacing;
+}
+
 /*titles centered*/
 #main h2.heading {
     display: block;

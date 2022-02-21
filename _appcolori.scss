@@ -61,21 +61,14 @@ form dd.required,
 
 a,
 a:link,
-a:visited,
-a.tag,
-a.tag:link,
-a.tag:visited,
 .listbox .index a,
 .listbox .index a:link,
-.listbox .index a:visited,
 #header .heading a,
 #header .heading a:link,
-#header .heading a:visited,
 .splash .module h3,
 .blurb h4 a:link,
 .blurb h4 a,
 .blurb h4 a:link,
-.blurb h4 a:visited,
 #header a,
 #header a:link,
 #header a:visited,
@@ -97,14 +90,25 @@ li::marker,
     color: $colaccent;
 }
 
+a:visited, .listbox .index a:visited, #header .heading a:visited, .blurb h4 a:visited {
+ color: desaturate($colaccent, 50%);
+}
+
+
 /* lighter texts for labels */
-dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current {
+dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current, .datetime {
     color: $coltextlighter;
 }
 
 #footer {
     background: $accentgradient;
     background-color: $accentgradient;
+    .heading {
+    color: $coltext;
+    }
+    a {
+        color: $coltext;
+    }
 }
 
 

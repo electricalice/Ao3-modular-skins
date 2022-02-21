@@ -999,6 +999,20 @@ textarea.LV_invalid_field:active {
   margin-top: 20px;
 }
 
+/*changes the stats page. yes I need to use hue-rotate because fill is not allowed by ao3. help.*/
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect, #stat_chart svg g:nth-of-type(2) > g rect:last-of-type, #stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+  filter: hue-rotate(222deg);
+  opacity: 70% !important;
+}
+
+#stat_chart svg text {
+  font-family: Verdana, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:hover {
+  filter: hue-rotate(217deg);
+}
+
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;

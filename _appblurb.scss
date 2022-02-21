@@ -6,14 +6,48 @@
 
 #main li.blurb {
     box-shadow: $blurbshadow !important;
+    padding: 0;
+}
+
+.blurb .header {
+    padding: $space*$ratio $space*$ratio 0;
+    width: auto;
+    color: $coltextlighter;
+}
+.blurb .tags {
+    padding: $space*$ratio $space*$ratio;
+}
+
+.blurb .userstuff {
+    padding: $space*$ratio;
+    width: auto;
+}
+
+.blurb .stats {
+    padding: $space*$ratio;
+    background: darken($colbackground, 2%);
+    border-top: 1px solid $colbordersubtle;
+    border-radius: 0 0 $bordershape $bordershape;
+    color: $coltextlighter;
+}
+
+.blurb dl.stats+.heading.landmark {
+    display: none;
+}
+
+.blurb .actions {
+    padding: 0 0 $space*$ratio;
+        background: darken($colbackground, 2%);
 }
 
 .blurb h4.heading {
-    text-align: center;
+    //text-align: center;
     padding: 10px 0;
     font-size: 100%;
     line-height: 150%;
 }
+
+
 
 .blurb h4.heading a {
      display: inline-block;
@@ -22,8 +56,10 @@
 
 .blurb h4.heading a:first-of-type {
      display: block;
-     font-size: 160%;
+     font-size: 200%;
+     font-weight: bold;
      margin-bottom: 10px;
+     line-height: 120%;
 }
 
 
@@ -32,7 +68,7 @@
 }
 
 h5.fandoms.heading {
-    text-align: center;
+    //text-align: center;
 }
 
 

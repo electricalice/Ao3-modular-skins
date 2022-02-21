@@ -1,0 +1,19 @@
+/*changes the stats page. yes I need to use hue-rotate because fill is not allowed by ao3. help.*/
+
+@if $what == lightbg {
+	#stat_chart svg rect:first-of-type {
+		opacity: 0%;
+	}
+}
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect, #stat_chart  svg g:nth-of-type(2) > g rect:last-of-type, #stat_chart  g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+	filter: hue-rotate(222deg);
+    opacity: 70% !important;
+}
+
+#stat_chart svg text {
+font-family: $fontbody;
+}
+
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:hover {
+    filter: hue-rotate(217deg);
+}

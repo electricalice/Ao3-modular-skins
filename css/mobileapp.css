@@ -17,7 +17,7 @@ h6,
   If you want to change it remember to provide fallback fonts 
   (something like 'serif' or 'sans-serif', separated by a comma)
   */
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   border-bottom: none;
   font-weight: normal;
 }
@@ -44,7 +44,7 @@ span.symbol, .splash .news .meta, select {
   Please also remember to provide fallback fonts 
   (something like 'serif' or 'sans-serif', separated by a comma)
   */
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 .qtip-content, p.note, blockquote, body,
@@ -208,6 +208,11 @@ td,
 dl.stats, .datetime, .byline, .blurb ul.series {
   text-transform: uppercase;
   font-size: 90%;
+}
+
+body {
+  letter-spacing: 0.04em;
+  word-spacing: 0.2em;
 }
 
 /*titles centered*/
@@ -443,37 +448,37 @@ fieldset.work.meta .fandom.required ul.autocomplete {
   background: transparent;
 }
 
+.comment ul.actions, .blurb ul.actions {
+  font-size: 70%;
+}
+
 #main .actions a,
 #main .actions a:link,
 #main .actions a:visited,
 input[type=submit],
-button, .blurb .actions a, .blurb .actions a:link, #main .actions .current {
-  color: #f8f9f9;
-  background: linear-gradient(140deg, #f27979 44%, #fd98aa 100%);
-  background-size: 600px 600px;
-  background-position: 0px 0px;
-  transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
-  text-transform: uppercase;
-  padding: 2% 4%;
-  letter-spacing: 0.1em;
-  border-radius: 5px;
+.actions input,
+button,
+.blurb .actions a,
+.blurb .actions a:link,
+#main .actions .current, #header #search .button {
+  border-color: black;
+  color: #fff;
+  background-image: linear-gradient(45deg, black 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: all 300ms ease-in-out;
 }
-
-.actions a:hover,
-.actions a:link:hover,
-.actions a:visited:hover,
+#main .actions a:hover,
+#main .actions a:link:hover,
+#main .actions a:visited:hover,
 input[type=submit]:hover,
-button:hover, .actions a:active,
-.actions a:link:active,
-.actions a:visited:active,
-input[type=submit]:active,
-button:active {
-  box-shadow: 1px 1px 10px #8f3952 inset !important;
-  transform: scale(0.99);
-}
-
-.comment ul.actions, .blurb ul.actions {
-  font-size: 70%;
+.actions input:hover,
+button:hover,
+.blurb .actions a:hover,
+.blurb .actions a:link:hover,
+#main .actions .current:hover, #header #search .button:hover {
+  background-position: 0;
+  transform: scale(1.1);
 }
 
 /*
@@ -560,7 +565,7 @@ input[type=radio] {
   content: "";
   vertical-align: -0.125em;
   background: none;
-  background-color: #8f3952;
+  background-color: #99d6ff;
   border: none;
 }
 
@@ -582,7 +587,7 @@ input[type=radio] {
   border-radius: 0px;
   vertical-align: -0.125em;
   background: none;
-  background-color: #8f3952;
+  background-color: #99d6ff;
   border: none;
 }
 
@@ -590,7 +595,7 @@ input[type=radio] {
   /* 
   the exclude filters have a different color when checked
   */
-  background-color: #f27979;
+  background-color: #ffc2fb;
 }
 
 input[type=checkbox],
@@ -626,10 +631,16 @@ input[type=checkbox]:hover,
 input[type=checkbox]:checked,
 input[type=radio]:checked,
 .actions input[type=checkbox]:checked,
-label.action input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked {
+  background-color: #99d6ff;
+  border: none;
+}
+
 input[type=checkbox]:hover,
-.actions input[type=checkbox]:hover {
-  background-color: #8f3952;
+.actions input[type=checkbox]:hover, .filters [type=checkbox]:hover + .indicator:before,
+.filters [type=radio]:hover + .indicator:before,
+.filters .exclude [type=checkbox]:hover + .indicator:before {
+  background-color: #b9ddf6;
   border: none;
 }
 
@@ -770,7 +781,7 @@ div.comment,
 .comment div.icon,
 a,
 a:link,
-a:visited:hover {
+a:visited:hover, .alert .userstuff {
   /* remove borders */
   border: none;
 }
@@ -880,9 +891,9 @@ form.inbox {
 
 .LV_invalid, .qtip-content {
   /*tooltips in tagsets and error messages in forms*/
-  background: #f27979;
-  border: none #f27979;
-  color: #f8f9f9;
+  background: #ffc2fb;
+  border: none #ffc2fb;
+  color: #f9f9f9;
   border-radius: 5px;
   box-shadow: none;
   z-index: 1;
@@ -894,7 +905,7 @@ form.inbox {
 }
 
 .LV_invalid:before {
-  border-color: #f27979 transparent;
+  border-color: #ffc2fb transparent;
   border-width: 0 0.643em 0.643em;
 }
 
@@ -903,7 +914,7 @@ input.LV_invalid_field:hover,
 input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active {
-  border-color: #f27979;
+  border-color: #ffc2fb;
 }
 
 #bookmark-form,
@@ -915,21 +926,59 @@ textarea.LV_invalid_field:active {
   content: "";
 }
 
+h5.fandoms.heading {
+  color: transparent;
+}
+
 a.tag {
-  background: rgba(242, 121, 121, 0.2);
+  background: #d5bdff;
   color: #555460;
-  padding: 0px 7px;
-  margin: 4px 0px;
-  border-radius: 15px;
+  padding: 1px 13px;
+  margin: 5.9171597633px 0px;
+  border-radius: 50px;
   display: inline-block;
 }
 
 .relationships a.tag {
-  background: rgba(242, 121, 121, 0.2);
+  background: #d7b3ff;
+}
+
+.characters a.tag {
+  background: #d9a9ff;
+}
+
+.freeforms a.tag {
+  background: #db9eff;
+}
+
+a.tag:visited {
+  color: rgba(85, 84, 96, 0.8);
+}
+
+a.tag:hover, a.tag:active, .listbox .heading a.tag:visited:hover {
+  background: rgba(213, 189, 255, 0.8);
+}
+
+.relationships a.tag:hover, .relationships a.tag:active {
+  background: rgba(219, 158, 255, 0.8);
+}
+
+.characters a.tag:hover, .characters a.tag:active {
+  background: rgba(213, 189, 255, 0.8);
+}
+
+.freeforms a.tag:hover, .freeforms a.tag:active {
+  background: rgba(213, 189, 255, 0.8);
 }
 
 li.warnings a.tag[href*=Apply] {
   display: none;
+}
+
+.blurb .fandoms a.tag, .blurb .fandoms a.tag:link, .blurb .fandoms a.tag:hover, .blurb .fandoms a.tag:active, .blurb .fandoms a.tag:visited:hover {
+  background: initial;
+  padding: initial;
+  margin: initial;
 }
 
 /*
@@ -946,14 +995,14 @@ body,
 .filters .expander,
 .autocomplete div.dropdown ul {
   color: #555460;
-  background-color: #f8f9f9;
+  background-color: #f9f9f9;
 }
 
 ::-moz-selection,
 ::selection,
 ::-webkit-selection {
-  background-color: #8f3952;
-  color: #f8f9f9;
+  background-color: #99d6ff;
+  color: #f9f9f9;
 }
 
 .actions a,
@@ -964,7 +1013,7 @@ body,
 .actions input,
 input[type=submit],
 button {
-  color: #f8f9f9;
+  color: #f9f9f9;
 }
 
 #header .primary .menu a,
@@ -991,21 +1040,14 @@ form dd.required,
 
 a,
 a:link,
-a:visited,
-a.tag,
-a.tag:link,
-a.tag:visited,
 .listbox .index a,
 .listbox .index a:link,
-.listbox .index a:visited,
 #header .heading a,
 #header .heading a:link,
-#header .heading a:visited,
 .splash .module h3,
 .blurb h4 a:link,
 .blurb h4 a,
 .blurb h4 a:link,
-.blurb h4 a:visited,
 #header a,
 #header a:link,
 #header a:visited,
@@ -1024,17 +1066,27 @@ a.tag:visited,
 li::marker,
 .draggable,
 .droppable {
-  color: #8f3952;
+  color: #99d6ff;
+}
+
+a:visited, .listbox .index a:visited, #header .heading a:visited, .blurb h4 a:visited {
+  color: #b3d1e6;
 }
 
 /* lighter texts for labels */
-dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current {
-  color: #878595;
+dl.meta dl.stats dt, .preface h3.heading, .comment .posted, .comment .edited, .news dl.meta, .blurb dl.stats dt, #header .dropdown .menu .current, .datetime {
+  color: #6d6c7b;
 }
 
 #footer {
-  background: linear-gradient(140deg, #f27979 44%, #fd98aa 100%);
-  background-color: linear-gradient(140deg, #f27979 44%, #fd98aa 100%);
+  background: linear-gradient(45deg, #ffc2fb, #99d6ff);
+  background-color: linear-gradient(45deg, #ffc2fb, #99d6ff);
+}
+#footer .heading {
+  color: #555460;
+}
+#footer a {
+  color: #555460;
 }
 
 #header .actions a:active, #header .actions a:hover {
@@ -1057,17 +1109,17 @@ ul.notes,
 .autocomplete .notice,
 #header h2.collections,
 #header h2 {
-  background-color: #04adbf;
-  color: #1f1f53;
+  background-color: #baa3ff;
+  color: #555460;
 }
 
 .notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
-  color: #1f1f53;
+  color: #555460;
   text-decoration: underline;
 }
 
 .error {
-  background-color: #04adbf;
+  background-color: #baa3ff;
   color: #0354a0;
 }
 
@@ -1102,15 +1154,15 @@ textarea {
 .filters [type=radio]:checked + .indicator:before,
 .filters [type=checkbox]:checked + .indicator:before,
 .filters .exclude [type=checkbox]:checked + .indicator:before {
-  background-color: #8f3952;
+  background-color: #99d6ff;
 }
 
 .filters .exclude [type=checkbox]:checked + .indicator:before {
-  background-color: #f27979;
+  background-color: #ffc2fb;
 }
 
 .secondary {
-  background-color: #f8f9f9;
+  background-color: #f9f9f9;
 }
 
 .javascript, .javascript form.filters {
@@ -1119,7 +1171,7 @@ textarea {
 
 .announcement input[type=submit],
 .announcement .action {
-  background: #f8f9f9;
+  background: #f9f9f9;
   border: none #e8e8e8;
   color: #555460;
 }
@@ -1129,7 +1181,7 @@ textarea {
 }
 
 .userstuff blockquote {
-  border-inline-start: 2px solid #8f3952;
+  border-inline-start: 2px solid #99d6ff;
 }
 
 span.offered.requested {
@@ -1163,10 +1215,42 @@ span.requested,
 */
 #main li.blurb {
   box-shadow: 0px 2px 10px 2px #eee !important;
+  padding: 0;
+}
+
+.blurb .header {
+  padding: 13px 13px 0;
+  width: auto;
+  color: #6d6c7b;
+}
+
+.blurb .tags {
+  padding: 13px 13px;
+}
+
+.blurb .userstuff {
+  padding: 13px;
+  width: auto;
+}
+
+.blurb .stats {
+  padding: 13px;
+  background: #f4f4f4;
+  border-top: 1px solid white;
+  border-radius: 0 0 5px 5px;
+  color: #6d6c7b;
+}
+
+.blurb dl.stats + .heading.landmark {
+  display: none;
+}
+
+.blurb .actions {
+  padding: 0 0 13px;
+  background: #f4f4f4;
 }
 
 .blurb h4.heading {
-  text-align: center;
   padding: 10px 0;
   font-size: 100%;
   line-height: 150%;
@@ -1179,16 +1263,14 @@ span.requested,
 
 .blurb h4.heading a:first-of-type {
   display: block;
-  font-size: 160%;
+  font-size: 200%;
+  font-weight: bold;
   margin-bottom: 10px;
+  line-height: 120%;
 }
 
 .blurb .header .heading {
   margin: 0.375em 5.25em;
-}
-
-h5.fandoms.heading {
-  text-align: center;
 }
 
 .splash blockquote.userstuff.summary {
@@ -1297,6 +1379,127 @@ p.kudos {
 
 /*
 ===========
+Stats Icons
+===========
+*/
+dl.stats dt {
+  display: none;
+}
+
+.skins .header dl.stats dt {
+  display: inline-block;
+}
+
+/*for the series in the bookmarks page*/
+dl.stats dd:nth-of-type(1)::before {
+  /*words*/
+  background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
+}
+
+dl.stats dd:nth-of-type(2)::before {
+  /*works*/
+  background: url(https://64.media.tumblr.com/f835b437a474b4b672a8d4ebe61402b8/8979adde76f2ff05-fb/s100x200/8f86556b6896e96427f5a4a54f0de7be38ddba75.png);
+}
+
+dl.stats dd.language::before {
+  display: none !important;
+}
+
+/*work blurb*/
+dl.stats dd.kudos::before {
+  /*kudos*/
+  background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
+}
+
+dl.stats dd.words::before {
+  /*words*/
+  background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
+}
+
+dl.stats dd.chapters::before {
+  /*chapters*/
+  background: url(https://64.media.tumblr.com/a8ca48310f24581ae539336583690b26/b2e751421a20aa0c-5c/s100x200/a51b914598b64c3ddf6f705b278f11a68301d443.png);
+}
+
+dl.stats dd.comments::before {
+  /*comments*/
+  background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
+}
+
+dl.stats dd.bookmarks::before, dl.stats dd a[href$=bookmarks]::before {
+  /*bookmarks*/
+  background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
+}
+
+dl.stats dd.hits::before {
+  /*hits*/
+  background: url(https://64.media.tumblr.com/b2b8862a356132ac1aa41e9e9f0ddd1d/b2e751421a20aa0c-9e/s100x200/dcd2bcb1adbbb8f9e1844b61aee3dd3a653531e3.png);
+}
+
+dl.stats dd.collections::before {
+  /*collections*/
+  background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
+}
+
+dl.work dl.stats dd.published::before {
+  /*date published*/
+  background: url(https://64.media.tumblr.com/7e13419071a7eeb35f48a76c7aa0ba36/b2e751421a20aa0c-5d/s250x400/7f351f60793ad683e4a9dc4de55e4ee4d625f9d2.png);
+}
+
+dl.work dl.stats dd.status::before {
+  /*completion status*/
+  background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
+}
+
+ul.statistics dl.stats dd.subscriptions::before {
+  /*subscriptions (in the stat page)*/
+  background: url(https://64.media.tumblr.com/64db76a65209eff79515dfc23842eb54/fd0b10e0262ddb71-14/s250x400/921de73c3d5bb819f4e3c58c7c45bd4c6edfe55f.png);
+}
+
+/*adjustments for the stat page*/
+dl.stats dd.published::before, dl.stats dd.status::before {
+  width: 0px;
+  margin-right: 0px;
+}
+
+/*for the collections*/
+li.collection dl.stats dd a[href$=collections]::before {
+  /*collections and sub collections*/
+  background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
+}
+
+li.collection dl.stats dd a[href$=works]::before {
+  /*works*/
+  background: url(https://64.media.tumblr.com/f835b437a474b4b672a8d4ebe61402b8/8979adde76f2ff05-fb/s100x200/8f86556b6896e96427f5a4a54f0de7be38ddba75.png);
+}
+
+li.collection dl.stats dd a[href$=bookmarks]::before {
+  /*bookmarks*/
+  background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
+}
+
+li.collection dl.stats dd a[href$=fandoms]::before {
+  /*fandoms*/
+  background: url(https://64.media.tumblr.com/0a2f3d28fb850907a859726916e04e6f/8979adde76f2ff05-48/s250x400/926b1499363f66438d02fdc8bbea5ce610a75395.png);
+}
+
+/*
+this creates the space before the stats for the icon. 
+Yes this is the worst css code ever written I blame Ao3's frontend inconsistencies.
+but I'm also sorry for putting this out in the world. I have no excuses.
+*/
+ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before, .collection dl.stats dd a[href$=collections]::before, li.collection dl.stats dd a[href$=works]::before, li.collection dl.stats dd a[href$=bookmarks]::before, li.collection dl.stats dd a[href$=fandoms]::before, li.series dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(1)::before, li:not(.collection) dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(2)::before, dl.stats dd:not(.bookmarks) a[href$=bookmarks]::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  content: " ";
+  background-size: 16px 16px !important;
+  margin-right: 5px;
+}
+
+/*End of Stats Icons*/
+/*
+===========
  various fixes
 ===========
 */
@@ -1346,21 +1549,6 @@ div#inner {
 
 /*
 ===========
- Footer
-===========
-*/
-#footer .module {
-  max-width: 40%;
-  margin: auto;
-}
-
-#footer .heading,
-.comment h4.byline {
-  overflow-wrap: break-word;
-}
-
-/*
-===========
  Dashboard
 ===========
 */
@@ -1377,7 +1565,6 @@ div#inner {
 ===========
 */
 #workskin,
-.blurb .userstuff,
 .news .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
@@ -1407,6 +1594,10 @@ dl.meta {
   top: 15em;
   right: 0;
   margin: 10px;
+}
+
+.chapter .expandable.secondary, .chapter .expandable.secondary select {
+  width: 90%;
 }
 
 .works-show .wrapper {
@@ -1727,4 +1918,26 @@ div.preface {
   left: 0 !important;
   right: 0 !important;
   position: fixed;
+}
+
+/*
+===========
+ Footer
+===========
+*/
+#footer .module {
+  max-width: 40%;
+  margin: auto;
+}
+
+#footer .heading,
+.comment h4.byline {
+  overflow-wrap: break-word;
+}
+
+#footer {
+  border-top: none;
+}
+#footer .actions a:hover, #footer .actions a:link:hover {
+  box-shadow: none !important;
 }

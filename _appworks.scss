@@ -5,7 +5,6 @@
 */
 
 #workskin,
-.blurb .userstuff,
 .news .userstuff,
 .system .userstuff,
 .collection blockquote.userstuff {
@@ -36,6 +35,10 @@ dl.meta {
     top: 15em;
     right: 0;
     margin: 10px;
+}
+
+.chapter .expandable.secondary, .chapter .expandable.secondary select {
+    width: 90%;
 }
 
 .works-show .wrapper {

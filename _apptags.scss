@@ -1,20 +1,57 @@
 .commas li:after {
     content: "";
 }
+h5.fandoms.heading {
+    color: transparent; //this removes the commas in the fandom tags (yeah, it's weird)
+}
+
 a.tag {
-    background: fade-out($coloreaccento2, 0.8);
+    background: nth($pastel, 5);
     color: $coltext;
-    padding: 0px 7px;
-    margin: 4px 0px;
-    border-radius: 15px;
+    padding: 1px $space*$ratio;
+    margin: $space/$ratio/$ratio 0px;
+    border-radius: $bordershapebuttons;
     display: inline-block;
 }
 
+
+
+
 .relationships a.tag {
-        background: fade-out($coloreaccento2, 0.8);
+        background: mix(nth($pastel, 4), nth($pastel, 5), $weight: 33%);
+}
+.characters a.tag {
+        background: mix(nth($pastel, 4), nth($pastel, 5), $weight: 66%);
+}
+.freeforms a.tag {
+        background: mix(nth($pastel, 4), nth($pastel, 5), $weight: 99%);
 }
 
 
+a.tag:visited {
+    color: fade-out($coltext, 0.2);
+}
+
+a.tag:hover, a.tag:active, .listbox .heading a.tag:visited:hover {
+        background: fade-out(nth($pastel, 5), 0.2);
+}
+
+.relationships a.tag:hover, .relationships a.tag:active {
+        background: fade-out(nth($pastel, 4), 0.2);
+}
+.characters a.tag:hover, .characters a.tag:active {
+        background: fade-out(nth($pastel, 5), 0.2);
+    }
+.freeforms a.tag:hover, .freeforms a.tag:active {
+        background: fade-out(nth($pastel, 5), 0.2);
+}
+
 li.warnings a.tag[href*=Apply] {
     display: none;
+}
+
+.blurb .fandoms a.tag, .blurb .fandoms a.tag:link, .blurb .fandoms a.tag:hover, .blurb .fandoms a.tag:active, .blurb .fandoms a.tag:visited:hover {
+    background: initial;
+    padding: initial;
+    margin: initial;
 }
