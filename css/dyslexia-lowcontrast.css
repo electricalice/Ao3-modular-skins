@@ -1200,6 +1200,10 @@ h5.fandoms.heading {
   Filters!
 ============
 */
+.filters fieldset {
+  padding: 0px;
+}
+
 .filters .expander,
 .filters .expanded .expander {
   /* 
@@ -1356,6 +1360,14 @@ input[type=checkbox]:hover,
 .filters .exclude [type=checkbox]:hover + .indicator:before {
   background-color: #976a7a;
   border: none;
+}
+
+.filters dt {
+  min-width: auto;
+}
+
+.filters {
+  font-size: 90%;
 }
 
 form.search input[type=text],
@@ -1810,6 +1822,11 @@ ul.notes,
 .thread .even {
   /*comments alternate*/
   background-color: #c8c6c6;
+}
+
+#outer .pagination .current {
+  color: #772d47;
+  background: #afacac;
 }
 
 #footer .heading, #footer a, #footer {

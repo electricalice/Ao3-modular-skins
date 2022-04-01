@@ -993,6 +993,11 @@ span.requested,
     background-color: $colbackgroundinput;
 }
 
+#outer .pagination .current {
+    color: $colaccent;
+    background: mix($colbackgroundalt, $colbackground, $weight: 50%);
+}
+
 #footer .heading, #footer a, #footer {
     /*changes the color of the footer text. Necessary for squidgeworld*/
     color: $colbackground;

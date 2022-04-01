@@ -560,6 +560,10 @@ fieldset.work.meta .fandom.required ul.autocomplete {
   Filters!
 ============
 */
+.filters fieldset {
+  padding: 0px;
+}
+
 .filters .expander,
 .filters .expanded .expander {
   /* 
@@ -716,6 +720,14 @@ input[type=checkbox]:hover,
 .filters .exclude [type=checkbox]:hover + .indicator:before {
   background-color: #e0878a;
   border: none;
+}
+
+.filters dt {
+  min-width: auto;
+}
+
+.filters {
+  font-size: 90%;
 }
 
 /*
